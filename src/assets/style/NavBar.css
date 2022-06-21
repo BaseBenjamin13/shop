@@ -3,4 +3,9 @@
     background-color: lightcoral;
     display: flex;
     justify-content: space-between;
+    height: 5.5rem;
+}
+
+.cart-container {
+    margin-right: 2%;
 }

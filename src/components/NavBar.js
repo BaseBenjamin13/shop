@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import '../assets/style/NavBar.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,12 +15,15 @@ function NavBar() {
     <div className="navbar">
         
             <h1>Tech Excess</h1>
+            <Link to={`/monitors`} >
+
             <h2>Monitors</h2>
+            </Link>
             <h2>Keyboard</h2>
             <h2>Mouses</h2>
             <h2>Headphones</h2>
         
-        <div>
+        <div className="cart-container">
             <img src={nav.cartIcon} />
         </div>
     </div>

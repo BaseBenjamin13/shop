@@ -1,0 +1,6 @@
+
+.navbar {
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-between;
+}

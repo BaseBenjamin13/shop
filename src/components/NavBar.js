@@ -16,10 +16,11 @@ function NavBar() {
         
             <h1>Tech Excess</h1>
             <Link to={`/monitors`} >
-
-            <h2>Monitors</h2>
+                <h2>Monitors</h2>
             </Link>
-            <h2>Keyboard</h2>
+            <Link to={`/keyboards`} >
+                <h2>Keyboard</h2>
+            </Link>
             <h2>Mouses</h2>
             <h2>Headphones</h2>
         

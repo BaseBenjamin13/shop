@@ -25,7 +25,7 @@ function Monitors() {
     <div>
         <NavBar />
         <h1>Monitors</h1>
-        <Results monitors={monitors}/>
+        <Results items={monitors}/>
     </div>
   )
 }

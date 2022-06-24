@@ -6,10 +6,12 @@
 }
 
 .items {
-    background-color: aqua;
+    background-color: rgb(158, 253, 253);
     height: 25rem;
     width: 23rem;
-    margin: 0 auto;  
+    margin: 0 auto;
+    border-radius: 5%;
+    box-shadow: 0 0 7px 7px rgb(92, 92, 92, .6);
 }
 
 .img{

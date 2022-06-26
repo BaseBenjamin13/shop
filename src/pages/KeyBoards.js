@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../assets/style/Results.css';
 
 import NavBar from '../components/NavBar';
@@ -16,6 +17,18 @@ function KeyBoards() {
             img: 'https://i.imgur.com/NhpivZ9.jpg'
         },
     ])
+
+    useEffect(() => {
+        const getTunr = async () => {
+            const { data } = await axios.get('http://127.0.0.1:8000/artists/?format=json')
+            console.log('test')
+            console.log(data)
+            console.log('test2')
+        }
+        // getTunr()
+    })
+
+
 
   return (
     <div>

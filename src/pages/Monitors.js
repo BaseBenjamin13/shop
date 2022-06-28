@@ -20,14 +20,13 @@ function Monitors() {
         getMonitors()
     }, [])
 
-    if(!monitors){
-        return <h1>Loading ...</h1>
-    }
+    
 
   return (
     <div>
         <NavBar />
         <h1>Monitors</h1>
+        {monitors.length === 0 && <h1>Loading ...</h1>}
         <Results items={monitors}/>
     </div>
   )

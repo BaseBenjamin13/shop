@@ -9,12 +9,12 @@ function KeyBoards() {
 
     const [keyboards, setKeyboards] = useState([
         {
-            name: 'IQUNIX Lime 80',
-            img: 'https://i.imgur.com/usVAk4u.jpg'
+            title: 'IQUNIX Lime 80',
+            image_url: 'https://i.imgur.com/usVAk4u.jpg'
         },
         {
-            name: 'Redragon K628 PRO',
-            img: 'https://i.imgur.com/NhpivZ9.jpg'
+            title: 'Redragon K628 PRO',
+            image_url: 'https://i.imgur.com/NhpivZ9.jpg'
         },
     ])
 
@@ -26,6 +26,7 @@ function KeyBoards() {
     <div>
         <NavBar />
         <h1>KeyBoards</h1>
+        {keyboards.length === 0 && <h1>Loading ...</h1>}
         <Results items={keyboards} />
     </div>
   )

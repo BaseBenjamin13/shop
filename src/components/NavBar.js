@@ -14,7 +14,9 @@ function NavBar() {
     return (
     <div className="navbar">
         
-            <h1>Tech Excess</h1>
+            <Link to={`/`} >
+                <h1>Tech Excess</h1>
+            </Link>
             <Link to={`/monitors`} >
                 <h2>Monitors</h2>
             </Link>

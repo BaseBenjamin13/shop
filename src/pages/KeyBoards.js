@@ -18,15 +18,7 @@ function KeyBoards() {
         },
     ])
 
-    useEffect(() => {
-        const getTunr = async () => {
-            const { data } = await axios.get('http://127.0.0.1:8000/artists/?format=json')
-            console.log('test')
-            console.log(data)
-            console.log('test2')
-        }
-        // getTunr()
-    })
+   
 
 
 

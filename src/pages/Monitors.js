@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import '../assets/style/Results.css';
 
 import NavBar from '../components/NavBar';
@@ -6,20 +8,21 @@ import Results from '../components/Results';
 
 function Monitors() {
 
-    const [monitors, setMonitors] = useState([
-        {
-            name: 'LG 34WN750-B Monitor 34"',
-            img: 'https://i.imgur.com/zOskYQF.jpeg'
-        },
-        {
-            name: 'Alienware 240Hz Gaming Monitor 24.5"',
-            img: 'https://i.imgur.com/IvIMQBY.jpg'
-        },
-        {
-            name: 'ASUS ROG Strix 34"',
-            img: 'https://i.imgur.com/D36qxYq.jpg'
+    const [monitors, setMonitors] = useState([])
+
+    useEffect(() => {
+        const getMonitors = async () => {
+            const { data } = await axios.get('http://127.0.0.1:8000/monitors/?format=json')
+            await setMonitors(data)
+            console.log(monitors)
+            console.log(data)
         }
-    ])
+        getMonitors()
+    }, [])
+
+    if(!monitors){
+        return <h1>Loading ...</h1>
+    }
 
   return (
     <div>

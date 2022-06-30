@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import '../assets/style/Results.css';
 
-import NavBar from '../components/NavBar';
 import Results from '../components/Results';
 
 function Monitors() {
@@ -24,7 +23,6 @@ function Monitors() {
 
   return (
     <div>
-        <NavBar />
         <h1>Monitors</h1>
         {monitors.length === 0 && <h1>Loading ...</h1>}
         <Results items={monitors}/>

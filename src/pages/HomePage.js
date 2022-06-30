@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 
-import NavBar from '../components/NavBar';
 import FeaturedItem from '../components/FeaturedItem';
 
 
@@ -20,7 +19,6 @@ function HomePage() {
 
   return (
     <div>
-        <NavBar />
         <FeaturedItem  featured={featuredMonitor} />
     </div>
   )

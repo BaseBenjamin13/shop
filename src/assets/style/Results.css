@@ -3,24 +3,45 @@
 .results {
     background-color: lightgray;
     display: flex;
+    width: 100%;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    justify-content:center;
 }
 
 .items {
-    background-color: rgb(158, 253, 253);
-    height: 25rem;
-    width: 23rem;
-    margin: 0 auto;
+    background-color: var(--myred);
+    height: 28rem;
+    width: 25rem;
+    margin: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
     border-radius: 5%;
     box-shadow: 0 0 7px 7px rgb(92, 92, 92, .6);
+    position: relative;
 }
 
 .img{
+    background-color: white;
     max-width: 100%;
     max-height: 50%;
 }
 
 .cart-btn {
-    background-color: rgb(9, 221, 9);
+    background-color: var(--myblue);
     font-weight: bold;
     font-size: 1em;
+    position:absolute; 
+    margin-left:-50px;
+    left:50%;
+    bottom:0px;
+}
+
+.price {
+    background-color: var(--myblack);
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--mylightyellow);
+    width: 25%;
+    border-radius: 0px 30px 30px 0px;
 }

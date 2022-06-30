@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../assets/style/Results.css';
 
-import NavBar from '../components/NavBar';
 import Results from '../components/Results';
 
 function KeyBoards() {
@@ -24,7 +23,6 @@ function KeyBoards() {
 
   return (
     <div>
-        <NavBar />
         <h1>KeyBoards</h1>
         {keyboards.length === 0 && <h1>Loading ...</h1>}
         <Results items={keyboards} />

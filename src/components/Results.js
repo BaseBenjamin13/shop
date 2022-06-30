@@ -5,12 +5,17 @@ function Results({ items }) {
     <div className="results">
         {
             items.map(item => {
-                return(
+                return(                        
                     <div className="items">
                         {item.title ? <h1>{item.title}</h1> : <h1>title not found</h1>}
                         {item.image_urls && <img className="img" src={item.image_urls[0]} />}
+                        
+                        <div className="price">
+                            <h3>${item.price}</h3>
+                        </div>
+
                         <button className="cart-btn">Add to Cart</button>
-                    </div>
+                    </div>    
                 )
             })
         }

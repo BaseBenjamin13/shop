@@ -14,17 +14,21 @@ function NavBar() {
     return (
     <div className="navbar">
         
-            <Link to={`/`} >
+            <Link to={`/`} className="nav-link">
                 <h1>Tech Excess</h1>
             </Link>
-            <Link to={`/monitors`} >
+            <Link to={`/monitors`} className="nav-link">
                 <h2>Monitors</h2>
             </Link>
-            <Link to={`/keyboards`} >
+            <Link to={`/keyboards`} className="nav-link">
                 <h2>Keyboard</h2>
             </Link>
-            <h2>Mouses</h2>
-            <h2>Headphones</h2>
+            <Link to={`/`} className="nav-link">
+                <h2>Mouses</h2>
+            </Link>
+            <Link to={`/`} className="nav-link">
+                <h2>Headphones</h2>
+            </Link>
         
         <div className="cart-container">
             <img src={nav.cartIcon} />

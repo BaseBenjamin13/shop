@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import axios from 'axios';
+
 import NavBar from '../components/NavBar';
+import FeaturedItem from '../components/FeaturedItem';
 
 
 function HomePage() {
+
+    const [featuredMonitor, setFeaturedMonitor] = useState([])
+
+    useEffect(() => {
+        const getMonitors = async () => {
+            const { data } = await axios.get('http://127.0.0.1:8000/monitors/?format=json')
+            await setFeaturedMonitor(data[0])
+        }
+        getMonitors()
+    }, [])
+
   return (
     <div>
         <NavBar />
-        
+        <FeaturedItem  featured={featuredMonitor} />
     </div>
   )
 }

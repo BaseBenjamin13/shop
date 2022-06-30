@@ -1,0 +1,18 @@
+
+.featured-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.featured-item {
+    /* display: flex; */
+    background-color: var(--myred);
+    width: 70%;
+    height: 100%;
+}
+
+.featured-img {
+    width: 100%;
+    border-radius: 50px;
+}

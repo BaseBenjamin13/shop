@@ -1,11 +1,20 @@
 
 .navbar {
-    background-color: lightcoral;
+    background-color: var(--myblack);
     display: flex;
     justify-content: space-between;
     height: 5.5rem;
 }
 
 .cart-container {
+    background-color: var(--mylightyellow);
     margin-right: 2%;
+    height: 75%;
+    margin-top: 3px;
+    border-radius: 100px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--mylightyellow);
 }

@@ -10,11 +10,11 @@ function KeyBoards() {
     const [keyboards, setKeyboards] = useState([
         {
             title: 'IQUNIX Lime 80',
-            image_url: 'https://i.imgur.com/usVAk4u.jpg'
+            image_urls: ['https://i.imgur.com/usVAk4u.jpg']
         },
         {
             title: 'Redragon K628 PRO',
-            image_url: 'https://i.imgur.com/NhpivZ9.jpg'
+            image_urls: ['https://i.imgur.com/NhpivZ9.jpg']
         },
     ])
 

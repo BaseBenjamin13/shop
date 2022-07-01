@@ -24,7 +24,11 @@ function Monitors() {
 
   return (
     <div>
-        {monitors.length === 0 && <h1>Loading ...</h1>}
+        {monitors.length === 0 && 
+            <div className="loading-data-container">
+                <h1 className="loading-data">Loading ...</h1>
+            </div>
+        }
         <Results items={monitors}/>
     </div>
   )

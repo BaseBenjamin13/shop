@@ -20,7 +20,11 @@ function Mouses() {
 
   return (
     <div>
-        {mouses.length === 0 && <h1>Loading ...</h1>}
+        {mouses.length === 0 && 
+            <div className="loading-data-container">
+                <h1 className="loading-data">Loading ...</h1>
+            </div>
+        }
         <Results items={mouses} />
     </div>
   )

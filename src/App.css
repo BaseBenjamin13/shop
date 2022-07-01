@@ -8,6 +8,22 @@
     --mydarkyellow: rgba(242, 199, 68, 1);
 }
 
+
+.loading-data-container {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+.loading-data {
+    display: flex;
+    align-items: center;
+    color: var(--myblue);
+}
+
 /* I copied from this link but changed to my own:
 https://stackoverflow.com/questions/13607117/css-css3-pixelate-dot-background */
 body {

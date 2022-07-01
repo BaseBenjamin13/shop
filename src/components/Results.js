@@ -7,7 +7,7 @@ function Results({ items }) {
             items.map(item => {
                 return(                        
                     <div className="items">
-                        {item.title ? <h1>{item.title}</h1> : <h1>title not found</h1>}
+                        {item.title ? <h2>{item.title.slice(0,30)}</h2> : <h1>title not found</h1>}
                         {item.image_urls && <img className="img" src={item.image_urls[0]} />}
                         
                         <div className="price">

@@ -1,12 +1,13 @@
 
 
 .results {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     display: flex;
     width: 100%;
     flex-basis: 100%;
     flex-flow: row wrap;
     justify-content:center;
+    margin-top: 3em;
 }
 
 .items {
@@ -17,14 +18,17 @@
     margin-left: 40px;
     margin-right: 40px;
     border-radius: 5%;
-    box-shadow: 0 0 7px 7px rgb(92, 92, 92, .6);
+    box-shadow: 0 0 7px 7px var(--myblack);
+    /* box-shadow: 0 0 7px 7px var(--myblue); */
+    /* box-shadow: 0 0 7px 7px rgb(92, 92, 92, .6); */
     position: relative;
 }
 
 .img{
-    background-color: white;
     max-width: 100%;
-    max-height: 50%;
+    max-height: 53%;
+    border-radius: 5%;
+    box-shadow: 0 0 7px 7px rgba(128, 126, 126, 0.6);
 }
 
 .cart-btn {

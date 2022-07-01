@@ -6,24 +6,20 @@ import Results from '../components/Results';
 
 function KeyBoards() {
 
-    const [keyboards, setKeyboards] = useState([
-        {
-            title: 'IQUNIX Lime 80',
-            image_urls: ['https://i.imgur.com/usVAk4u.jpg']
-        },
-        {
-            title: 'Redragon K628 PRO',
-            image_urls: ['https://i.imgur.com/NhpivZ9.jpg']
-        },
-    ])
+    const [keyboards, setKeyboards] = useState([])
 
    
-
+    useEffect(() => {
+        const getKeyboards = async () => {
+            const { data } = await axios.get('http://127.0.0.1:8000/keyboards/?format=json')
+            await setKeyboards(data)
+        }
+        getKeyboards()
+    }, [])
 
 
   return (
     <div>
-        <h1>KeyBoards</h1>
         {keyboards.length === 0 && <h1>Loading ...</h1>}
         <Results items={keyboards} />
     </div>

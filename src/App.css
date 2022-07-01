@@ -8,7 +8,35 @@
     --mydarkyellow: rgba(242, 199, 68, 1);
 }
 
-
+/* I copied from this link but changed to my own:
+https://stackoverflow.com/questions/13607117/css-css3-pixelate-dot-background */
+body {
+    background-image: -moz-linear-gradient(45deg, var(--myblack) 25%, transparent 25%), 
+        -moz-linear-gradient(-45deg, var(--myblack) 25%, transparent 25%), 
+        -moz-linear-gradient(45deg, transparent 75%, var(--myblack) 75%), 
+        -moz-linear-gradient(-45deg, transparent 75%, var(--myblack) 75%);
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, var(--myblack)), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, var(--myblack)), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, var(--myblack))), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, var(--myblack)));
+    background-image: -webkit-linear-gradient(45deg, var(--myblack) 25%, transparent 25%), 
+        -webkit-linear-gradient(-45deg, var(--myblack) 25%, transparent 25%), 
+        -webkit-linear-gradient(45deg, transparent 75%, var(--myblack) 75%), 
+        -webkit-linear-gradient(-45deg, transparent 75%, var(--myblack) 75%);
+    background-image: -o-linear-gradient(45deg, var(--myblack) 25%, transparent 25%), 
+        -o-linear-gradient(-45deg, var(--myblack) 25%, transparent 25%), 
+        -o-linear-gradient(45deg, transparent 75%, var(--myblack) 75%), 
+        -o-linear-gradient(-45deg, transparent 75%, var(--myblack) 75%);
+    background-image: linear-gradient(45deg, var(--myblack) 60%, transparent 25%), 
+        linear-gradient(-45deg, var(--myblack) 40%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, var(--myblack) 75%), 
+        linear-gradient(-45deg, transparent 75%, var(--myblack) 75%);
+    -moz-background-size: 2px 2px;
+    background-size: 2px 2px;
+     -webkit-background-size: 15px 15px; /* override value for webkit */
+    background-position: 0 1, 1px 0, 1px -1px, 0px 1px;
+    background-color: var(--mylightyellow);
+}
 
 .App {
   text-align: center;

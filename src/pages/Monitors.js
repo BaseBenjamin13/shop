@@ -19,11 +19,11 @@ function Monitors() {
         getMonitors()
     }, [])
 
+
     
 
   return (
     <div>
-        <h1>Monitors</h1>
         {monitors.length === 0 && <h1>Loading ...</h1>}
         <Results items={monitors}/>
     </div>

@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import Monitors from './pages/Monitors';
 import KeyBoards from './pages/KeyBoards';
 import Mouses from './pages/Mouses';
+import HeadPhones from './pages/HeadPhones';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/monitors" element={<Monitors />} />
             <Route path="/keyboards" element={<KeyBoards />} />
             <Route path="/mouses" element={<Mouses />} />
+            <Route path="/headphones" element={<HeadPhones />} />
         </Routes>
     </div>
   );

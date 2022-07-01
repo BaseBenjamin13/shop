@@ -26,7 +26,7 @@ function NavBar() {
             <Link to={`/mouses`} className="nav-link">
                 <h2>Mouses</h2>
             </Link>
-            <Link to={`/`} className="nav-link">
+            <Link to={`/headphones`} className="nav-link">
                 <h2>Headphones</h2>
             </Link>
         

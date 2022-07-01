@@ -23,7 +23,7 @@ function NavBar() {
             <Link to={`/keyboards`} className="nav-link">
                 <h2>Keyboard</h2>
             </Link>
-            <Link to={`/`} className="nav-link">
+            <Link to={`/mouses`} className="nav-link">
                 <h2>Mouses</h2>
             </Link>
             <Link to={`/`} className="nav-link">

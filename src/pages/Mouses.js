@@ -1,0 +1,29 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import '../assets/style/Results.css';
+
+import Results from '../components/Results';
+
+function Mouses() {
+
+    const [mouses, setMouses] = useState([])
+
+   
+    useEffect(() => {
+        const getMouses = async () => {
+            const { data } = await axios.get('http://127.0.0.1:8000/mouses/?format=json')
+            await setMouses(data)
+        }
+        getMouses()
+    }, [])
+
+
+  return (
+    <div>
+        {mouses.length === 0 && <h1>Loading ...</h1>}
+        <Results items={mouses} />
+    </div>
+  )
+}
+
+export default Mouses

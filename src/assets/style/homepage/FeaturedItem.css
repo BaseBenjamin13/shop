@@ -6,6 +6,7 @@
 }
 
 .featured-item {
+    border-radius: 50px;
     /* display: flex; */
     background-color: var(--myred);
     width: 70%;
@@ -13,6 +14,6 @@
 }
 
 .featured-img {
-    width: 100%;
+    width: 95%;
     border-radius: 50px;
 }

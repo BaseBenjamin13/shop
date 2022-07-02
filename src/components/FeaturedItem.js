@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/style/FeaturedItem.css';
+import '../assets/style/homepage/FeaturedItem.css';
 
 
 function FeaturedItem({ featured }) {

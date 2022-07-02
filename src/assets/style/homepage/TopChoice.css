@@ -1,0 +1,22 @@
+
+
+.top-choice-keyboard-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.top-choice-keyboard {
+    background-color: var(--myred);
+    width: 70%;
+    height: 100%;
+    border-radius: 50px;
+}
+.featured-keyboard-img {
+    max-width: 80%;
+}
+
+
+
+

@@ -25,7 +25,7 @@ function KeyBoards() {
                 <h1 className="loading-data">Loading ...</h1>
             </div>
         }
-        <Results items={keyboards} />
+        <Results items={keyboards} url={'/keyboards/'} />
     </div>
   )
 }

@@ -11,14 +11,15 @@ July 1st:
 
 
 July 2nd:
-    make keyboard by id api route.
-    make keyboard detail page.
-    make mouses by id api route.
-    make mouses detail page.
+    make keyboard by id api route. ✅
+    make keyboard detail page. ✅
+    make mouses by id api route. 
+    make mouses detail page. 
     make headphones by id api route.
     make headphones detail page.
-    basic footer add into index.js.
     update all api calls for top choices, featured items to use by id route.
+    style detail pages.
 
 July 3rd:
+    basic footer add into index.js.
     on detailed page display images in carousel.

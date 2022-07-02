@@ -4,9 +4,21 @@ July 1st:
     make HeadPhone page in react. ✅
     add "ben's choice" Keyboard to homepage. ✅
     add "ben's choice" Mouse to homepage. ✅
-    add "ben's choice" Headphones to homepage.
+    add "ben's choice" Headphones to homepage. ✅
+    make monitor by id api route. ✅
+    make monitor detail page. ✅
 
 
 
-July 1st:
+July 2nd:
+    make keyboard by id api route.
+    make keyboard detail page.
+    make mouses by id api route.
+    make mouses detail page.
+    make headphones by id api route.
+    make headphones detail page.
     basic footer add into index.js.
+    update all api calls for top choices, featured items to use by id route.
+
+July 3rd:
+    on detailed page display images in carousel.

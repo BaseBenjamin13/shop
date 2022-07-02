@@ -9,6 +9,7 @@ function Monitors() {
 
     const [monitors, setMonitors] = useState([])
 
+
     useEffect(() => {
         const getMonitors = async () => {
             const { data } = await axios.get('http://127.0.0.1:8000/monitors/?format=json')
@@ -29,7 +30,7 @@ function Monitors() {
                 <h1 className="loading-data">Loading ...</h1>
             </div>
         }
-        <Results items={monitors}/>
+        <Results items={monitors} url={'/monitors/'}/>
     </div>
   )
 }

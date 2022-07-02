@@ -25,7 +25,7 @@ function HeadPhones() {
                 <h1 className="loading-data">Loading ...</h1>
             </div>
         }
-        <Results items={headPhones} />
+        <Results items={headPhones} url={'/headphones/'} />
     </div>
   )
 }

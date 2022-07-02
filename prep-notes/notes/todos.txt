@@ -13,8 +13,8 @@ July 1st:
 July 2nd:
     make keyboard by id api route. ✅
     make keyboard detail page. ✅
-    make mouses by id api route. 
-    make mouses detail page. 
+    make mouses by id api route. ✅
+    make mouses detail page. ✅
     make headphones by id api route.
     make headphones detail page.
     update all api calls for top choices, featured items to use by id route.

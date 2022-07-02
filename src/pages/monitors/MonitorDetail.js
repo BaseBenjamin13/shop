@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import '../assets/style/DetailPage.css';
+import '../../assets/style/DetailPage.css';
 
-import DetailedResult from '../components/DetailedResult';
+import DetailedResult from '../../components/DetailedResult';
 
 function MonitorDetail() {
     const { id } = useParams();

@@ -3,14 +3,16 @@ import './App.css';
 import { Routes, Route} from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
-import Monitors from './pages/Monitors';
-import MonitorDetail from './pages/MonitorDetail';
+import Monitors from './pages/monitors/Monitors';
+import MonitorDetail from './pages/monitors/MonitorDetail';
 
-import KeyBoards from './pages/KeyBoards';
-import KeyBoardDetail from './pages/KeyBoardDetail';
+import KeyBoards from './pages/keyboards/KeyBoards';
+import KeyBoardDetail from './pages/keyboards/KeyBoardDetail';
 
-import Mouses from './pages/Mouses';
-import HeadPhones from './pages/HeadPhones';
+import Mouses from './pages/mouses/Mouses';
+import MouseDetail from './pages/mouses/MouseDetail'
+
+import HeadPhones from './pages/headphones/HeadPhones';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
             <Route path="/keyboards" element={<KeyBoards />} />
             <Route path="/keyboards/:id" element={<KeyBoardDetail />} />
             <Route path="/mouses" element={<Mouses />} />
+            <Route path="/mouses/:id" element={<MouseDetail />} />
             <Route path="/headphones" element={<HeadPhones />} />
         </Routes>
     </div>

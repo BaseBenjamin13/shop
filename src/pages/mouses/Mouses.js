@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../assets/style/Results.css';
+import '../../assets/style/Results.css';
 
-import Results from '../components/Results';
+import Results from '../../components/Results';
 
 function Mouses() {
 
@@ -25,7 +25,7 @@ function Mouses() {
                 <h1 className="loading-data">Loading ...</h1>
             </div>
         }
-        <Results items={mouses} />
+        <Results items={mouses} url={'/mouses/'} />
     </div>
   )
 }

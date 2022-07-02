@@ -50,9 +50,9 @@ function HomePage() {
   return (
     <div>
         {featuredMonitor && <FeaturedItem featured={featuredMonitor} />}
-        {topKeyBoard && <TopChoiceKeyBoard keyboard={topKeyBoard} /> }
-        {topMouse && <TopChoiceMouse mouse={topMouse} /> }
-        {topHeadPhone && <TopChoiceHeadPhones headphone={topHeadPhone} /> }
+        {topKeyBoard && <TopChoiceKeyBoard keyboard={topKeyBoard} url={'/keyboards/'} /> }
+        {topMouse && <TopChoiceMouse mouse={topMouse} url={'/mouses/'}/> }
+        {topHeadPhone && <TopChoiceHeadPhones headphone={topHeadPhone} url={'/headphones/'}/> }
     </div> 
   )
 }

@@ -7,7 +7,7 @@ function FeaturedItem({ featured }) {
   return (
     <div className="featured-container">
         <div className="featured-item">
-            <Link to={'/monitors/' + featured.id}>
+            <Link className="link" to={'/monitors/' + featured.id}>
                 <h1>Featured Item</h1>
                 <img className="featured-img" src={featured.featured_image_url} />
             </Link>

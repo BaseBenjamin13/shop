@@ -10,26 +10,27 @@ import TopChoiceHeadPhones from '../components/homepage/TopChoiceHeadPhones';
 
 function HomePage() {
 
-    const [featuredMonitor, setFeaturedMonitor] = useState([])
+    const [featuredMonitor, setFeaturedMonitor] = useState()
     const [topKeyBoard, setTopKeyBoard] = useState()
     const [topMouse, setTopMouse] = useState()
     const [topHeadPhone, setTopHeadPhone] = useState()
 
     const getMonitors = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/monitors/?format=json')
-        await setFeaturedMonitor(data[0])
+        const { data } = await axios.get('http://127.0.0.1:8000/monitors/7?format=json')
+        await setFeaturedMonitor(data)
+        console.log(data)
     }
     const getTopChoiceKeyBoard = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/keyboards/?format=json')
-        await setTopKeyBoard(data[0])
+        const { data } = await axios.get('http://127.0.0.1:8000/keyboards/1?format=json')
+        await setTopKeyBoard(data)
     }
     const getTopChoiceMouse = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/mouses/?format=json')
-        await setTopMouse(data[0])
+        const { data } = await axios.get('http://127.0.0.1:8000/mouses/1?format=json')
+        await setTopMouse(data)
     }
     const getTopChoiceHeadPhone = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/headphones/?format=json')
-        await setTopHeadPhone(data[0])
+        const { data } = await axios.get('http://127.0.0.1:8000/headphones/1?format=json')
+        await setTopHeadPhone(data)
     }
 
     useEffect(() => {
@@ -39,7 +40,7 @@ function HomePage() {
         getTopChoiceHeadPhone()
     }, [])
 
-    if(featuredMonitor.length === 0 && !topKeyBoard && !topMouse && !topHeadPhone) {
+    if(!featuredMonitor === 0 && !topKeyBoard && !topMouse && !topHeadPhone) {
         return (
             <div className="loading-data-container">
                 <h1 className="loading-data">Loading ...</h1>

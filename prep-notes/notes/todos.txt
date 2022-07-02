@@ -17,7 +17,8 @@ July 2nd:
     make mouses detail page. ✅
     make headphones by id api route. ✅
     make headphones detail page. ✅
-    update all api calls for top choices, featured items to use by id route.
+    update all api calls for top choices, featured items to use by id route. ✅
+    take styling off all Link tags. ✅
     style detail pages.
 
 July 3rd:

@@ -8,6 +8,11 @@
     --mydarkyellow: rgba(242, 199, 68, 1);
 }
 
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .loading-data-container {
     width: 40%;

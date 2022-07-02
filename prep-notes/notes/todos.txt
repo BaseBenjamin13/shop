@@ -3,7 +3,7 @@ July 1st:
     make Headphone model, serializer, url, and view. ✅
     make HeadPhone page in react. ✅
     add "ben's choice" Keyboard to homepage. ✅
-    add "ben's choice" Mouse to homepage.
+    add "ben's choice" Mouse to homepage. ✅
     add "ben's choice" Headphones to homepage.
 
 

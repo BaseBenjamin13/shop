@@ -3,3 +3,67 @@
     background-color: var(--myred);
     margin: 5rem;
 }
+
+.detailed-container {
+    /* display: flex;
+    justify-content: center; */
+    height: 100vh;
+    background-color: var(--myblue);
+    position: relative;
+}
+.detailed-title {
+    background-color: var(--myblack);
+    color: var(--mylightyellow);
+}
+.detailed-img-div {
+    width: 50%;
+    position: absolute;
+    left: 0;
+}
+.detailed-img {
+    width: 100%;
+    margin: 1%;
+    border-radius: 25px;
+    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
+}
+
+
+.info-container {
+    background-color: var(--myblack);
+    /* display: flex; */
+    border-radius: 30px;
+    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
+    /* justify-content: center; */
+    color: var(--mylightyellow);
+    width: 40%;
+    height: 50%;
+    margin-right: 3px;
+    position: absolute;
+    right: 0;
+}
+.brand {
+    background-color: var(--myblack);
+    margin: 2%;
+    position: absolute;
+    left: 0;
+}
+.detailed-price {
+    position: absolute;
+    left: 0;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+
+
+
+.description-container {
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+
+

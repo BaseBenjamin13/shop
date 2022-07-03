@@ -25,4 +25,4 @@ July 3rd:
     basic footer add into index.js. ✅
     on detailed page display images in carousel. ✅
     make img modal component. ✅
-    style and position image modal.
+    style and position image modal. ✅

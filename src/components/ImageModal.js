@@ -1,9 +1,18 @@
 import React from 'react'
+import '../assets/style/DetailPage.css';
 
-function ImageModal({ img }) {
+
+
+function ImageModal({ img, modal, setModal }) {
+
+
+    function hideModal() {
+        setModal({show: false});
+    }
+
   return (
-    <div className="modal-container">
-        <img className="modal-image" src={img} />
+    <div onClick={() => hideModal()} className="modal-container">
+        <img className="modal-image detailed-img" src={img} />
     </div>
   )
 }

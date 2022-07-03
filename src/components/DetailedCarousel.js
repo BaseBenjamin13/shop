@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../assets/style/DetailPage.css';
 
@@ -6,7 +6,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
+import ImageModal from './ImageModal';
+
 function DetailedCarousel({ item }) {
+
+    const [modal, setModal] = useState({show: false, image: ''})
 
     const settings = {
         dots: true,
@@ -19,17 +23,27 @@ function DetailedCarousel({ item }) {
         className: "slides"
     }
 
+    function showModal(index) {
+        setModal({show: !modal.show, image: item.image_urls[index]})
+        console.log(modal.show)
+    }
 
+ 
   return (
     <div>
-                <div className="detailed-img-div">
+        <div className="detailed-img-div">
             <Slider {...settings}>
                 {
-                    item.image_urls.map((img) => {
-                        return <img className="detailed-img" src={img} />
+                    item.image_urls.map((img, index) => {
+                        return (
+                            <div key={index} onClick={() => showModal(index)} >
+                                <img className="detailed-img myImg" src={img} />
+                            </div>
+                        )
                     })
                 }
             </Slider>
+            {modal.show && <ImageModal img={modal.image} />}
         </div>
     </div>
   )

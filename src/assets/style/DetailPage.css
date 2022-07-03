@@ -28,6 +28,13 @@
     border-radius: 25px;
     box-shadow: 0 0 7px 7px rgb(42, 125, 134);
 }
+.detailed-img-big {
+    height: 100%;
+    width: 100%;
+    margin: 1%;
+    border-radius: 25px;
+    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
+}
 
 
 .info-container {
@@ -66,6 +73,15 @@
 
 
 
+/* .modal-container {
+    position: relative;
+} */
+
+.modal-image {
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+}
 
 
 

@@ -20,13 +20,19 @@
 }
 
 
+
+
 .footer {
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     background-color: var(--myblack);
     color: white;
-    display: flex;
-    position: relative;
+    /* display: flex; */
+    /* position:static;
+    bottom: 0; */
+    /* position: relative; */
+    position: absolute;
+    bottom: 0;
 }
 .copyright {
     position: absolute;

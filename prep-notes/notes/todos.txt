@@ -22,5 +22,5 @@ July 2nd:
     style detail pages. ✅
 
 July 3rd:
-    basic footer add into index.js.
-    on detailed page display images in carousel.
+    basic footer add into index.js. ✅
+    on detailed page display images in carousel. ✅

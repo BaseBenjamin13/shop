@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import DetailedCarousel from './DetailedCarousel';
 
 function DetailedResult({ item }) {
   return ( 
@@ -7,7 +8,8 @@ function DetailedResult({ item }) {
         <div className="detailed-img-div">
             {/* Carousel */}
             {/* map images inside carousel */}
-            <img className="detailed-img" src={item.image_urls[0]} />
+            {/* <img className="detailed-img" src={item.image_urls[0]} /> */}
+            <DetailedCarousel item={item} />
         </div>
 
         <div className="info-container">

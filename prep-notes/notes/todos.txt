@@ -19,7 +19,7 @@ July 2nd:
     make headphones detail page. ✅
     update all api calls for top choices, featured items to use by id route. ✅
     take styling off all Link tags. ✅
-    style detail pages.
+    style detail pages. ✅
 
 July 3rd:
     basic footer add into index.js.

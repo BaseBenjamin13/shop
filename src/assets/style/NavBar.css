@@ -18,3 +18,19 @@
     text-decoration: none;
     color: var(--mylightyellow);
 }
+
+
+.footer {
+    height: 10vh;
+    width: 100%;
+    background-color: var(--myblack);
+    color: white;
+    display: flex;
+    position: relative;
+}
+.copyright {
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    font-size: 1.5rem;
+}

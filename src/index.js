@@ -4,6 +4,7 @@ import './index.css';
 
 import App from './App';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -13,6 +14,7 @@ root.render(
     <Router>
         <NavBar />
         <App />
+        <Footer />
     </Router>
 );
 

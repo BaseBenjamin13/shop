@@ -26,3 +26,20 @@ July 3rd:
     on detailed page display images in carousel. ✅
     make img modal component. ✅
     style and position image modal. ✅
+
+July 4th:
+    Create Review model.
+    make review in admin to list out to detail page.
+    make create Review route.
+    watch recording on CRUD on react end.
+
+July 5th:
+    build create review on react side.
+    build delete route.
+    build delete review on react side.
+    build update review route.
+    build update review on react side.
+
+
+
+

@@ -1,7 +1,12 @@
 import React from 'react';
+import axios from 'axios';
+
 import DetailedCarousel from './DetailedCarousel';
+import Review from './Review';
 
 function DetailedResult({ item }) {
+
+
   return ( 
     <div className="detailed-container">
         <h1 className="detailed-title">{item.title}</h1>
@@ -22,6 +27,11 @@ function DetailedResult({ item }) {
                 {item.description}
             </p>
         </div>
+        {
+            item.reviews.map((review) => {
+               return <Review reviewUrl={review} />
+            })
+        }
     </div>
   )
 }

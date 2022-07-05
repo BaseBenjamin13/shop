@@ -106,5 +106,9 @@
     background-color: var(--myred);
     border-radius: 30px;
 }
-
+.review-form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 

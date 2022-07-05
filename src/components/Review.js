@@ -10,16 +10,7 @@ function Review({ reviewUrl, item }) {
         console.log(data)
         setReview(data)
     }
-    const createReview = async (e) => {
-        e.preventDefault()
-        axios.post('http://127.0.0.1:8000/reviews/',
-        {
-            "monitor": "http://127.0.0.1:8000/monitors/" + item.id,
-            "author": "test",
-            "body": "gretsetsetsetis.",
-            "rating": 5
-        })
-    }
+
     useEffect(() => {
         getReview()
     }, [])
@@ -30,9 +21,6 @@ function Review({ reviewUrl, item }) {
   return (
     <div>
         <h1>Reviews</h1>
-        <form onSubmit={createReview}>
-            <button type="submit">create Keyboard</button>
-        </form>
         <div>
             <h2>Author: {review.author}</h2>
             <p>{review.body}</p>

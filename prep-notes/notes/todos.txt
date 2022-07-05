@@ -34,12 +34,21 @@ July 4th:
 July 5th:
     style and position reviews. ✅
     make create Review route.  ✅
-    watch recording on CRUD on react end. 
-    build create review on react side. 
+    build create review on react side. ✅
+    Make create monitor review form. ✅
+    make item model remove all other models.
+    make route finding cag for each page.
+    make create Review route AGAIN. 
+    build create review on react side AGAIN.
+    Make create monitor review form AGAIN. 
+
+
+July 6th:
     build delete route. 
     build delete review on react side. 
     build update review route. 
     build update review on react side. 
+    watch recording on CRUD on react end. 
 
 
 

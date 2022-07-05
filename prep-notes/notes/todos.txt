@@ -33,13 +33,13 @@ July 4th:
 
 July 5th:
     style and position reviews. ✅
-    make create Review route.
-    watch recording on CRUD on react end.
-    build create review on react side.
-    build delete route.
-    build delete review on react side.
-    build update review route.
-    build update review on react side.
+    make create Review route.  ✅
+    watch recording on CRUD on react end. 
+    build create review on react side. 
+    build delete route. 
+    build delete review on react side. 
+    build update review route. 
+    build update review on react side. 
 
 
 

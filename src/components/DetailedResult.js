@@ -30,7 +30,7 @@ function DetailedResult({ item }) {
                 {
                     item.reviews && item.reviews.length !== 0 ? 
                     item.reviews.map((review) => {
-                        return <Review reviewUrl={review} />
+                        return <Review reviewUrl={review} item={item}/>
                     })
                     : <h2>No Reviews</h2>
                 }

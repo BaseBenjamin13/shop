@@ -31,7 +31,7 @@ function HeadPhoneDetail() {
 
   return (
     <div className="monitor-detail">
-        <h1>Headphone Detail</h1> 
+        <h1 className="page-title">Headphone Detail</h1> 
         <DetailedResult item={headphone} />
     </div>
   )

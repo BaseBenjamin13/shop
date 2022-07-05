@@ -30,7 +30,7 @@ function MouseDetail() {
 
   return (
     <div className="monitor-detail">
-        <h1>Mouse Detail</h1> 
+        <h1 className="page-title">Mouse Detail</h1> 
         <DetailedResult item={mouse} />
     </div>
   )

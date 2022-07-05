@@ -30,7 +30,7 @@ function KeyBoardDetail() {
 
   return (
     <div className="monitor-detail">
-        <h1>Keyboard Detail</h1> 
+        <h1 className="page-title">Keyboard Detail</h1> 
         <DetailedResult item={keyboard} />
     </div>
   )

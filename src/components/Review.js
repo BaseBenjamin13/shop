@@ -19,9 +19,11 @@ function Review({ reviewUrl }) {
     }
   return (
     <div>
-        Review
-        <h1>{review.author}</h1>
-        <p>{review.body}</p>
+        <h1>Reviews</h1>
+        <div>
+            <h2>Author: {review.author}</h2>
+            <p>{review.body}</p>
+        </div>
     </div>
   )
 }

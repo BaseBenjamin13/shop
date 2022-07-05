@@ -30,10 +30,11 @@ July 3rd:
 July 4th:
     Create Review model. ✅
     make review in admin to list out to detail page. ✅
-    make create Review route.
-    watch recording on CRUD on react end.
 
 July 5th:
+    style and position reviews. ✅
+    make create Review route.
+    watch recording on CRUD on react end.
     build create review on react side.
     build delete route.
     build delete review on react side.

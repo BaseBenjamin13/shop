@@ -1,13 +1,20 @@
 
+
+
+.page-title, .detailed-img, .detailed-img-big, .info-container, .reviews {
+    border-radius: 25px;
+    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
+}
+
 .monitor-detail {
-    background-color: var(--myred);
     margin: 5rem;
+}
+.page-title {
+    background-color: var(--myblue);
 }
 
 .detailed-container {
-    /* display: flex;
-    justify-content: center; */
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--myblue);
     position: relative;
 }
@@ -25,24 +32,17 @@
     max-height: 100%;
     max-width: 100%;
     margin: 1%;
-    border-radius: 25px;
-    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
 }
 .detailed-img-big {
     height: 100%;
     width: 100%;
     margin: 1%;
-    border-radius: 25px;
-    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
 }
 
 
 .info-container {
     background-color: var(--myblack);
-    /* display: flex; */
     border-radius: 30px;
-    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
-    /* justify-content: center; */
     color: var(--mylightyellow);
     width: 40%;
     height: 50%;
@@ -89,11 +89,22 @@
 }
 
 .modal-image {
-    /* position: absolute; */
-    /* z-index: 50; */
-    /* bottom: 0; */
     max-width: 80%;
 }
 
+
+
+
+
+/* REVIEWS */
+
+.reviews {
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--myred);
+    border-radius: 30px;
+}
 
 

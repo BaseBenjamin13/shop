@@ -18,10 +18,12 @@
     width: 40%;
     margin: 0 auto;
     margin-top: 4rem;
-    background-color: black;
+    background-color: var(--myblack);
     display: flex;
     justify-content: center;
     font-size: 2rem;
+    border-radius: 25px;
+    box-shadow: 0px 5px 7px 10px rgb(42, 125, 134);
 }
 .loading-data {
     display: flex;

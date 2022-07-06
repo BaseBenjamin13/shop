@@ -102,6 +102,8 @@
     margin-top: 3rem;
     display: flex;
     width: 100%;
+    flex-basis: 100%;
+    flex-flow: row wrap;
     justify-content: center;
     background-color: var(--myred);
     border-radius: 30px;
@@ -111,4 +113,9 @@
     justify-content: center;
     width: 100%;
 }
+
+.review {
+    width: 100%;
+}
+
 

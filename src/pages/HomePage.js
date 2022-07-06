@@ -40,7 +40,7 @@ function HomePage() {
         getTopChoiceHeadPhone()
     }, [])
 
-    if(!featuredMonitor === 0 && !topKeyBoard && !topMouse && !topHeadPhone) {
+    if(!featuredMonitor && !topKeyBoard && !topMouse && !topHeadPhone) {
         return (
             <div className="loading-data-container">
                 <h1 className="loading-data">Loading ...</h1>

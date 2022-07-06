@@ -8,6 +8,8 @@ function DetailedResult({ item }) {
 
     const [reviewForm, setReviewForm] = useState({author: 'unknown', body: '', rating: 0})
     const [reviewState, setReviewState] = useState()
+    
+    const [showForm, setShowForm] = useState();
 
     const handleFormChange = (e) => {
         setReviewForm({ ...reviewForm, [e.target.id]: e.target.value})
@@ -17,6 +19,8 @@ function DetailedResult({ item }) {
         e.preventDefault()
         await setReviewState(reviewForm)
     }
+
+
     
     if(reviewState) {
         axios.post('http://127.0.0.1:8000/reviews/',
@@ -28,6 +32,7 @@ function DetailedResult({ item }) {
         })
         setReviewState()
     }
+   
 
     return ( 
         <div>
@@ -51,6 +56,7 @@ function DetailedResult({ item }) {
             </div>
             <div className="reviews">
                 <div className="review-form-container">
+                    
                     <form onSubmit={createReview}>
                         <label>author:</label>
                         <input type="text" id="author" value={reviewForm.author} onChange={handleFormChange}></input>
@@ -66,8 +72,9 @@ function DetailedResult({ item }) {
                 </div>
                 {
                     item.reviews && item.reviews.length !== 0 ? 
-                    item.reviews.map((review, i) => {
-                        return <Review key={i} reviewUrl={review} item={item}/>
+                    item.reviews.map((reviewUrl, i) => {
+                        return (<Review key={i} index={i} reviewUrl={reviewUrl} item={item} showForm={showForm} setShowForm={setShowForm}/>
+                        )
                     })
                     : <h2>No Reviews</h2>
                 }

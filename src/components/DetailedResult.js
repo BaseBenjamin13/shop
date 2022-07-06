@@ -66,8 +66,8 @@ function DetailedResult({ item }) {
                 </div>
                 {
                     item.reviews && item.reviews.length !== 0 ? 
-                    item.reviews.map((review) => {
-                        return <Review reviewUrl={review} item={item}/>
+                    item.reviews.map((review, i) => {
+                        return <Review key={i} reviewUrl={review} item={item}/>
                     })
                     : <h2>No Reviews</h2>
                 }

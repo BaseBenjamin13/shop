@@ -47,8 +47,8 @@ July 5th:
 
 
 July 6th:
-    build delete route. 
-    build delete review on react side. 
+    build delete route. ✅
+    build delete review on react side. ✅
     build update review route. 
     build update review on react side. 
     force refresh to see reviews, maybe use useNavigate.

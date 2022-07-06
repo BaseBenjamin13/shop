@@ -10,6 +10,9 @@ function Review({ reviewUrl, item }) {
         console.log(data)
         setReview(data)
     }
+    const deleteReview = () => {
+        axios.delete(reviewUrl)
+    }
 
     useEffect(() => {
         getReview()
@@ -25,7 +28,7 @@ function Review({ reviewUrl, item }) {
             <h2>Author: {review.author}</h2>
             <p>{review.body}</p>
         </div>
-
+        <button onClick={deleteReview}>Delete</button>
     </div>
   )
 }

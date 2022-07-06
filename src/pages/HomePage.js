@@ -16,7 +16,7 @@ function HomePage() {
     const [topHeadPhone, setTopHeadPhone] = useState()
 
     const getMonitors = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/monitors/7?format=json')
+        const { data } = await axios.get('http://127.0.0.1:8000/items/2?format=json')
         await setFeaturedMonitor(data)
         console.log(data)
     }

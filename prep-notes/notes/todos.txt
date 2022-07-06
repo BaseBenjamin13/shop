@@ -43,7 +43,7 @@ July 5th:
     make route for headphones and display too react. ✅
     make create Review route AGAIN. ✅
     build create review on react side AGAIN. ✅
-    make review with form, test on every category.
+    make review with form, test on every category. ✅
 
 
 July 6th:
@@ -51,6 +51,7 @@ July 6th:
     build delete review on react side. 
     build update review route. 
     build update review on react side. 
+    force refresh to see reviews, maybe use useNavigate.
     watch recording on CRUD on react end. 
 
 

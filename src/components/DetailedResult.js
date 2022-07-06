@@ -7,16 +7,26 @@ import Review from './Review';
 function DetailedResult({ item }) {
 
     const [reviewForm, setReviewForm] = useState({author: 'unknown', body: '', rating: 0})
+    const [reviewState, setReviewState] = useState()
+
+    const handleFormChange = (e) => {
+        setReviewForm({ ...reviewForm, [e.target.id]: e.target.value})
+    }
 
     const createReview = async (e) => {
         e.preventDefault()
+        await setReviewState(reviewForm)
+    }
+    
+    if(reviewState) {
         axios.post('http://127.0.0.1:8000/reviews/',
         {
             "item": "http://127.0.0.1:8000/items/" + item.id,
-            "author": "test",
-            "body": "gretsetsetsetis.",
-            "rating": 5
+            "author": reviewState.author,
+            "body": reviewState.body,
+            "rating": reviewState.rating
         })
+        setReviewState()
     }
 
     return ( 
@@ -43,15 +53,15 @@ function DetailedResult({ item }) {
                 <div className="review-form-container">
                     <form onSubmit={createReview}>
                         <label>author:</label>
-                        <input></input>
+                        <input type="text" id="author" value={reviewForm.author} onChange={handleFormChange}></input>
                         <br></br>
                         <label>body:</label>
-                        <textarea></textarea>
+                        <textarea type="text" id="body" value={reviewForm.body} onChange={handleFormChange}></textarea>
                         <br></br>
                         <label>rating:</label>
-                        <input></input>
+                        <input type="number" id="rating" value={reviewForm.rating} onChange={handleFormChange}></input>
                         <br></br>
-                        <button type="submit">create Keyboard</button>
+                        <button type="submit">Create Review</button>
                     </form>
                 </div>
                 {

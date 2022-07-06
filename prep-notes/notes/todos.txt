@@ -39,12 +39,11 @@ July 5th:
     make item model remove all other models. ✅
     make route for monitors and display too react. ✅
     make route for keyboards and display too react. ✅
-    make route for mouses and display too react. 
-    make route for headphones and display too react. 
-
-    make create Review route AGAIN. 
-    build create review on react side AGAIN.
-    Make create monitor review form AGAIN. 
+    make route for mouses and display too react. ✅
+    make route for headphones and display too react. ✅
+    make create Review route AGAIN. ✅
+    build create review on react side AGAIN. ✅
+    make review with form, test on every category.
 
 
 July 6th:

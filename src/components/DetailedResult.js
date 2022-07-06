@@ -12,7 +12,7 @@ function DetailedResult({ item }) {
         e.preventDefault()
         axios.post('http://127.0.0.1:8000/reviews/',
         {
-            "monitor": "http://127.0.0.1:8000/monitors/" + item.id,
+            "item": "http://127.0.0.1:8000/items/" + item.id,
             "author": "test",
             "body": "gretsetsetsetis.",
             "rating": 5

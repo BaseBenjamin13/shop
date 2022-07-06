@@ -12,7 +12,7 @@ function MouseDetail() {
     const [mouse, setMouse] = useState()
 
     const getMouse = async () => {
-        const { data } = await axios.get(`http://127.0.0.1:8000/mouses/${id}?format=json`)
+        const { data } = await axios.get(`http://127.0.0.1:8000/items/${id}?format=json`)
         await setMouse(data)
     }
 

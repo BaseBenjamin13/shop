@@ -11,7 +11,7 @@ function MonitorDetail() {
     const [monitor, setMonitor] = useState()
 
     const getMonitor = async () => {
-        const { data } = await axios.get(`http://127.0.0.1:8000/monitors/${id}?format=json`)
+        const { data } = await axios.get(`http://127.0.0.1:8000/items/${id}?format=json`)
         await setMonitor(data)
         console.log(monitor)
         console.log(data)

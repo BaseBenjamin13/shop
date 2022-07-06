@@ -12,7 +12,7 @@ function KeyBoardDetail() {
     const [keyboard, setKeyboard] = useState()
 
     const getKeyboard = async () => {
-        const { data } = await axios.get(`http://127.0.0.1:8000/keyboards/${id}?format=json`)
+        const { data } = await axios.get(`http://127.0.0.1:8000/items/${id}?format=json`)
         await setKeyboard(data)
     }
 

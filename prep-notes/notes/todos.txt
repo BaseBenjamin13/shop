@@ -38,7 +38,7 @@ July 5th:
     Make create monitor review form. ✅
     make item model remove all other models. ✅
     make route for monitors and display too react. ✅
-    make route for keyboards and display too react. 
+    make route for keyboards and display too react. ✅
     make route for mouses and display too react. 
     make route for headphones and display too react. 
 

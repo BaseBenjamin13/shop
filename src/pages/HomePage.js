@@ -21,15 +21,15 @@ function HomePage() {
         console.log(data)
     }
     const getTopChoiceKeyBoard = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/keyboards/1?format=json')
+        const { data } = await axios.get('http://127.0.0.1:8000/items/3?format=json')
         await setTopKeyBoard(data)
     }
     const getTopChoiceMouse = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/mouses/1?format=json')
+        const { data } = await axios.get('http://127.0.0.1:8000/items/4?format=json')
         await setTopMouse(data)
     }
     const getTopChoiceHeadPhone = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/headphones/1?format=json')
+        const { data } = await axios.get('http://127.0.0.1:8000/items/1?format=json')
         await setTopHeadPhone(data)
     }
 

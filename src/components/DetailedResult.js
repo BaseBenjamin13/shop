@@ -9,7 +9,6 @@ function DetailedResult({ item }) {
     const [reviewForm, setReviewForm] = useState({author: 'unknown', body: '', rating: 0})
     const [reviewState, setReviewState] = useState()
     
-    const [showForm, setShowForm] = useState();
 
     const handleFormChange = (e) => {
         setReviewForm({ ...reviewForm, [e.target.id]: e.target.value})
@@ -31,6 +30,7 @@ function DetailedResult({ item }) {
             "rating": reviewState.rating
         })
         setReviewState()
+        window.location.reload()
     }
    
 
@@ -73,7 +73,7 @@ function DetailedResult({ item }) {
                 {
                     item.reviews && item.reviews.length !== 0 ? 
                     item.reviews.map((reviewUrl, i) => {
-                        return (<Review key={i} index={i} reviewUrl={reviewUrl} item={item} showForm={showForm} setShowForm={setShowForm}/>
+                        return (<Review key={i} index={i} reviewUrl={reviewUrl} item={item}/>
                         )
                     })
                     : <h2>No Reviews</h2>

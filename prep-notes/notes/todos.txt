@@ -51,7 +51,7 @@ July 6th:
     build delete review on react side. ✅
     build update review route. ✅
     build update review on react side. ✅
-    force refresh to see reviews, maybe use useNavigate.
+    force refresh to see reviews, maybe use useNavigate. ✅ 
     watch recording on CRUD on react end. 
 
 

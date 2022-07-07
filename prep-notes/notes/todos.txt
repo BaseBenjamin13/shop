@@ -52,10 +52,13 @@ July 6th:
     build update review route. ✅
     build update review on react side. ✅
     force refresh to see reviews, maybe use useNavigate. ✅ 
-    watch recording on jwt part-1. 
 
 July 7th:
-    watch recording on jwt part-2. 
+    create user on backend ✅
+    login user on backend 
+    logout user on backend 
+    finish tutorial on django user auth
+
 
 
 

@@ -31,6 +31,7 @@ function DetailedResult({ item }) {
         })
         setReviewState()
         window.location.reload()
+        
     }
    
 

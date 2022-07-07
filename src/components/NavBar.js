@@ -29,6 +29,9 @@ function NavBar() {
             <Link to={`/headphones`} className="nav-link">
                 <h2>Headphones</h2>
             </Link>
+            <Link to={`/user/reviews`} className="nav-link">
+                <h2>Users Reviews</h2>
+            </Link>
         
         <div className="cart-container">
             <img src={nav.cartIcon} />

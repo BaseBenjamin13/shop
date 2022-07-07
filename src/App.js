@@ -15,6 +15,8 @@ import MouseDetail from './pages/mouses/MouseDetail'
 import HeadPhones from './pages/headphones/HeadPhones';
 import HeadPhoneDetail from './pages/headphones/HeadPhoneDetail';
 
+import UsersReviews from './pages/UsersReviews';
+
 function App() {
   return (
     <div className="App">
@@ -31,6 +33,12 @@ function App() {
 
             <Route path="/headphones" element={<HeadPhones />} />
             <Route path="/headphones/:id" element={<HeadPhoneDetail />} />
+
+            <Route path="/user/reviews" element={<UsersReviews />} />
+
+            {/* <Route exact path="/"><ListTweets userSignedIn={userSignedIn}/></Route>
+            <Route exact path="/signup"><SignUp setUserSignedIn={setUserSignedIn} /></Route>   
+            <Route path="/login"><Login setUserSignedIn={setUserSignedIn} /></Route> */}
         </Routes>
     </div>
   );

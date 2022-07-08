@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 function NavBar() {
 
     const [nav, setNav] = useState({
-        cartIcon: 'https://i.imgur.com/4JpVowC.png'
+        cartIcon: 'https://i.imgur.com/4JpVowC.png',
+        loginIcon: 'https://i.imgur.com/l6zEpG2.png'
     })
   
   
@@ -35,6 +36,11 @@ function NavBar() {
         
         <div className="cart-container">
             <img src={nav.cartIcon} />
+        </div>
+        <div className="cart-container">
+        <Link to={`/login`} className="nav-link">
+            <img src={nav.loginIcon} />
+        </Link>
         </div>
     </div>
   )

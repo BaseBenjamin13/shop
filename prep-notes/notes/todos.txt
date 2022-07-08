@@ -64,7 +64,7 @@ July 7th:
     react-make login form, bottom of form make register button. ✅
     react-make make register page. ✅
     react-make make register form. ✅
-    amke post, register a user through react.
+    amke post, register a user through react. ✅
     figure out a way to make mother or external react component for user.
 
 

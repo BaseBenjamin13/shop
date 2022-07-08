@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Register() {
     const initForm = {username: '', email: '', password: ''}
@@ -10,13 +11,31 @@ function Register() {
         setRegisterForm({ ...registerForm, [e.target.id]: e.target.value})
         console.log(registerForm)
     }
+    const submitRegisterForm = async (e) => {
+        e.preventDefault()
+        console.log(registerForm)
+        await setRegisterUser(registerForm)
+        axios.post('http://127.0.0.1:8000/api/auth/register', 
+            {
+                "username": registerUser.username,
+                "email": registerUser.email,
+                "password": registerUser.password
+            }, 
+            {
+                headers: {'Content-Type': 'application/json'},
+            })
+            .then((res) => {
+                console.log(res)
+            })
+            .catch(err => console.log(err))
+    }
 
   return (
     <div className="register login">
         <h1>Register</h1>
         <br></br>
             <div>
-                <form className="login-form">
+                <form className="login-form" onSubmit={submitRegisterForm}>
                     <label>Username:</label>
                     <input type="text" id="username" value={registerForm.username} onChange={handleFormChange}></input>
                     <br></br>

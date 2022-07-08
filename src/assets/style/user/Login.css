@@ -2,7 +2,22 @@
 
 .login{
     background-color: var(--myblue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.login-form {
+    margin: 3rem;
+}
+
+.login-btn, .register-link {
+    height: auto;
+    width: 15%;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--mylightyellow);
+}
+.login-btn {
+    background-color: var(--myblack);
+    color: var(--mylightyellow);
 }

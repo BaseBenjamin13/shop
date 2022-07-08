@@ -18,7 +18,11 @@ function UsersReviews() {
 
     useEffect(() =>{
         const getUsersReviews = () => {
-            axios.get('http://127.0.0.1:8000/user/reviews?format=json')
+            axios.get('http://127.0.0.1:8000/user/reviews?format=json', {
+                headers: {
+                    'Authorization': 'Token 9066ab0db7d6b6496c4a80c557baab2a3a4b06e904eb3f92d4ae835fffae4e86'
+                    }
+            })
             .then((res) => {
                 console.log(res)
             })

@@ -16,6 +16,7 @@ import HeadPhones from './pages/headphones/HeadPhones';
 import HeadPhoneDetail from './pages/headphones/HeadPhoneDetail';
 
 import Login from './pages/user/Login';
+import Register from './pages/user/Register';
 import UsersReviews from './pages/UsersReviews';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/headphones/:id" element={<HeadPhoneDetail />} />
 
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/user/reviews" element={<UsersReviews />} />
 
             {/* <Route exact path="/"><ListTweets userSignedIn={userSignedIn}/></Route>

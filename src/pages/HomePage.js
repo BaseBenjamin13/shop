@@ -17,20 +17,19 @@ function HomePage() {
 
     const getMonitors = async () => {
         const { data } = await axios.get('http://127.0.0.1:8000/items/2?format=json')
-        await setFeaturedMonitor(data)
-        console.log(data)
+        setFeaturedMonitor(data)
     }
     const getTopChoiceKeyBoard = async () => {
         const { data } = await axios.get('http://127.0.0.1:8000/items/3?format=json')
-        await setTopKeyBoard(data)
+        setTopKeyBoard(data)
     }
     const getTopChoiceMouse = async () => {
         const { data } = await axios.get('http://127.0.0.1:8000/items/4?format=json')
-        await setTopMouse(data)
+        setTopMouse(data)
     }
     const getTopChoiceHeadPhone = async () => {
         const { data } = await axios.get('http://127.0.0.1:8000/items/1?format=json')
-        await setTopHeadPhone(data)
+        setTopHeadPhone(data)
     }
 
     useEffect(() => {

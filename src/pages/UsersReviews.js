@@ -2,12 +2,15 @@
 // https://www.youtube.com/watch?v=0d7cIfiydAc
 // user tutorial
 
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
+import { UserContext } from '../contexts/UserState';
 
 function UsersReviews() {
 
+    const user = useContext(UserContext)
     const [usersReviews, setUsersReviews] = useState()
+
 
     // const returnErrors = (msg, status) => {
     //     return {
@@ -31,11 +34,18 @@ function UsersReviews() {
                 // dispatch(returnErrors(err.response.data, err.response.status))
             })
         }
-        getUsersReviews()
+        // getUsersReviews()
     }, [])
 
+    if(!user) {
+        return <h1>no user</h1>
+    }
+    console.log(user)
   return (
-    <div>UsersReviews</div>
+    <div style={{ backgroundColor: 'red' }}>
+        UsersReviews
+        <h1>Username: {user.user}</h1>
+    </div>
   )
 }
 

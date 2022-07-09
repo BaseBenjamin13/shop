@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Routes, Route} from 'react-router-dom';
 
@@ -19,31 +19,37 @@ import Login from './pages/user/Login';
 import Register from './pages/user/Register';
 import UsersReviews from './pages/UsersReviews';
 
+import { UserContext, UserProvider } from './contexts/UserState';
+
+
+
 function App() {
-  return (
-    <div className="App">
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/monitors" element={<Monitors />} />
-            <Route path="/monitors/:id" element={<MonitorDetail />} />
 
-            <Route path="/keyboards" element={<KeyBoards />} />
-            <Route path="/keyboards/:id" element={<KeyBoardDetail />} />
+    return (
+        <div className="App">
+        <UserProvider >
+            <Routes>
 
-            <Route path="/mouses" element={<Mouses />} />
-            <Route path="/mouses/:id" element={<MouseDetail />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/monitors" element={<Monitors />} />
+                <Route path="/monitors/:id" element={<MonitorDetail />} />
 
-            <Route path="/headphones" element={<HeadPhones />} />
-            <Route path="/headphones/:id" element={<HeadPhoneDetail />} />
+                <Route path="/keyboards" element={<KeyBoards />} />
+                <Route path="/keyboards/:id" element={<KeyBoardDetail />} />
 
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/user/reviews" element={<UsersReviews />} />
+                <Route path="/mouses" element={<Mouses />} />
+                <Route path="/mouses/:id" element={<MouseDetail />} />
 
-            {/* <Route exact path="/"><ListTweets userSignedIn={userSignedIn}/></Route>
-            <Route exact path="/signup"><SignUp setUserSignedIn={setUserSignedIn} /></Route>   
-            <Route path="/login"><Login setUserSignedIn={setUserSignedIn} /></Route> */}
-        </Routes>
+                <Route path="/headphones" element={<HeadPhones />} />
+                <Route path="/headphones/:id" element={<HeadPhoneDetail />} />
+
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/user/reviews" element={<UsersReviews />} />
+
+                
+            </Routes>
+        </UserProvider>
     </div>
   );
 }

@@ -68,7 +68,7 @@ July 7th:
     figure out a way to make mother or external react component for user. ✅
 
 July 8th:
-    Login form send login info to knox and save user in UserState.
+    Login form send login info to knox and save user in UserState. ✅
     make profile page.
     profile page get user, display info to page.
     make logout button and functionality.

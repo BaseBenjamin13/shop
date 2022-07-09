@@ -44,7 +44,7 @@ function UsersReviews() {
   return (
     <div style={{ backgroundColor: 'red' }}>
         UsersReviews
-        <h1>Username: {user.user}</h1>
+        <h1>Username: {user.user.username}</h1>
     </div>
   )
 }

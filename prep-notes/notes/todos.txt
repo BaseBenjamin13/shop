@@ -69,6 +69,7 @@ July 7th:
 
 July 8th:
     Login form send login info to knox and save user in UserState. ✅
+    worked on navbar and homepage mobile responsive, deleted homepage css files into one.✅
     make profile page.
     profile page get user, display info to page.
     make logout button and functionality.

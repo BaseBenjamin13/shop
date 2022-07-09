@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../assets/style/homepage/TopChoice.css';
+import '../../assets/style/homepage/HomePage.css';
 import { Link } from 'react-router-dom';
 
 

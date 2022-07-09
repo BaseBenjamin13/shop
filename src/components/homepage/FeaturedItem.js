@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/style/homepage/FeaturedItem.css';
+import '../../assets/style/homepage/HomePage.css';
 import { Link } from 'react-router-dom';
 
 

@@ -15,31 +15,31 @@ function NavBar() {
     return (
     <div className="navbar">
         
-            <Link to={`/`} className="nav-link">
+            <Link to={`/`} className="nav-link brand-name">
                 <h1>Tech Excess</h1>
             </Link>
-            <Link to={`/monitors`} className="nav-link">
+            <Link to={`/monitors`} className="nav-link cat-link">
                 <h2>Monitors</h2>
             </Link>
-            <Link to={`/keyboards`} className="nav-link">
+            <Link to={`/keyboards`} className="nav-link cat-link">
                 <h2>Keyboard</h2>
             </Link>
-            <Link to={`/mouses`} className="nav-link">
+            <Link to={`/mouses`} className="nav-link cat-link">
                 <h2>Mouses</h2>
             </Link>
-            <Link to={`/headphones`} className="nav-link">
+            <Link to={`/headphones`} className="nav-link cat-link">
                 <h2>Headphones</h2>
             </Link>
-            <Link to={`/user/reviews`} className="nav-link">
+            {/* <Link to={`/user/reviews`} className="nav-link cat-link">
                 <h2>Users Reviews</h2>
-            </Link>
+            </Link> */}
         
         <div className="cart-container">
-            <img src={nav.cartIcon} />
+            <img className="cart-icon" src={nav.cartIcon} />
         </div>
         <div className="cart-container">
         <Link to={`/login`} className="nav-link">
-            <img src={nav.loginIcon} />
+            <img className="profile-icon" src={nav.loginIcon} />
         </Link>
         </div>
     </div>

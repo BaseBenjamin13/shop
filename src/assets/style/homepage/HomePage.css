@@ -1,0 +1,72 @@
+
+.featured-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.featured-item {
+    border-radius: 50px;
+    /* display: flex; */
+    background-color: var(--myred);
+    width: 70%;
+    height: 100%;
+}
+
+.featured-img {
+    width: 95%;
+    border-radius: 50px;
+}
+
+.top-choice-keyboard-container, .top-choice-mouse-container, .top-choice-headphone-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.top-choice-keyboard, .top-choice-mouse, .top-choice-headphone{
+    background-color: var(--myred);
+    width: 70%;
+    height: 100%;
+    border-radius: 50px;
+}
+.featured-keyboard-img, .featured-mouse-img, .featured-headphone-img {
+    max-width: 80%;
+}
+
+
+
+
+
+
+/* Mobile response */
+
+@media screen and (max-width: 650px) {
+    .featured-container, .top-choice-keyboard-container, .top-choice-mouse-container, .top-choice-headphone-container {
+        font-size: 85%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .featured-container, .top-choice-keyboard-container, .top-choice-mouse-container, .top-choice-headphone-container {
+        font-size: 75%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .featured-container, .top-choice-keyboard-container, .top-choice-mouse-container, .top-choice-headphone-container {
+        font-size: 70%;
+        width: 100%;
+        margin: 0px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .featured-img, .featured-keyboard-img, .featured-mouse-img, .featured-headphone-img {
+        max-width: 95%;
+    }
+    .featured-item, .top-choice-keyboard, .top-choice-mouse, .top-choice-headphone{
+        background-color: var(--myred);
+        width: 90%;
+        height: 100%;
+        border-radius: 50px;
+    }
+}

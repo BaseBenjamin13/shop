@@ -1,12 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import '../../assets/style/user/Login.css';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserState';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
 
+    const navigate = useNavigate()
     const { user, setUser } = useContext(UserContext)
     const [loginForm, setLoginForm] = useState({username: '', password: ''})
     const [login, setLogin] = useState()
@@ -38,8 +40,17 @@ function Login() {
             })
             setLogin()
         })
+        .then((res) => {
+            navigate('/user/profile')
+        })
         .catch(err => console.log(err))
     }
+
+    useEffect(() => {
+        if(user.knoxToken){
+            navigate('/user/profile')
+        }
+    }, [])
 
     return (
         <div className="login">

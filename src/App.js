@@ -18,6 +18,7 @@ import HeadPhoneDetail from './pages/headphones/HeadPhoneDetail';
 import Login from './pages/user/Login';
 import Register from './pages/user/Register';
 import UsersReviews from './pages/UsersReviews';
+import Profile from './pages/user/Profile';
 
 import { UserContext, UserProvider } from './contexts/UserState';
 
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/user/reviews" element={<UsersReviews />} />
+                <Route path="/user/profile" element={<Profile />} />
 
                 
             </Routes>

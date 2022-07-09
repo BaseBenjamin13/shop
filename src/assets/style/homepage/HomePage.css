@@ -24,6 +24,10 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+.top-choice-headphone-container{
+    
+    margin-bottom: 5rem;
+}
 
 .top-choice-keyboard, .top-choice-mouse, .top-choice-headphone{
     background-color: var(--myred);
@@ -68,5 +72,8 @@
         width: 90%;
         height: 100%;
         border-radius: 50px;
+    }
+    .top-choice-headphone-container{
+        margin-bottom: 5rem;
     }
 }

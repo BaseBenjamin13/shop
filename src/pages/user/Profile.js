@@ -51,10 +51,10 @@ function Profile() {
             <button onClick={() => logout()} className="logout-btn">Logout</button>
         </div>
         <div className="help-container">
-            <button>Order History</button>
-            <button>Wishlist</button>
-            <button>Customer Support</button>
-            <button>Login Security</button>
+            <button className="help-btn">Order History</button>
+            <button className="help-btn">Wishlist</button>
+            <button className="help-btn">Customer Support</button>
+            <button className="help-btn">Login Security</button>
         </div>
     </div>
   )

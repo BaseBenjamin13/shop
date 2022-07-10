@@ -75,7 +75,7 @@ July 8th:
     added on hover reflective icons ✅
     login icon goes too profile, but if user is not loggedin navigate too login. ✅
     make logout button and functionality. ✅
-    style the logout button and user info container. 
+    style the logout button and user info container. ✅
     style register form.
 
 

@@ -41,14 +41,14 @@ function Login() {
             setLogin()
         })
         .then((res) => {
-            navigate('/user/profile')
+            navigate('/profile')
         })
         .catch(err => console.log(err))
     }
 
     useEffect(() => {
         if(user.knoxToken){
-            navigate('/user/profile')
+            navigate('/profile')
         }
     }, [])
 

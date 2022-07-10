@@ -74,8 +74,9 @@ July 8th:
     profile page get user, display info to page. ✅
     added on hover reflective icons ✅
     login icon goes too profile, but if user is not loggedin navigate too login. ✅
-    make logout button and functionality.
-
+    make logout button and functionality. ✅
+    style the logout button and user info container. 
+    style register form.
 
 
 

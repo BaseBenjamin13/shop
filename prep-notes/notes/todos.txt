@@ -80,7 +80,7 @@ July 8th:
 
 July 9th:
     Deploy front-end. ✅
-    style login page.
+    style login page. ✅
     restrict create review to logged in users.
     get user and create review, test while not/is logged in.
 

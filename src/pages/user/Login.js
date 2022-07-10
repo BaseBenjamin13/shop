@@ -54,22 +54,24 @@ function Login() {
 
     return (
         <div className="login">
-            <h1>Login</h1>
+            <h1 className="login-title">Login</h1>
             <br></br>
             <div>
 
                 <form className="login-form" onSubmit={submitLogin}>
-                    <label>Username:</label>
-                    <input type="text" id="username" value={loginForm.username}
-                        onChange={handleLoginChange} ></input>
-                    <br></br>
+                    <div className="login-inner-form">
+                        <label>Username:</label>
+                        <input type="text" id="username" value={loginForm.username}
+                            onChange={handleLoginChange} ></input>
+                        <br></br>
 
-                    <label>Password:</label>
-                    <input type="text" id="password" value={loginForm.password} 
-                        onChange={handleLoginChange}></input>
-                    <br></br>
+                        <label>Password:</label>
+                        <input type="text" id="password" value={loginForm.password} 
+                            onChange={handleLoginChange}></input>
+                        <br></br>
 
-                    <button className="login-btn" type="submit">Login</button>
+                        <button className="login-btn" type="submit">Login</button>
+                    </div>
                 </form>
 
                 <Link className="link" to="/register">

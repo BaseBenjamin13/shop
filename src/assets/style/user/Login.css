@@ -6,7 +6,7 @@
 .login-form, .register-form {
     margin: 3rem;
 }
-.register {
+.register, .login {
     margin: 5vw;
     margin-left: 10vw;
     margin-right: 10vw;
@@ -16,13 +16,13 @@
     justify-content: center;
     flex-flow: wrap;
 }
-.register-form {
+.register-form, .login-form {
     font-size: 2rem;
     text-align: center;
     width: 50%;
     /* display: flex; */
 }
-.register-form input {
+.register-form input, .login-form input {
     height: 2rem;
     width: 15rem;
     display: flex;
@@ -30,14 +30,12 @@
     justify-items: center;
     font-size: 1.2rem;
 } 
-.register-inner-form {
-    /* display: flex; */
+.register-inner-form, .login-inner-form {
     justify-items: center;
     text-align: center;
     width: 15.5rem;
-    /* margin-left: 1rem; */
 }
-.register-title {
+.register-title, .login-title {
     width: 100%;
     letter-spacing: .5rem;
     font-weight: 800;
@@ -45,16 +43,20 @@
 }
 
 
-.login-btn, .register-link {
+.login-btn, .register-link, .login-link {
     height: auto;
-    width: 15%;
+    width: 50%;
     font-weight: bold;
     font-size: 20px;
     background-color: var(--mylightyellow);
 }
-.login-btn {
+.login-btn, .login-link {
     background-color: var(--myblack);
     color: var(--mylightyellow);
+    width: 100%;
+}
+.login-link {
+    width: 50%;
 }
 .register-btn {
     width: 100%;

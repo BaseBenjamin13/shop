@@ -31,21 +31,24 @@ function Register() {
     }
 
   return (
-    <div className="register login">
-        <h1>Register</h1>
+    <div className="register">
+        <h1 className="register-title">Register</h1>
         <br></br>
             <div>
-                <form className="login-form" onSubmit={submitRegisterForm}>
+                <form className="register-form" onSubmit={submitRegisterForm}>
+                    <div className="register-inner-form">
+
                     <label>Username:</label>
                     <input type="text" id="username" value={registerForm.username} onChange={handleFormChange}></input>
                     <br></br>
                     <label>Email:</label>
-                    <input type="text" id="email" value={registerForm.email} onChange={handleFormChange}></input>
+                    <input type="email" id="email" value={registerForm.email} onChange={handleFormChange}></input>
                     <br></br>
                     <label>Password:</label>
-                    <input type="text" id="password" value={registerForm.password} onChange={handleFormChange}></input>
+                    <input type="password" id="password" value={registerForm.password} onChange={handleFormChange}></input>
                     <br></br>
                     <button className="register-btn" type="submit">Register</button>
+                    </div>
                 </form>
                 <Link className="link" to="/login">
                     <button className="login-link">Login</button>

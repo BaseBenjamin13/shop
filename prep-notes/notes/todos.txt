@@ -76,7 +76,19 @@ July 8th:
     login icon goes too profile, but if user is not loggedin navigate too login. ✅
     make logout button and functionality. ✅
     style the logout button and user info container. ✅
-    style register form.
+    style register form. ✅
+
+July 9th:
+    Deploy front-end. ✅
+    style login page.
+    restrict create review to logged in users.
+    get user and create review, test while not/is logged in.
+
+
+IDEAS:
+    Color wheel to choose there own profile color.
+        <input type="color" id="colorTheme" value={registerForm.colorTheme}></input>
+        also: type="date" to store birthdate, or "file" for profile img.
 
 
 

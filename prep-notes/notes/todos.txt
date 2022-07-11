@@ -85,6 +85,7 @@ July 9th:
     get user and create review, test while not/is logged in. ✅
 
 July 10th: 
+    "login to create review" if logged in show create review form. ✅
     deploy back-end. 
 
 

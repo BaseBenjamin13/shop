@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { UserContext } from '../contexts/UserState';
+import { Link } from 'react-router-dom';
 
 import DetailedCarousel from './DetailedCarousel';
 import Review from './Review';
@@ -70,7 +71,7 @@ function DetailedResult({ item }) {
             </div>
             <div className="reviews">
                 <div className="review-form-container">
-                    
+                    {user.user.knoxToken ?
                     <form onSubmit={createReview}>
                         <label>author:</label>
                         <input type="text" id="author" value={reviewForm.author} onChange={handleFormChange}></input>
@@ -83,6 +84,7 @@ function DetailedResult({ item }) {
                         <br></br>
                         <button type="submit">Create Review</button>
                     </form>
+                    : <h2><Link to="/login">Login</Link> to create a review</h2> }
                 </div>
                 {
                     item.reviews && item.reviews.length !== 0 ? 

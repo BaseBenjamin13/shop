@@ -38,7 +38,6 @@ function Review({index, reviewUrl, item }){
         setShowForm(false);
         // window.location.reload()
     }
-   
 
     useEffect(() => {
         getReview()

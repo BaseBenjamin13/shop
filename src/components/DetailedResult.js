@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import { UserContext } from '../contexts/UserState';
 
 import DetailedCarousel from './DetailedCarousel';
 import Review from './Review';
 
 function DetailedResult({ item }) {
 
+    const user = useContext(UserContext)
     const [reviewForm, setReviewForm] = useState({author: 'unknown', body: '', rating: 0})
     const [reviewState, setReviewState] = useState()
     
@@ -22,16 +24,27 @@ function DetailedResult({ item }) {
 
     
     if(reviewState) {
-        axios.post('http://127.0.0.1:8000/reviews/',
+        axios.post('http://127.0.0.1:8000/reviews/create',
         {
             "item": "http://127.0.0.1:8000/items/" + item.id,
             "author": reviewState.author,
             "body": reviewState.body,
             "rating": reviewState.rating
+        },
+        {
+            headers: {
+                'Authorization': `Token ${user.user.knoxToken}`
+            }
+        }
+        )
+        .then((res) => {
+            setReviewState()
+            console.log(res)
         })
-        setReviewState()
-        window.location.reload()
-        
+        .then(() => {
+            window.location.reload()
+        })
+        .catch(err => console.log(err))
     }
    
 

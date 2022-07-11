@@ -81,11 +81,21 @@ July 8th:
 July 9th:
     Deploy front-end. ✅
     style login page. ✅
-    restrict create review to logged in users.
-    get user and create review, test while not/is logged in.
+    restrict create review to logged in users. ✅
+    get user and create review, test while not/is logged in. ✅
+
+July 10th: 
+    deploy back-end. 
 
 
-IDEAS:
+
+Bugs:
+    creating review logs user out, might be because of forced refresh:
+        Solution: maybe replace window.reload with navigate.
+        but refresh still will log user out, figure out how to keep user logged in.
+
+
+IDEAS: 
     Color wheel to choose there own profile color.
         <input type="color" id="colorTheme" value={registerForm.colorTheme}></input>
         also: type="date" to store birthdate, or "file" for profile img.

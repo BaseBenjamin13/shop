@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios';
+import { UserContext } from '../contexts/UserState';
 
 function Review({index, reviewUrl, item }){
+
+    const user = useContext(UserContext)
 
     const [showForm, setShowForm] = useState();
     
@@ -14,7 +17,7 @@ function Review({index, reviewUrl, item }){
         setReview(data)
     }
     const deleteReview = async () => {
-        await axios.delete(reviewUrl)
+        await axios.delete(`http://127.0.0.1:8000/reviews/${review.id}/change`)
         window.location.reload()
     }
     const editBtn = () => {
@@ -27,7 +30,7 @@ function Review({index, reviewUrl, item }){
     const editReview = async (e) => {
         console.log(editReviewForm)
         e.preventDefault()
-        await axios.put(reviewUrl,
+        await axios.put(`http://127.0.0.1:8000/reviews/${review.id}/change`,
         {
             "item": "http://127.0.0.1:8000/items/" + item.id,
             "author": editReviewForm.author,
@@ -51,10 +54,15 @@ function Review({index, reviewUrl, item }){
         <div>
             <h2>Author: {review.author}</h2>
             <p>{review.body}</p>
-            <p>{review.rating}</p>
+            <p>Rating: {review.rating}</p>
         </div>
-        <button onClick={deleteReview}>Delete</button>
-        <button onClick={editBtn}>Edit</button>
+
+        {user.user.username === review.author &&
+            <div>
+                <button onClick={deleteReview}>Delete</button>
+                <button onClick={editBtn}>Edit</button>
+            </div>
+        }
 
         {showForm && 
         <form onSubmit={editReview}>

@@ -86,6 +86,10 @@ July 9th:
 
 July 10th: 
     "login to create review" if logged in show create review form. ✅
+    Link User to review they create. ✅
+    reconfigure create review to relate to logged in users. ✅
+
+
     deploy back-end. 
 
 

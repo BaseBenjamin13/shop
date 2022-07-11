@@ -1,15 +1,17 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { UserContext } from '../contexts/UserState';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import DetailedCarousel from './DetailedCarousel';
 import Review from './Review';
 
 function DetailedResult({ item }) {
 
+    const navigate = useNavigate()
+
     const user = useContext(UserContext)
-    const [reviewForm, setReviewForm] = useState({author: 'unknown', body: '', rating: 0})
+    const [reviewForm, setReviewForm] = useState({title: '', body: '', rating: 0})
     const [reviewState, setReviewState] = useState()
     
 
@@ -25,10 +27,14 @@ function DetailedResult({ item }) {
 
     
     if(reviewState) {
+        console.log(user.user)
         axios.post('http://127.0.0.1:8000/reviews/create',
         {
             "item": "http://127.0.0.1:8000/items/" + item.id,
-            "author": reviewState.author,
+            // "author": user.user.id,
+            // thought i needed to send user but in create route i had to set author 
+            // too the authenticated user, its wonderful.
+            "title": reviewState.title,
             "body": reviewState.body,
             "rating": reviewState.rating
         },
@@ -43,11 +49,13 @@ function DetailedResult({ item }) {
             console.log(res)
         })
         .then(() => {
-            window.location.reload()
+            // window.location.reload()
+            // navigate(`/${item.category}s/${item.id}`)
         })
         .catch(err => console.log(err))
     }
    
+    console.log(item)
 
     return ( 
         <div>
@@ -73,8 +81,8 @@ function DetailedResult({ item }) {
                 <div className="review-form-container">
                     {user.user.knoxToken ?
                     <form onSubmit={createReview}>
-                        <label>author:</label>
-                        <input type="text" id="author" value={reviewForm.author} onChange={handleFormChange}></input>
+                        <label>title:</label>
+                        <input type="text" id="title" value={reviewForm.title} onChange={handleFormChange}></input>
                         <br></br>
                         <label>body:</label>
                         <textarea type="text" id="body" value={reviewForm.body} onChange={handleFormChange}></textarea>

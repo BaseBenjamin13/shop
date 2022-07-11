@@ -81,16 +81,18 @@ function DetailedResult({ item }) {
                 <div className="review-form-container">
                     {user.user.knoxToken ?
                     <form onSubmit={createReview}>
-                        <label>title:</label>
-                        <input type="text" id="title" value={reviewForm.title} onChange={handleFormChange}></input>
-                        <br></br>
-                        <label>body:</label>
-                        <textarea type="text" id="body" value={reviewForm.body} onChange={handleFormChange}></textarea>
-                        <br></br>
-                        <label>rating:</label>
-                        <input type="number" id="rating" value={reviewForm.rating} onChange={handleFormChange}></input>
-                        <br></br>
-                        <button type="submit">Create Review</button>
+                        <div className="inner-review-form">
+                            <label>title:</label>
+                            <input type="text" id="title" value={reviewForm.title} onChange={handleFormChange}></input>
+                            <br></br>
+                            <label>body:</label>
+                            <textarea type="text" id="body" value={reviewForm.body} onChange={handleFormChange}></textarea>
+                            <br></br>
+                            <label>rating:</label>
+                            <input type="number" min="0" max="5" id="rating" value={reviewForm.rating} onChange={handleFormChange}></input>
+                            <br></br>
+                            <button className="create-review-btn" type="submit">Create Review</button>
+                        </div>
                     </form>
                     : <h2><Link to="/login">Login</Link> to create a review</h2> }
                 </div>

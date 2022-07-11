@@ -105,7 +105,7 @@
     flex-basis: 100%;
     flex-flow: row wrap;
     justify-content: center;
-    background-color: var(--myred);
+    background-color: var(--myblue);
     border-radius: 30px;
 }
 .review-form-container {
@@ -113,9 +113,55 @@
     justify-content: center;
     width: 100%;
 }
+.review-form-container input, textarea {
+    height: 1.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 1.2rem;
+}
+.review-form-container textarea {
+    height: 8rem;
+}
+#rating {
+    width: 12%;
+    margin-left:44%;
+    margin-right:44%;
+    /* padding: 0; */
+}
 
+.inner-review-form {
+    width: 100%;
+}
 .review {
     width: 100%;
 }
 
+.create-review-btn {
+    background-color: var(--myblack);
+    color: var(--mylightyellow);
+    border: 2px solid var(--myblack);
+    width: 80%;
+    height: 2rem;
+    font-weight: bold;
+    font-size: 20px;
+}
 
+.delete-review-btn, .edit-review-btn {
+    background-color: var(--mydarkyellow);
+    border: 2px solid var(--myblack);
+    font-weight: bold;
+    width: 5.5rem;
+    height: 1.5rem;
+    margin: 0.7rem;
+    font-size: 16px;
+}
+
+.delete-review-btn {
+    background-color: var(--myred);
+}
+
+.delete-review-btn:hover, .edit-review-btn:hover, .create-review-btn:hover {
+    box-shadow:  0px 0px 2px 2px;
+}

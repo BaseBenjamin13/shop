@@ -59,8 +59,8 @@ function Review({index, reviewUrl, item }){
 
         {user.user.username === review.author &&
             <div>
-                <button onClick={deleteReview}>Delete</button>
-                <button onClick={editBtn}>Edit</button>
+                <button className="delete-review-btn" onClick={deleteReview}>Delete</button>
+                <button className="edit-review-btn" onClick={editBtn}>Edit</button>
             </div>
         }
 

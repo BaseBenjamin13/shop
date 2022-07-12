@@ -9,12 +9,18 @@ function Review({index, reviewUrl, item, getItems }){
     const [showForm, setShowForm] = useState();
     
     const [review, setReview] = useState()
-    const [editReviewForm, setEditReviewForm] = useState(
-        {author: 'unknown', body: '', rating: 0})
+    const [editReviewForm, setEditReviewForm] = useState()
 
     const getReview = async () => {
-        const { data } = await axios.get(reviewUrl)
-        setReview(data)
+        axios.get(reviewUrl)
+        .then((res) => {
+            console.log(res.data)
+            setReview(res.data)
+        })
+        .then(() => {
+            console.log('review' + review)
+            setEditReviewForm({title: review.title, body: review.body, rating: review.rating})
+        })
     }
     const deleteReview = () => {
         axios.delete(`http://127.0.0.1:8000/reviews/${review.id}/change`,
@@ -74,18 +80,22 @@ function Review({index, reviewUrl, item, getItems }){
         }
 
         {showForm && 
+        <div className="review-form-container">
         <form onSubmit={editReview}>
-            <label>author:</label>
-            <input type="text" id="author" value={editReviewForm.author} onChange={handleEditFormChange}></input>
-            <br></br>
-            <label>body:</label>
-            <textarea type="text" id="body" value={editReviewForm.body} onChange={handleEditFormChange}></textarea>
-            <br></br>
-            <label>rating:</label>
-            <input type="number" id="rating" value={editReviewForm.rating} onChange={handleEditFormChange}></input>
-            <br></br>
-            <button type="submit">Update Review</button>
+            <div className="inner-review-form">
+                <label>title:</label>
+                <input type="text" id="title" value={editReviewForm.title} onChange={handleEditFormChange}></input>
+                <br></br>
+                <label>body:</label>
+                <textarea type="text" id="body" value={editReviewForm.body} onChange={handleEditFormChange}></textarea>
+                <br></br>
+                <label>rating:</label>
+                <input type="number" min="0" max="5" id="rating" value={editReviewForm.rating} onChange={handleEditFormChange}></input>
+                <br></br>
+                <button className="update-btn" type="submit">Update Review</button>
+            </div>
         </form>
+        </div>
         }
     </div>
   )

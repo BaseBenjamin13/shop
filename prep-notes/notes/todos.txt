@@ -96,6 +96,10 @@ July 10th:
     fixed logout on refresh bug, got data everytime you edit, create, del reviews.✅
     style reviews. ✅
 
+July 12th:
+    style edit form. ✅
+    make edit review form start with review info.
+
 
     deploy back-end. 
 

@@ -160,7 +160,7 @@
     font-size: 20px;
 }
 
-.delete-review-btn, .edit-review-btn {
+.delete-review-btn, .edit-review-btn, .update-btn {
     background-color: var(--mydarkyellow);
     border: 2px solid var(--myblack);
     font-weight: bold;
@@ -169,11 +169,15 @@
     margin: 0.7rem;
     font-size: 16px;
 }
+.update-btn {
+    width: 75%;
+    height: 1.7rem;
+}
 
 .delete-review-btn {
     background-color: var(--myred);
 }
 
-.delete-review-btn:hover, .edit-review-btn:hover, .create-review-btn:hover {
+.delete-review-btn:hover, .edit-review-btn:hover, .create-review-btn:hover, .update-btn:hover {
     box-shadow:  0px 0px 2px 2px;
 }

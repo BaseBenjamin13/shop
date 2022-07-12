@@ -68,7 +68,15 @@
 
 .description-container {
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
+    border: 2px solid var(--myblack);
+    border-inline-start: 8px solid lawngreen;
+    border-inline-end: 5px solid var(--myred);
+    border-radius: 35px 10px 10px 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 0.5%;
+    padding-top: 0;
 }
 
 

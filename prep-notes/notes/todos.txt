@@ -91,6 +91,8 @@ July 10th:
     make delete and edit review route required authentication. ✅
     hide delete and edit button unless user logged in = review author ✅
     style reviews form, buttons, min/max on rating input. ✅
+    style description on detailed item page. ✅
+    look up how to keep user/context api when refresh/fix bug.
 
 
     deploy back-end. 

@@ -72,6 +72,7 @@ function DetailedResult({ item }) {
                 </div>
 
                 <div className="description-container">
+                    <h2>Description:</h2>
                     <p>
                         {item.description}
                     </p>

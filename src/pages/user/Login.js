@@ -32,7 +32,6 @@ function Login() {
             headers: {'Content-Type': 'application/json'}
         }
         ).then(res => {
-            console.log(res)
             setUser({
                 username: res.data.user.username,
                 email: res.data.user.email,

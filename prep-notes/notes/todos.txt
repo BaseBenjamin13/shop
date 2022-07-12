@@ -94,6 +94,7 @@ July 10th:
     style description on detailed item page. ✅
     look up how to keep user/context api when refresh/fix bug. ✅
     fixed logout on refresh bug, got data everytime you edit, create, del reviews.✅
+    style reviews. ✅
 
 
     deploy back-end. 

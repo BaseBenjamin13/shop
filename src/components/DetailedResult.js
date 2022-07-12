@@ -27,7 +27,6 @@ function DetailedResult({ item, getItems }) {
 
     
     if(reviewState) {
-        console.log(user)
         axios.post('http://127.0.0.1:8000/reviews/create',
         {
             "item": "http://127.0.0.1:8000/items/" + item.id,
@@ -46,7 +45,6 @@ function DetailedResult({ item, getItems }) {
         )
         .then((res) => {
             setReviewState()
-            console.log(res)
         })
         .then(() => getItems())
         .catch(err => console.log(err))
@@ -55,7 +53,6 @@ function DetailedResult({ item, getItems }) {
     useEffect(() => {
     }, [])
    
-    console.log(item)
 
     return ( 
         <div>
@@ -100,7 +97,8 @@ function DetailedResult({ item, getItems }) {
                 {
                     item.reviews && item.reviews.length !== 0 ? 
                     item.reviews.map((reviewUrl, i) => {
-                        return (<Review key={i} index={i} reviewUrl={reviewUrl} item={item} getItems={getItems}/>
+                        return (
+                            <Review key={i} index={i} reviewUrl={reviewUrl} item={item} getItems={getItems}/>
                         )
                     })
                     : <h2>No Reviews</h2>

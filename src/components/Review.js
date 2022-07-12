@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios';
 import { UserContext } from '../contexts/UserState';
 
-function Review({index, reviewUrl, item }){
+function Review({index, reviewUrl, item, getItems }){
 
     const user = useContext(UserContext)
 
@@ -16,9 +16,14 @@ function Review({index, reviewUrl, item }){
         const { data } = await axios.get(reviewUrl)
         setReview(data)
     }
-    const deleteReview = async () => {
-        await axios.delete(`http://127.0.0.1:8000/reviews/${review.id}/change`)
-        window.location.reload()
+    const deleteReview = () => {
+        axios.delete(`http://127.0.0.1:8000/reviews/${review.id}/change`,
+        {
+            headers: {
+                'Authorization': `Token ${user.user.knoxToken}`
+            }
+        }).then(() => getItems())
+        
     }
     const editBtn = () => {
         setShowForm(true);
@@ -36,10 +41,14 @@ function Review({index, reviewUrl, item }){
             "author": editReviewForm.author,
             "body": editReviewForm.body,
             "rating": editReviewForm.rating
-        })
-        // setEditReviewForm()
+        },
+        {
+            headers: {
+                'Authorization': `Token ${user.user.knoxToken}`
+            }
+        }
+        ).then(() => getItems())
         setShowForm(false);
-        // window.location.reload()
     }
 
     useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { UserContext } from '../contexts/UserState';
 import { Link, useNavigate } from 'react-router-dom';
@@ -6,11 +6,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import DetailedCarousel from './DetailedCarousel';
 import Review from './Review';
 
-function DetailedResult({ item }) {
+function DetailedResult({ item, getItems }) {
 
     const navigate = useNavigate()
 
-    const user = useContext(UserContext)
+    const {user, setUser} = useContext(UserContext)
     const [reviewForm, setReviewForm] = useState({title: '', body: '', rating: 0})
     const [reviewState, setReviewState] = useState()
     
@@ -27,7 +27,7 @@ function DetailedResult({ item }) {
 
     
     if(reviewState) {
-        console.log(user.user)
+        console.log(user)
         axios.post('http://127.0.0.1:8000/reviews/create',
         {
             "item": "http://127.0.0.1:8000/items/" + item.id,
@@ -40,7 +40,7 @@ function DetailedResult({ item }) {
         },
         {
             headers: {
-                'Authorization': `Token ${user.user.knoxToken}`
+                'Authorization': `Token ${user.knoxToken}`
             }
         }
         )
@@ -48,12 +48,12 @@ function DetailedResult({ item }) {
             setReviewState()
             console.log(res)
         })
-        .then(() => {
-            // window.location.reload()
-            // navigate(`/${item.category}s/${item.id}`)
-        })
+        .then(() => getItems())
         .catch(err => console.log(err))
     }
+
+    useEffect(() => {
+    }, [])
    
     console.log(item)
 
@@ -80,7 +80,7 @@ function DetailedResult({ item }) {
             </div>
             <div className="reviews">
                 <div className="review-form-container">
-                    {user.user.knoxToken ?
+                    {user.knoxToken ?
                     <form onSubmit={createReview}>
                         <div className="inner-review-form">
                             <label>title:</label>
@@ -100,7 +100,7 @@ function DetailedResult({ item }) {
                 {
                     item.reviews && item.reviews.length !== 0 ? 
                     item.reviews.map((reviewUrl, i) => {
-                        return (<Review key={i} index={i} reviewUrl={reviewUrl} item={item}/>
+                        return (<Review key={i} index={i} reviewUrl={reviewUrl} item={item} getItems={getItems}/>
                         )
                     })
                     : <h2>No Reviews</h2>

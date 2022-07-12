@@ -92,7 +92,8 @@ July 10th:
     hide delete and edit button unless user logged in = review author ✅
     style reviews form, buttons, min/max on rating input. ✅
     style description on detailed item page. ✅
-    look up how to keep user/context api when refresh/fix bug.
+    look up how to keep user/context api when refresh/fix bug. ✅
+    fixed logout on refresh bug, got data everytime you edit, create, del reviews.✅
 
 
     deploy back-end. 
@@ -103,6 +104,10 @@ Bugs:
     creating review logs user out, might be because of forced refresh:
         Solution: maybe replace window.reload with navigate.
         but refresh still will log user out, figure out how to keep user logged in.
+    fixed:
+        to keep user logged in at the end of each crud action i get the data again.
+    More permanent fix:
+        Use session storage, or local storage.
 
 
 IDEAS: 

@@ -98,7 +98,7 @@ July 10th:
 
 July 12th:
     style edit form. ✅
-    make edit review form start with review info.
+    make edit review form start with review info. ✅
 
 
     deploy back-end. 

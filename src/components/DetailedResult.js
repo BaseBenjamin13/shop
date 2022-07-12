@@ -98,7 +98,7 @@ function DetailedResult({ item, getItems }) {
                     item.reviews && item.reviews.length !== 0 ? 
                     item.reviews.map((reviewUrl, i) => {
                         return (
-                            <Review key={i} index={i} reviewUrl={reviewUrl} item={item} getItems={getItems}/>
+                            <Review key={i} reviewUrl={reviewUrl} item={item} getItems={getItems}/>
                         )
                     })
                     : <h2>No Reviews</h2>

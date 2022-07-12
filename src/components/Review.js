@@ -2,25 +2,29 @@ import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios';
 import { UserContext } from '../contexts/UserState';
 
-function Review({index, reviewUrl, item, getItems }){
+function Review({ reviewUrl, item, getItems }){
 
     const user = useContext(UserContext)
 
     const [showForm, setShowForm] = useState();
     
     const [review, setReview] = useState()
-    const [editReviewForm, setEditReviewForm] = useState()
+    const [editReviewForm, setEditReviewForm] = useState(
+        {
+            title: 'title here',
+            body: 'body here',
+            rating: 0
+        }
+    )
+    const [editReviewState, setEditReviewState] = useState()
 
-    const getReview = async () => {
+    const getReview = () => {
         axios.get(reviewUrl)
         .then((res) => {
             console.log(res.data)
             setReview(res.data)
         })
-        .then(() => {
-            console.log('review' + review)
-            setEditReviewForm({title: review.title, body: review.body, rating: review.rating})
-        })
+        .catch(err => console.log(err))
     }
     const deleteReview = () => {
         axios.delete(`http://127.0.0.1:8000/reviews/${review.id}/change`,
@@ -33,28 +37,38 @@ function Review({index, reviewUrl, item, getItems }){
     }
     const editBtn = () => {
         setShowForm(true);
+        setEditReviewForm({
+            title: review.title,
+            body: review.body,
+            rating: review.rating
+        })
     }
     const handleEditFormChange = (e) => {
         setEditReviewForm({ ...editReviewForm, [e.target.id]: e.target.value})
     }
 
-    const editReview = async (e) => {
+    const editReview = (e) => {
         console.log(editReviewForm)
         e.preventDefault()
-        await axios.put(`http://127.0.0.1:8000/reviews/${review.id}/change`,
+        setEditReviewState(editReviewForm)
+    }
+
+    if(editReviewState) {
+        axios.put(`http://127.0.0.1:8000/reviews/${review.id}/change`,
         {
             "item": "http://127.0.0.1:8000/items/" + item.id,
-            "author": editReviewForm.author,
-            "body": editReviewForm.body,
-            "rating": editReviewForm.rating
+            "title": editReviewState.title,
+            "body": editReviewState.body,
+            "rating": editReviewState.rating
         },
         {
             headers: {
                 'Authorization': `Token ${user.user.knoxToken}`
             }
         }
-        ).then(() => getItems())
-        setShowForm(false);
+        ).then(() => getReview())
+        .then(() => setShowForm(false))
+        .catch(err => console.log(err))
     }
 
     useEffect(() => {

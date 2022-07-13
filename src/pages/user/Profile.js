@@ -16,6 +16,9 @@ function Profile() {
             })
             .then((res) => {
                 setUser({})
+                localStorage.removeItem('username')
+                localStorage.removeItem('email')
+                localStorage.removeItem('knox_token')
             })
             .then(() => {
                 navigate('/login')

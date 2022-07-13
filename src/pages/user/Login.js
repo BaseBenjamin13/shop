@@ -31,24 +31,24 @@ function Login() {
         {
             headers: {'Content-Type': 'application/json'}
         }
-        ).then(res => {
+        ).then((res) => {
             setUser({
                 username: res.data.user.username,
                 email: res.data.user.email,
                 knoxToken: res.data.token
             })
             setLogin()
+            localStorage.setItem('username', res.data.user.username)
+            localStorage.setItem('email', res.data.user.email)
+            localStorage.setItem('knox_token', res.data.token)
         })
-        .then((res) => {
+        .then((data) => {
             navigate('/profile')
         })
         .catch(err => console.log(err))
     }
 
     useEffect(() => {
-        if(user.knoxToken){
-            navigate('/profile')
-        }
     }, [])
 
     return (

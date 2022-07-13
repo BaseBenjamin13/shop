@@ -1,4 +1,21 @@
 
+User stories:
+As a user I want to start at a homepage where top rated, newly added, and on-sale items are on display.✅
+As a user I want the navigation to be easy with a nav bar. ✅
+As a user I want to be able to like/add items to my wish list.
+As a user I want to be able to contact reviewers for help, customer support.
+As a user I want the site to be mobile responsive.
+As a user I want to be able to see Ben's review and other’s reviews under items for sale.✅
+As a user i want to be able to register for an account. ✅
+As a user i want to be able to login/logout to my account. ✅
+If logged in as a user I want to be able to add my own review. ✅
+If logged in as a user I want to add images to my review.
+If logged in as a user I want to be able to edit and delete my own review. ✅
+If logged in as a user I want to see my orders, orderHistory.
+
+
+
+
 July 1st:
     make Headphone model, serializer, url, and view. ✅
     make HeadPhone page in react. ✅
@@ -99,6 +116,10 @@ July 10th:
 July 12th:
     style edit form. ✅
     make edit review form start with review info. ✅
+    use local storage for user. ✅
+    fix delete route, delete route dosent work right after edit.
+    make wish list model.
+
 
 
     deploy back-end. 
@@ -113,6 +134,7 @@ Bugs:
         to keep user logged in at the end of each crud action i get the data again.
     More permanent fix:
         Use session storage, or local storage.
+        Used local storage.
 
 
 IDEAS: 

@@ -31,7 +31,7 @@ function KeyBoardDetail() {
   return (
     <div className="monitor-detail">
         <h1 className="page-title">Keyboard Detail</h1> 
-        <DetailedResult item={keyboard} />
+        <DetailedResult item={keyboard} getItems={getKeyboard}/>
     </div>
   )
 }

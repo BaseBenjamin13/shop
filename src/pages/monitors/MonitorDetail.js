@@ -32,7 +32,7 @@ function MonitorDetail() {
   return (
     <div className="monitor-detail">
         <h1 className="page-title">MonitorDetail</h1> 
-        <DetailedResult item={monitor} />
+        <DetailedResult item={monitor} getItems={getMonitor}/>
     </div>
   )
 }

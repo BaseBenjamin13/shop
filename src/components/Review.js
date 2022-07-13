@@ -66,8 +66,11 @@ function Review({ reviewUrl, item, getItems }){
                 'Authorization': `Token ${user.user.knoxToken}`
             }
         }
-        ).then(() => getReview())
-        .then(() => setShowForm(false))
+        ).then(() => setEditReviewState())
+        .then(() => {
+            setShowForm(false)
+            window.location.reload()
+        })
         .catch(err => console.log(err))
     }
 

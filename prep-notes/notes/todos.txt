@@ -117,6 +117,10 @@ July 12th:
     style edit form. ✅
     make edit review form start with review info. ✅
     use local storage for user. ✅
+
+July 13th:
+    fix infinite reload bug on edit. ✅
+    stop using getItems functions. use window.location.reload.
     fix delete route, delete route dosent work right after edit.
     make wish list model.
 

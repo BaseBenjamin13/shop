@@ -124,7 +124,11 @@ July 13th:
 July 14th:
     figure out how ManyToMany works as a field. ✅
     make wish list model. ✅
-    make wishlist page setup in react.
+    make wishlist page setup in react. ✅
+    after logged in get users wishlists. ✅
+    make wishlist component, render name and number of items.
+    make wishlistDetail page, gets wishlist by id.
+    make component for each item that making api call to item url.
     stop using getItems functions. use window.location.reload. 
     fix delete route, delete route dosent work right after edit. 
 

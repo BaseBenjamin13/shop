@@ -1,5 +1,9 @@
 
 .wishlists {
+    display: flex;
+    justify-content: center;
+}
+.wishlists-container {
     width: 80%;
     background-color: var(--myblue);
 }

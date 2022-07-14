@@ -50,7 +50,6 @@ function App() {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/user/reviews" element={<UsersReviews />} />
                 <Route path="/user/wishlists" element={<WishLists />} />
-
                 
             </Routes>
         </UserProvider>

@@ -128,7 +128,7 @@ July 14th:
     after logged in get users wishlists. ✅
     make wishlist component, render name and number of items. ✅
     make go to btn give index to state to render correct component. ✅
-    make wishlistDetail component.
+    make wishlistDetail component. ✅
     make component for each item that making api call to item url.
     stop using getItems functions. use window.location.reload. 
     fix delete route, delete route dosent work right after edit. 

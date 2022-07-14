@@ -4,6 +4,7 @@ import axios from 'axios';
 import { UserContext } from '../../../contexts/UserState';
 
 import Wishlist from '../../../components/wishlist/Wishlist';
+import WishlistDetail from '../../../components/wishlist/WishlistDetail';
 
 function WishLists() {
 
@@ -43,7 +44,7 @@ function WishLists() {
                 wishlists.map((wishlist, i) => {
                     return <Wishlist key={i} wishlist={wishlist} index={i} renderWishlist={renderWishlist} setrenderWishlist={setrenderWishlist}/>
                 })
-                : <h2>show {renderWishlist}</h2>
+                : <WishlistDetail wishlist={wishlists[renderWishlist]}/>
             }
         </div>
     </div>

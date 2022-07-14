@@ -133,7 +133,7 @@ July 14th:
     make back button and functionality. ✅
     build out item display in wishlist. ✅
     style wishlist. ✅
-    make create wishlist form. 
+    make create wishlist form. ✅
     add create wishlist functionality. 
 
 July 15th:

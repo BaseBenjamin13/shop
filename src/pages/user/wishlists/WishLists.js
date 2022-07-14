@@ -11,7 +11,7 @@ function WishLists() {
     const { user, setUser } = useContext(UserContext)
 
     const [wishlists, setWishlists] = useState([])
-
+    const [wishlistForm, setWishlistForm] = useState()
     const [renderWishlistIndex, setrenderWishlistIndex] = useState()
 
     useEffect(() => {
@@ -40,6 +40,15 @@ function WishLists() {
     <div className="wishlists">
         <div className="wishlists-container">
             <h1>WishLists</h1>
+
+            <div>
+                <form>
+                    <label>Name:</label>
+                    <input></input>
+                    <button type="submit" >Create Wishlist</button>
+                </form>
+            </div>
+
             {!renderWishlistIndex && renderWishlistIndex !== 0 ?
                 wishlists.map((wishlist, i) => {
                     return <Wishlist key={i} wishlist={wishlist} index={i} renderWishlistIndex={renderWishlistIndex} setrenderWishlistIndex={setrenderWishlistIndex}/>

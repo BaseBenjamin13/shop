@@ -2,6 +2,7 @@
 .wishlists {
     display: flex;
     justify-content: center;
+    background-color: var(--myred);
 }
 .wishlists-container {
     width: 80%;

@@ -29,3 +29,27 @@
     background-color: var(--myblack);
     color: var(--myred);
 }
+
+.wishlist-item-container {
+    display: flex;
+    border: 2px solid var(--myblack);
+    margin: 2rem;
+}
+
+.wishlist-img-container {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+}
+.wishlist-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.wishlist-title-container, .wishlist-price-container {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    margin: 1rem;
+}

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function WishlistItem({ itemUrl }) {
@@ -21,7 +22,17 @@ function WishlistItem({ itemUrl }) {
 
   return (
     <div className="wishlist-item-container">
-        <h2>{item.title}</h2>
+        <div className="wishlist-img-container">
+            <img className="wishlist-img" src={item.image_urls[0]}></img>
+        </div>
+        <div className="wishlist-title-container">
+            <Link to={`/${item.category}s/${item.id}`}>
+                <h2>{item.title}</h2>
+            </Link>
+        </div>
+        <div className="wishlist-price-container">
+            <h2>${item.price}</h2>
+        </div>
     </div>
   )
 }

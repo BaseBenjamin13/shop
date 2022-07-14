@@ -131,10 +131,10 @@ July 14th:
     make wishlistDetail component. ✅
     make component for each item that making api call to item url. ✅
     make back button and functionality. ✅
-    build out item display in wishlist.
-    style wishlist.
-    make create wishlist form.
-    add create wishlist functionality.
+    build out item display in wishlist. ✅
+    style wishlist. ✅
+    make create wishlist form. 
+    add create wishlist functionality. 
 
 July 15th:
     add on hover to all wishlist buttons.

@@ -21,7 +21,7 @@ import UsersReviews from './pages/UsersReviews';
 import Profile from './pages/user/Profile';
 
 import { UserContext, UserProvider } from './contexts/UserState';
-import WishLists from './pages/user/WishLists';
+import WishLists from './pages/user/wishlists/WishLists';
 
 
 

@@ -7,3 +7,16 @@
     width: 80%;
     background-color: var(--myblue);
 }
+.wishlist {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid var(--myblack);
+    margin: 3rem;
+}
+.wishlist-link {
+    width: 20%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--myblack);
+    color: var(--mylightyellow);
+}

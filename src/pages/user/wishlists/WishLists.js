@@ -1,13 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react';
-import '../../assets/style/user/Wishlists.css';
+import '../../../assets/style/user/Wishlists.css';
 import axios from 'axios';
-import { UserContext } from '../../contexts/UserState';
+import { UserContext } from '../../../contexts/UserState';
+
+import Wishlist from '../../../components/wishlist/Wishlist';
 
 function WishLists() {
 
     const { user, setUser } = useContext(UserContext)
 
     const [wishlists, setWishlists] = useState([])
+
+    const [renderWishlist, setrenderWishlist] = useState()
 
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/user/wishlists',
@@ -35,6 +39,11 @@ function WishLists() {
     <div className="wishlists">
         <div className="wishlists-container">
             <h1>WishLists</h1>
+            {
+                wishlists.map((wishlist, i) => {
+                    return <Wishlist wishlist={wishlist} index={i} renderWishlist={renderWishlist} setrenderWishlist={setrenderWishlist}/>
+                })
+            }
         </div>
     </div>
   )

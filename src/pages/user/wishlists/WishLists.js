@@ -39,10 +39,11 @@ function WishLists() {
     <div className="wishlists">
         <div className="wishlists-container">
             <h1>WishLists</h1>
-            {
+            {!renderWishlist && renderWishlist !== 0 ?
                 wishlists.map((wishlist, i) => {
-                    return <Wishlist wishlist={wishlist} index={i} renderWishlist={renderWishlist} setrenderWishlist={setrenderWishlist}/>
+                    return <Wishlist key={i} wishlist={wishlist} index={i} renderWishlist={renderWishlist} setrenderWishlist={setrenderWishlist}/>
                 })
+                : <h2>show {renderWishlist}</h2>
             }
         </div>
     </div>

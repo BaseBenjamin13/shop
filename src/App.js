@@ -21,6 +21,7 @@ import UsersReviews from './pages/UsersReviews';
 import Profile from './pages/user/Profile';
 
 import { UserContext, UserProvider } from './contexts/UserState';
+import WishLists from './pages/user/WishLists';
 
 
 
@@ -48,6 +49,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/user/reviews" element={<UsersReviews />} />
+                <Route path="/user/wishlists" element={<WishLists />} />
 
                 
             </Routes>

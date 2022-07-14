@@ -120,9 +120,13 @@ July 12th:
 
 July 13th:
     fix infinite reload bug on edit. ✅
-    stop using getItems functions. use window.location.reload.
-    fix delete route, delete route dosent work right after edit.
-    make wish list model.
+
+July 14th:
+    figure out how ManyToMany works as a field. ✅
+    make wish list model. ✅
+    make wishlist page setup in react.
+    stop using getItems functions. use window.location.reload. 
+    fix delete route, delete route dosent work right after edit. 
 
 
 

@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { UserContext } from '../../contexts/UserState';
 import '../../assets/style/user/ProfilePage.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Profile() {
     const navigate = useNavigate()
@@ -55,7 +55,9 @@ function Profile() {
         </div>
         <div className="help-container">
             <button className="help-btn">Order History</button>
-            <button className="help-btn">Wishlist</button>
+            <Link to="/user/wishlists" className="link">
+                <button className="help-btn">Wishlist</button>
+            </Link>
             <button className="help-btn">Customer Support</button>
             <button className="help-btn">Login Security</button>
         </div>

@@ -9,10 +9,8 @@ function Wishlist({ wishlist, index, renderWishlistIndex, setrenderWishlistIndex
 
   return (
     <div className="wishlist">
-        <h1>{wishlist.name}</h1>
-        
         <button className="wishlist-link" onClick={showWishlist}>Go To Wishlist</button>
-
+        <h1>{wishlist.name}</h1>
         <h1>Amount: {wishlist.items.length}</h1>
     </div>
   )

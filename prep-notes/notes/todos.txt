@@ -130,11 +130,14 @@ July 14th:
     make go to btn give index to state to render correct component. ✅
     make wishlistDetail component. ✅
     make component for each item that making api call to item url. ✅
-    make back button and functionality.
+    make back button and functionality. ✅
     build out item display in wishlist.
     style wishlist.
     make create wishlist form.
     add create wishlist functionality.
+
+July 15th:
+    add on hover to all wishlist buttons.
 
 
     stop using getItems functions. use window.location.reload. 

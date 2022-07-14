@@ -44,7 +44,7 @@ function WishLists() {
                 wishlists.map((wishlist, i) => {
                     return <Wishlist key={i} wishlist={wishlist} index={i} renderWishlistIndex={renderWishlistIndex} setrenderWishlistIndex={setrenderWishlistIndex}/>
                 })
-                : <WishlistDetail wishlist={wishlists[renderWishlistIndex]}/>
+                : <WishlistDetail wishlist={wishlists[renderWishlistIndex]} setrenderWishlistIndex={setrenderWishlistIndex}/>
             }
         </div>
     </div>

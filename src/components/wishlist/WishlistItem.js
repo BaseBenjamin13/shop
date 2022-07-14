@@ -9,7 +9,6 @@ function WishlistItem({ itemUrl }) {
     useEffect(() => {
         axios.get(itemUrl)
             .then((res) =>{
-                console.log(res);
                 setItem(res.data);
             })
             .catch(err => console.log(err))

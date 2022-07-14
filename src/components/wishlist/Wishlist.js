@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../assets/style/user/Wishlists.css';
 
-function Wishlist({ wishlist, index, renderWishlist, setrenderWishlist }) {
+function Wishlist({ wishlist, index, renderWishlistIndex, setrenderWishlistIndex }) {
 
     const showWishlist = () => {
-        setrenderWishlist(index);
+        setrenderWishlistIndex(index);
     }
 
   return (

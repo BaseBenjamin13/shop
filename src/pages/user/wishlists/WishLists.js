@@ -12,7 +12,7 @@ function WishLists() {
 
     const [wishlists, setWishlists] = useState([])
 
-    const [renderWishlist, setrenderWishlist] = useState()
+    const [renderWishlistIndex, setrenderWishlistIndex] = useState()
 
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/user/wishlists',
@@ -40,11 +40,11 @@ function WishLists() {
     <div className="wishlists">
         <div className="wishlists-container">
             <h1>WishLists</h1>
-            {!renderWishlist && renderWishlist !== 0 ?
+            {!renderWishlistIndex && renderWishlistIndex !== 0 ?
                 wishlists.map((wishlist, i) => {
-                    return <Wishlist key={i} wishlist={wishlist} index={i} renderWishlist={renderWishlist} setrenderWishlist={setrenderWishlist}/>
+                    return <Wishlist key={i} wishlist={wishlist} index={i} renderWishlistIndex={renderWishlistIndex} setrenderWishlistIndex={setrenderWishlistIndex}/>
                 })
-                : <WishlistDetail wishlist={wishlists[renderWishlist]}/>
+                : <WishlistDetail wishlist={wishlists[renderWishlistIndex]}/>
             }
         </div>
     </div>

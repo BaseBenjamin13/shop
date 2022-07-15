@@ -136,9 +136,15 @@ July 14th:
     make create wishlist form. ✅
     add create wishlist functionality. ✅
     add on hover to all wishlist buttons. ✅
+    make delete wishlist button and functionality. ✅
+    style delete wishlist button, and wishlist component.
 
 July 15th:
-    make delete wishlist button and functionality.
+    make add wishlist component add into item info container.
+    if loged in display users wishlist names to item info container.
+    make and style add to wishlist button next too button.
+    add functionality to button, adds wishlist too item's Wishlists.
+
 
 
 

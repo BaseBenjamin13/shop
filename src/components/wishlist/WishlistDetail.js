@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import WishlistItem from './WishlistItem';
+import { UserContext } from '../../contexts/UserState';
+import axios from 'axios';
 
 function WishlistDetail({ wishlist, setrenderWishlistIndex }) {
 
+    const { user, setUser } = useContext(UserContext)
+
     const goBack = () => {
         setrenderWishlistIndex()
+    }
+    const deleteWishlist = () => {
+        axios.delete('http://127.0.0.1:8000/user/wishlists/' + wishlist.id,
+        {
+            headers: {
+                'Authorization': `Token ${user.knoxToken}`
+            }
+        }).then((res) => {
+            console.log(res)
+            window.location.reload()
+        })
+        .catch(err => console.log(err))
     }
 
   return (
@@ -18,6 +34,7 @@ function WishlistDetail({ wishlist, setrenderWishlistIndex }) {
             })
             : <h1>No Items</h1>
         }
+        <button onClick={deleteWishlist}>Delete</button>
     </div>
   )
 }

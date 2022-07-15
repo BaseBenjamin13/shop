@@ -67,11 +67,8 @@ function DetailedResult({ item, getItems }) {
                 <div className="info-container">
                     <h2 className="brand">Brand: {item.brand}</h2>
                     <h2 className="detailed-price" >${item.price}</h2>
-                    {
-                        user.knoxToken ?
-                        <ItemWishlists item={item}/>
-                        : <h2><Link to="/login">Login</Link> to create a review</h2>
-                    }
+
+                    <ItemWishlists item={item}/>
                 </div>
 
                 <div className="description-container">

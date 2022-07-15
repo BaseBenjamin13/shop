@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect} from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import { UserContext } from '../../../contexts/UserState';
 import ItemWishlist from './ItemWishlist';
@@ -21,16 +22,21 @@ function ItemWishlists({ item }) {
         })
     }, [])
 
-    if(!wishlists) return null
+    // if(!wishlists) return null
     return (
         <div className="item-wishlists">
             <div className="item-wishlists-container">
 
                 <h2>Wishlists</h2>
                 {
-                    wishlists.map((wishlist, i) => {
-                        return <ItemWishlist key={i} wishlist={wishlist} item={item}/>
-                    })
+                    user.knoxToken ?
+                        wishlists.length !== 0 ?
+                        wishlists.map((wishlist, i) => {
+                            return <ItemWishlist key={i} wishlist={wishlist} item={item}/>
+                        })
+                        : <h2><Link to="/user/wishlists">Create a wishlist</Link></h2>
+
+                    : <h2><Link to="/login">Login</Link> to create a review</h2>
                 }
             </div>
         </div>

@@ -17,6 +17,9 @@
     margin: 3rem;
     position: relative;
 }
+.help-link {
+    width: 20%;
+}
 .logout-btn {
     width: 20%;
     height: 10%;
@@ -40,11 +43,11 @@
     width: 70vw;
     margin: 3rem;
 }
-.help-container button {
+.help-btn {
     background-color: var(--myblack);
     color: var(--mylightyellow);
     height: 5rem;
-    width: 30%;
+    width: 100%;
     margin: 2rem;
     font-size: 2rem;
 }

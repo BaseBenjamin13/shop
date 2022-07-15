@@ -135,10 +135,11 @@ July 14th:
     style wishlist. ✅
     make create wishlist form. ✅
     add create wishlist functionality. ✅
-    add on hover to all wishlist buttons.
+    add on hover to all wishlist buttons. ✅
 
 July 15th:
     make delete wishlist button and functionality.
+
 
 
     stop using getItems functions. use window.location.reload. 

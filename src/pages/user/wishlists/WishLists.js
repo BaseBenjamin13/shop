@@ -2,11 +2,14 @@ import React, { useState, useEffect, useContext } from 'react';
 import '../../../assets/style/user/Wishlists.css';
 import axios from 'axios';
 import { UserContext } from '../../../contexts/UserState';
+import { useNavigate } from 'react-router-dom';
 
 import Wishlist from '../../../components/wishlist/Wishlist';
 import WishlistDetail from '../../../components/wishlist/WishlistDetail';
 
 function WishLists() {
+
+    const navigate = useNavigate()
 
     const { user, setUser } = useContext(UserContext)
 
@@ -57,6 +60,9 @@ function WishLists() {
     <div className="wishlists">
         <div className="wishlists-container">
             <h1>WishLists</h1>
+            {!renderWishlistIndex && renderWishlistIndex !== 0 && 
+                <button className="wishlist-back-btn" onClick={() => navigate(-1)}>Back</button>
+            }
 
             <div>
                 <form onSubmit={handleFormSubmit}>

@@ -23,6 +23,7 @@
 }
 .wishlist-back-btn {
     padding: 0;
+    margin: 1rem;
     font-size: 1.6rem;
     font-weight: bold;
     width: 10%;
@@ -53,4 +54,8 @@
     height: inherit;
     align-items: center;
     margin: 1rem;
+}
+
+.wishlist-back-btn:hover, .wishlist-link:hover {
+    box-shadow:  0px 0px 2px 2px;
 }

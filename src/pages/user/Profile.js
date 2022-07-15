@@ -55,11 +55,13 @@ function Profile() {
         </div>
         <div className="help-container">
             <button className="help-btn">Order History</button>
-            <Link to="/user/wishlists" className="link">
-                <button className="help-btn">Wishlist</button>
-            </Link>
+            
+            <button onClick={() => navigate('/user/wishlists')} 
+            className="help-btn">Wishlist</button>
+
             <button className="help-btn">Customer Support</button>
             <button className="help-btn">Login Security</button>
+
         </div>
     </div>
   )

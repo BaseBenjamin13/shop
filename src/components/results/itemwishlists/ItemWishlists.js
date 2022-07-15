@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect} from 'react';
 import axios from 'axios';
 
-import { UserContext } from '../contexts/UserState';
+import { UserContext } from '../../../contexts/UserState';
+import ItemWishlist from './ItemWishlist';
 
 function ItemWishlists() {
 
@@ -23,7 +24,11 @@ function ItemWishlists() {
     if(!wishlists) return null
     return (
         <div>
-            {/* map through all users wishlists here loading component */}
+            {
+                wishlists.map((wishlist) => {
+                    return <ItemWishlist wishlist={wishlist}/>
+                })
+            }
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/style/DetailPage.css';
+import '../../assets/style/DetailPage.css';
 
 
 

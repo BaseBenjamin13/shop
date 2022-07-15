@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import '../assets/style/DetailPage.css';
+import '../../assets/style/DetailPage.css';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

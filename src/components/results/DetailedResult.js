@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
-import { UserContext } from '../contexts/UserState';
+import { UserContext } from '../../contexts/UserState';
 import { Link, useNavigate } from 'react-router-dom';
 
 import DetailedCarousel from './DetailedCarousel';
 import Review from './Review';
-import ItemWishlists from './ItemWishlists';
+import ItemWishlists from './itemwishlists/ItemWishlists';
 
 function DetailedResult({ item, getItems }) {
 

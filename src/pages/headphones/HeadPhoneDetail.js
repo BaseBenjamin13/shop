@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import '../../assets/style/DetailPage.css';
 
-import DetailedResult from '../../components/DetailedResult';
+import DetailedResult from '../../components/results/DetailedResult';
 
 
 

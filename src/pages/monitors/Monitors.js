@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import '../../assets/style/Results.css';
 
-import Results from '../../components/Results';
+import Results from '../../components/results/Results';
 
 function Monitors() {
 

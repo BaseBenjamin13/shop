@@ -181,3 +181,36 @@
 .delete-review-btn:hover, .edit-review-btn:hover, .create-review-btn:hover, .update-btn:hover {
     box-shadow:  0px 0px 2px 2px;
 }
+
+
+
+/* Wishlists */
+
+.item-wishlists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: var(--myred); */
+}
+.item-wishlists-container {
+    position: absolute;
+    bottom: 3%;
+    height: 50%;
+    width: 100%;
+    /* background-color: var(--myblue) */
+}
+.item-wishlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+.add-to-btn {
+    background-color: var(--mylightyellow);
+    margin: 3px;
+    font-size: 15px;
+    font-weight: bold;
+}

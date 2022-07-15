@@ -23,12 +23,16 @@ function ItemWishlists() {
 
     if(!wishlists) return null
     return (
-        <div>
-            {
-                wishlists.map((wishlist) => {
-                    return <ItemWishlist wishlist={wishlist}/>
-                })
-            }
+        <div className="item-wishlists">
+            <div className="item-wishlists-container">
+
+                <h2>Wishlists</h2>
+                {
+                    wishlists.map((wishlist) => {
+                        return <ItemWishlist wishlist={wishlist}/>
+                    })
+                }
+            </div>
         </div>
     )
 }

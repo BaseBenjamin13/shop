@@ -134,10 +134,11 @@ July 14th:
     build out item display in wishlist. ✅
     style wishlist. ✅
     make create wishlist form. ✅
-    add create wishlist functionality. 
+    add create wishlist functionality. ✅
+    add on hover to all wishlist buttons.
 
 July 15th:
-    add on hover to all wishlist buttons.
+    make delete wishlist button and functionality.
 
 
     stop using getItems functions. use window.location.reload. 

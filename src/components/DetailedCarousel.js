@@ -31,7 +31,7 @@ function DetailedCarousel({ item }) {
  
   return (
       <div>
-        {modal.show && <ImageModal img={modal.image} modal={modal} setModal={setModal} />}
+        {modal.show && <ImageModal img={modal.image} setModal={setModal} />}
         <div className="detailed-img-div">
             <Slider {...settings}>
                 {

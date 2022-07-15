@@ -3,7 +3,7 @@ import '../assets/style/DetailPage.css';
 
 
 
-function ImageModal({ img, modal, setModal }) {
+function ImageModal({ img, setModal }) {
 
 
     function hideModal() {

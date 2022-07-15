@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import DetailedCarousel from './DetailedCarousel';
 import Review from './Review';
+import ItemWishlists from './ItemWishlists';
 
 function DetailedResult({ item, getItems }) {
 
@@ -66,6 +67,11 @@ function DetailedResult({ item, getItems }) {
                 <div className="info-container">
                     <h2 className="brand">Brand: {item.brand}</h2>
                     <h2 className="detailed-price" >${item.price}</h2>
+                    {
+                        user.knoxToken ?
+                        <ItemWishlists />
+                        : <h2><Link to="/login">Login</Link> to create a review</h2>
+                    }
                 </div>
 
                 <div className="description-container">

@@ -13,6 +13,9 @@ If logged in as a user I want to add images to my review.
 If logged in as a user I want to be able to edit and delete my own review. ✅
 If logged in as a user I want to see my orders, orderHistory.
 
+ADDED SCRETCH:
+    on profile page let user pick what color the mini rectangles in background will be.
+
 
 
 
@@ -140,7 +143,7 @@ July 14th:
     style delete wishlist button, and wishlist component. ✅
 
 July 15th:
-    make add wishlist component add into item info container.
+    make add wishlist component add into item info container. ✅
     if loged in display users wishlist names to item info container.
     make and style add to wishlist button next too button.
     add functionality to button, adds wishlist too item's Wishlists.

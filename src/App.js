@@ -10,7 +10,7 @@ import KeyBoards from './pages/keyboards/KeyBoards';
 import KeyBoardDetail from './pages/keyboards/KeyBoardDetail';
 
 import Mouses from './pages/mouses/Mouses';
-import MouseDetail from './pages/mouses/MouseDetail'
+import MouseDetail from './pages/mouses/MouseDetail';
 
 import HeadPhones from './pages/headphones/HeadPhones';
 import HeadPhoneDetail from './pages/headphones/HeadPhoneDetail';
@@ -23,7 +23,7 @@ import Profile from './pages/user/Profile';
 import { UserContext, UserProvider } from './contexts/UserState';
 import WishLists from './pages/user/wishlists/WishLists';
 
-
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
 
@@ -50,6 +50,8 @@ function App() {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/user/reviews" element={<UsersReviews />} />
                 <Route path="/user/wishlists" element={<WishLists />} />
+
+                <Route path="*" element={<PageNotFound />} />
                 
             </Routes>
         </UserProvider>

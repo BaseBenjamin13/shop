@@ -2,7 +2,7 @@
 User stories:
 As a user I want to start at a homepage where top rated, newly added, and on-sale items are on display.✅
 As a user I want the navigation to be easy with a nav bar. ✅
-As a user I want to be able to like/add items to my wish list.
+As a user I want to be able to like/add items to my wish list. ✅
 As a user I want to be able to contact reviewers for help, customer support.
 As a user I want the site to be mobile responsive.
 As a user I want to be able to see Ben's review and other’s reviews under items for sale.✅
@@ -151,7 +151,7 @@ July 15th:
     add if statements to display correct links if user not logedin or no wishlists.✅
     make remove item from wishlist button and functionality on wishlist. ✅
     style remove item button and item img in wishlist. ✅
-    add 404 page not found in react.
+    add 404 page not found in react. ✅
 
 
 

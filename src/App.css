@@ -72,3 +72,30 @@ body {
 }
 
 
+/* Page Not Found */
+.page-not-found {
+    display: flex;
+    justify-content: center;
+}
+.page-not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    background-color: var(--myblue);
+    width: 75vw;
+    height: 60vh;
+    margin: 3rem;
+    box-shadow: 0 4px 7px 7px rgb(42, 125, 134);
+}
+.page-not-found-container h1 {
+    box-shadow: 0 3px 5px 5px rgb(42, 125, 134);
+    margin: 3rem;
+    width: 100%;
+}
+.not-found-img {
+    width: 30%;
+    height: 36%;
+    border-radius: 50px;
+    box-shadow: 0 4px 7px 7px rgb(42, 125, 134);
+}

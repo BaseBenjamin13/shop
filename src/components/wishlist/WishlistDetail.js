@@ -30,7 +30,7 @@ function WishlistDetail({ wishlist, setrenderWishlistIndex }) {
         {
             wishlist.items.length !== 0 ?
             wishlist.items.map((itemUrl, i) => {
-                return <WishlistItem key={i} itemUrl={itemUrl} />
+                return <WishlistItem key={i} itemUrl={itemUrl} wishlist={wishlist} />
             })
             : <h1>No Items</h1>
         }

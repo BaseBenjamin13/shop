@@ -30,7 +30,7 @@ function ItemWishlists({ item }) {
                 <h2>Wishlists</h2>
                 {
                     user.knoxToken ?
-                        wishlists.length !== 0 ?
+                        wishlists && wishlists.length !== 0 ?
                         wishlists.map((wishlist, i) => {
                             return <ItemWishlist key={i} wishlist={wishlist} item={item}/>
                         })

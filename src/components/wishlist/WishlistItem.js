@@ -58,13 +58,13 @@ function WishlistItem({ itemUrl, wishlist }) {
             <img className="wishlist-img" src={item.image_urls[0]}></img>
         </div>
         <div className="wishlist-title-container">
-            <Link to={`/${item.category}s/${item.id}`}>
+            <button className="remove-item-btn" onClick={removeItem}>Remove Item</button>
+            <Link className="item-link" to={`/${item.category}s/${item.id}`}>
                 <h2>{item.title}</h2>
             </Link>
         </div>
         <div className="wishlist-price-container">
             <h2>${item.price}</h2>
-            <button onClick={removeItem}>Remove Item</button>
         </div>
     </div>
   )

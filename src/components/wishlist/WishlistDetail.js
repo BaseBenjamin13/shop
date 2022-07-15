@@ -34,7 +34,7 @@ function WishlistDetail({ wishlist, setrenderWishlistIndex }) {
             })
             : <h1>No Items</h1>
         }
-        <button onClick={deleteWishlist}>Delete</button>
+        <button className="wishlist-delete-btn" onClick={deleteWishlist}>Delete</button>
     </div>
   )
 }

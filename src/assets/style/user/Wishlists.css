@@ -2,34 +2,22 @@
 .wishlists {
     display: flex;
     justify-content: center;
-    background-color: var(--myred);
+    margin: 3rem;
 }
 .wishlists-container {
     width: 80%;
     background-color: var(--myblue);
+    border-radius: 25px;
+    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
 }
 .wishlist {
     display: flex;
     justify-content: space-around;
     border: 2px solid var(--myblack);
+    border-inline-start: 8px solid lawngreen;
+    border-inline-end: 5px solid var(--myred);
+    border-radius: 35px 10px 10px 10px;
     margin: 3rem;
-}
-.wishlist-link {
-    width: 20%;
-    font-size: 1.8rem;
-    font-weight: bold;
-    background-color: var(--myblack);
-    color: var(--mylightyellow);
-}
-.wishlist-back-btn {
-    padding: 0;
-    margin: 1rem;
-    font-size: 1.6rem;
-    font-weight: bold;
-    width: 10%;
-    height: 2rem;
-    background-color: var(--myblack);
-    color: var(--myred);
 }
 
 .wishlist-item-container {
@@ -56,6 +44,28 @@
     margin: 1rem;
 }
 
-.wishlist-back-btn:hover, .wishlist-link:hover {
+.wishlist-link {
+    width: 20%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--myblack);
+    color: var(--mylightyellow);
+}
+.wishlist-back-btn, .wishlist-delete-btn {
+    padding: 0;
+    margin: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 10%;
+    height: 2rem;
+    background-color: var(--myblack);
+    color: var(--myred);
+}
+.wishlist-delete-btn {
+    color: var(--myblack);
+    background-color: var(--myred);
+}
+
+.wishlist-back-btn:hover, .wishlist-link:hover, .wishlist-delete-btn:hover {
     box-shadow:  0px 0px 2px 2px;
 }

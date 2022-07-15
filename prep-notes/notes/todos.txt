@@ -147,7 +147,7 @@ July 15th:
     if loged in display users wishlist names to item info container. ✅ 
     make and style add to wishlist button next too button. ✅ 
     style wishlists and layout in itemDetails info container. ✅ 
-    add functionality to button, adds wishlist too item's Wishlists.
+    add functionality to button, adds wishlist too item's Wishlists. ✅
     make remove item from wishlist button and functionality on wishlist.
 
 

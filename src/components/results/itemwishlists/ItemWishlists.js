@@ -4,7 +4,7 @@ import axios from 'axios';
 import { UserContext } from '../../../contexts/UserState';
 import ItemWishlist from './ItemWishlist';
 
-function ItemWishlists() {
+function ItemWishlists({ item }) {
 
     const { user, setUser } = useContext(UserContext);
     const [wishlists, setWishlists] = useState();
@@ -28,8 +28,8 @@ function ItemWishlists() {
 
                 <h2>Wishlists</h2>
                 {
-                    wishlists.map((wishlist) => {
-                        return <ItemWishlist wishlist={wishlist}/>
+                    wishlists.map((wishlist, i) => {
+                        return <ItemWishlist key={i} wishlist={wishlist} item={item}/>
                     })
                 }
             </div>

@@ -8,8 +8,6 @@
 }
 
 .user-info-container {
-    /* flex-flow: wrap;
-    display: flex; */
     background-color: aqua;
     width: 50vw;
     height: 30vh;
@@ -50,4 +48,76 @@
     width: 100%;
     margin: 2rem;
     font-size: 2rem;
+}
+
+
+
+@media screen and (max-width: 1150px) {
+    .help-container {
+        margin: 2rem;
+    }
+    
+    .help-btn {
+        background-color: var(--myblack);
+        color: var(--mylightyellow);
+        height: 4.5rem;
+        width: 100%;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .profile {
+        margin-bottom: 9rem;
+    }
+    .user-info-container {
+        width: 80vw;
+        height: 30vh;
+        justify-content: center;
+        margin: 2rem;
+    }
+    .logout-btn {
+        width: 22%;
+        height: 12%;
+        font-size: 1.2rem;
+        left: 72%;
+    }
+    .help-container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        margin: 0.2rem;
+    }
+    
+    .help-btn {
+        height: 3rem;
+        width: 90%;
+        margin: 0.8rem;
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .user-info-container {
+        height: 35vh;
+        justify-content: center;
+        margin: 2rem;
+    }
+    .logout-btn {
+        width: 28%;
+        height: 12%;
+        font-size: 1.2rem;
+        left: 65%;
+    }
+    .help-container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        margin: 0.2rem;
+    }
+    .help-btn {
+        height: 3rem;
+        width: 90%;
+        margin: 0.8rem;
+        font-size: 1.8rem;
+    }
 }

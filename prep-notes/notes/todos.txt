@@ -9,9 +9,9 @@ As a user I want to be able to see Ben's review and other’s reviews under item
 As a user i want to be able to register for an account. ✅
 As a user i want to be able to login/logout to my account. ✅
 If logged in as a user I want to be able to add my own review. ✅
-If logged in as a user I want to add images to my review.
+If logged in as a user I want to add images to my review. 
 If logged in as a user I want to be able to edit and delete my own review. ✅
-If logged in as a user I want to see my orders, orderHistory.
+If logged in as a user I want to see my orders, orderHistory. 
 
 ADDED SCRETCH:
     on profile page let user pick what color the mini rectangles in background will be.
@@ -153,8 +153,10 @@ July 15th:
     style remove item button and item img in wishlist. ✅
     add 404 page not found in react. ✅
 
-
-
+July 16th:
+    make profile page mobile responsive. ✅
+    plan out cart system and model.
+    make cart model and add ManyToMany field for cart too items. 
 
     stop using getItems functions. use window.location.reload. 
     fix delete route, delete route dosent work right after edit. 

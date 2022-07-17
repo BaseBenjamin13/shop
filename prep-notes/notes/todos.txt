@@ -164,7 +164,7 @@ July 16th:
 
 July 17th:
     get users cart, set it too local storage and UserContext. ✅
-    add a font.
+    add a font. ✅
 
 
 

@@ -1,4 +1,10 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body h1, body h2 {
+    font-family: 'Share Tech Mono', monospace;
+}
+
 
 :root {
     --myred: rgba(217, 30, 80, 1);

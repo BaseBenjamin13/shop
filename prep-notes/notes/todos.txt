@@ -163,7 +163,7 @@ July 16th:
     client side, make page setup for cart. ✅
 
 July 17th:
-    get users cart, set it too local storage and UserContext. 
+    get users cart, set it too local storage and UserContext. ✅
     add a font.
 
 

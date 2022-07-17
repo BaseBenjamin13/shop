@@ -99,3 +99,12 @@ body {
     border-radius: 50px;
     box-shadow: 0 4px 7px 7px rgb(42, 125, 134);
 }
+
+
+
+
+
+.border-blue {
+    border-radius: 25px;
+    box-shadow: 0 0 7px 7px rgb(42, 125, 134);
+}

@@ -19,6 +19,7 @@ function Profile() {
                 localStorage.removeItem('username')
                 localStorage.removeItem('email')
                 localStorage.removeItem('knox_token')
+                localStorage.removeItem('cart')
             })
             .then(() => {
                 navigate('/login')
@@ -36,7 +37,17 @@ function Profile() {
                     }
             })
             .then((res) => {
-                console.log(res)
+                console.log(res) 
+                axios.get('http://127.0.0.1:8000/user/carts/current',
+                {
+                    headers: {
+                        'Authorization': `Token ${user.knoxToken}`
+                    }
+                }).then((res) => {
+                    console.log(res)
+                    localStorage.setItem('cart', JSON.stringify(res.data[0]))
+                })
+                .catch(err => console.log(err))
             })
             .catch((err) => {
                 navigate('/login')

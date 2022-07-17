@@ -2,6 +2,7 @@
 .cart-page {
     display: flex;
     justify-content: center;
+    flex-flow: wrap;
 }
 
 .cart-header {
@@ -25,4 +26,8 @@
 
 /* margin: auto auto; */
 
+.cart {
+    background-color: var(--myblue);
+    width: 75vw;
+}
 

@@ -7,7 +7,8 @@ export const UserProvider = ({children}) => {
     const [user, setUser] = useState({
         username: localStorage.getItem('username'),
         email: localStorage.getItem('email'),
-        knoxToken: localStorage.getItem('knox_token')
+        knoxToken: localStorage.getItem('knox_token'),
+        cart: JSON.parse(localStorage.getItem('cart'))
     });
     return (
         <UserContext.Provider value={{user, setUser}}>

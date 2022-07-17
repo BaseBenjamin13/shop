@@ -35,12 +35,14 @@ function NavBar() {
             </Link> */}
         
         <div className="cart-container">
-            <img className="cart-icon" src={nav.cartIcon} alt='shopping cart icon'/>
+            <Link to={`/user/cart`} className="nav-link">
+                <img className="cart-icon" src={nav.cartIcon} alt='shopping cart icon'/>
+            </Link>
         </div>
         <div className="cart-container">
-        <Link to={`/profile`} className="nav-link">
-            <img className="profile-icon" src={nav.loginIcon} alt='login/profile icon' />
-        </Link>
+            <Link to={`/profile`} className="nav-link">
+                <img className="profile-icon" src={nav.loginIcon} alt='login/profile icon' />
+            </Link>
         </div>
     </div>
   )

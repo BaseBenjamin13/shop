@@ -19,9 +19,10 @@ import Login from './pages/user/Login';
 import Register from './pages/user/Register';
 import UsersReviews from './pages/UsersReviews';
 import Profile from './pages/user/Profile';
+import WishLists from './pages/user/wishlists/WishLists';
+import CartPage from './pages/user/cart/CartPage';
 
 import { UserContext, UserProvider } from './contexts/UserState';
-import WishLists from './pages/user/wishlists/WishLists';
 
 import PageNotFound from './pages/PageNotFound';
 
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/user/reviews" element={<UsersReviews />} />
                 <Route path="/user/wishlists" element={<WishLists />} />
+                <Route path="/user/cart" element={<CartPage />} />
 
                 <Route path="*" element={<PageNotFound />} />
                 

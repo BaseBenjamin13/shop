@@ -155,16 +155,27 @@ July 15th:
 
 July 16th:
     make profile page mobile responsive. ✅
-    plan out cart system and model.
-    make cart model and add ManyToMany field for cart too items. 
+    plan out cart system and model. ✅
+    make cart model and add ManyToMany field for cart too items. ✅
+    make serializer for cart, and add to other serializers. ✅
+    make views and urls for cart, test in admin and postman. ✅
+    make cart view that grabs a order completed false, test in postman. ✅
+    client side, make page setup for cart. ✅
 
-    stop using getItems functions. use window.location.reload. 
+July 17th:
+    get users cart, set it too local storage and UserContext. 
+    add a font.
+
+
+
+
+    stop using getItems functions. use window.location.reload. MAYBE
     fix delete route, delete route dosent work right after edit. 
 
 
 
     deploy back-end. 
-
+    make readme.
 
 
 Bugs:

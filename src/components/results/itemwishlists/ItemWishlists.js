@@ -36,7 +36,7 @@ function ItemWishlists({ item }) {
                         })
                         : <h2><Link to="/user/wishlists">Create a wishlist</Link></h2>
 
-                    : <h2><Link to="/login">Login</Link> to create a review</h2>
+                    : <h2><Link to="/login">Login</Link> To Add To Wishlist</h2>
                 }
             </div>
         </div>

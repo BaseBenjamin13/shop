@@ -80,7 +80,6 @@
 .item-link:hover {
     text-decoration:underline;
     color: var(--mydarkyellow);
-    /* color: purple; */
 }
 
 .remove-item-btn:hover ~ .item-link {

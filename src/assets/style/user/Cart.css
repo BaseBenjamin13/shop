@@ -1,0 +1,28 @@
+
+.cart-page {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    width: 50vw;
+    height: 5rem;
+    background-color: var(--myblue);
+    color: var(--mydarkyellow);
+    /* text-shadow: 1px 1px 16px 16px var(--myblack); */
+    font-size: 2rem;
+    text-shadow: -3px 3px 15px var(--myblack), 3px -3px 15px var(--myblack);
+    /* text-shadow: -6px 6px 6px #000,
+                          6px 6px 6px #000,
+                         6px -6px 6px #000,
+                        -6px -6px 6px #000; */
+    letter-spacing: 8px;
+}
+
+/* margin: auto auto; */
+
+

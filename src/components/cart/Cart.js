@@ -2,12 +2,14 @@ import React, { useEffect, useContext } from 'react';
 import { UserContext } from '../../contexts/UserState';
 import { Link } from 'react-router-dom';
 
+import CartItem from './CartItem';
+
 function Cart() {
 
     const { user, setUser } = useContext(UserContext);
 
     useEffect(() => {
-        console.log(user);
+        console.log(user.cart);
     }, [])
 
     if(!user.cart){
@@ -22,6 +24,13 @@ function Cart() {
   return (
     <div className="cart border-blue">
         <h2>Your Items</h2>
+        {
+            user.cart.items.length > 0 ?
+            user.cart.items.map((itemUrl, i) => {
+                return <CartItem key={i} itemUrl={itemUrl} />
+            }) 
+            : <h1>No Items</h1>
+        }
     </div>
   )
 }

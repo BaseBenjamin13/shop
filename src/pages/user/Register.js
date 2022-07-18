@@ -31,7 +31,7 @@ function Register() {
     }
 
   return (
-    <div className="register">
+    <div className="register border-blue">
         <h1 className="register-title">Register</h1>
         <br></br>
             <div>

@@ -52,7 +52,7 @@ function Login() {
     }, [])
 
     return (
-        <div className="login">
+        <div className="login border-blue">
             <h1 className="login-title">Login</h1>
             <br></br>
             <div>

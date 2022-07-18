@@ -166,7 +166,7 @@ July 17th:
     get users cart, set it too local storage and UserContext. ✅
     add a font. ✅
     make cart items component that cart maps through and displays items. ✅
-    use url from cart to get items and display them
+    use url from cart to get items and display them. ✅
 
 
 

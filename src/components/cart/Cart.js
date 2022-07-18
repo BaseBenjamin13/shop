@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../../contexts/UserState';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ import CartItem from './CartItem';
 function Cart() {
 
     const { user, setUser } = useContext(UserContext);
+    const [total, setTotal] = useState(0);
 
     useEffect(() => {
         console.log(user.cart);
@@ -27,10 +28,14 @@ function Cart() {
         {
             user.cart.items.length > 0 ?
             user.cart.items.map((itemUrl, i) => {
-                return <CartItem key={i} itemUrl={itemUrl} />
+                return <CartItem key={i} itemUrl={itemUrl} setTotal={setTotal} total={total}/>
             }) 
             : <h1>No Items</h1>
         }
+        <div className="total-container">
+            <h1>Total: ${total}</h1>
+            <button>Checkout</button>
+        </div>
     </div>
   )
 }

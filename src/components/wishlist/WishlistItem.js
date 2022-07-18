@@ -22,11 +22,12 @@ function WishlistItem({ itemUrl, wishlist }) {
 
     if(replaceWishlist) {
         axios.put('http://127.0.0.1:8000/items/edit/' + item.id, {
+            "carts": item.carts,
             "category": item.category,
             "description": item.description,
             "price": item.price,
             "image_urls": item.image_urls,
-            "wishlists": replaceWishlist
+            "wishlists": replaceWishlist,
         },{
             headers: {
                 'Authorization': `Token ${user.knoxToken}`

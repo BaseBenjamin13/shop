@@ -172,11 +172,14 @@ July 17th:
     get cart on cart page load and set local storage, ✅
         note: currently need to relogin to see updated cart. ✅
     added functionality to update cart, when adding to cart, updates total and items. ✅
-    add remove item from cart functionality.
+    add remove item from cart functionality. ✅
+    fix cart rendering new item, refresh needed.
     Style add to cart btn.
+    create a new cart on register.
 
 
 
+    when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
 
     stop using getItems functions. use window.location.reload. MAYBE
     fix delete route, delete route dosent work right after edit. 
@@ -188,6 +191,7 @@ July 17th:
 
 
 Bugs:
+    #1 ✅
     creating review logs user out, might be because of forced refresh:
         Solution: maybe replace window.reload with navigate.
         but refresh still will log user out, figure out how to keep user logged in.
@@ -196,6 +200,10 @@ Bugs:
     More permanent fix:
         Use session storage, or local storage.
         Used local storage.
+
+    #2 
+    when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
+
 
 
 IDEAS: 

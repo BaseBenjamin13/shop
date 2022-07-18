@@ -12,16 +12,16 @@ function CartPage() {
     const { user, setUser } = useContext(UserContext);
 
     useEffect(() => {
-        // axios.get('http://127.0.0.1:8000/user/carts/current',
-        //     {
-        //         headers: {
-        //             'Authorization': `Token ${user.knoxToken}`
-        //         }
-        //     }).then((res) => {
-        //         console.log(res)
-        //         localStorage.setItem('cart', JSON.stringify(res.data[0]))
-            // })
-            // .catch(err => console.log(err))
+        axios.get('http://127.0.0.1:8000/user/carts/current',
+            {
+                headers: {
+                    'Authorization': `Token ${user.knoxToken}`
+                }
+            }).then((res) => {
+                console.log(res)
+                localStorage.setItem('cart', JSON.stringify(res.data[0]))
+            })
+            .catch(err => console.log(err))
     }, [])
 
   return (

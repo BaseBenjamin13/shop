@@ -21,7 +21,8 @@ function ItemWishlist({ wishlist, item }) {
             "description": item.description,
             "price": item.price,
             "image_urls": item.image_urls,
-            "wishlists": newWishlists
+            "wishlists": newWishlists,
+            "carts": item.carts,
         },{
             headers: {
                 'Authorization': `Token ${user.knoxToken}`

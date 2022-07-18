@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import DetailedCarousel from './DetailedCarousel';
 import Review from './Review';
 import ItemWishlists from './itemwishlists/ItemWishlists';
+import ItemCart from './ItemCart';
 
 function DetailedResult({ item, getItems }) {
 
@@ -67,6 +68,10 @@ function DetailedResult({ item, getItems }) {
                 <div className="info-container">
                     <h2 className="brand">Brand: {item.brand}</h2>
                     <h2 className="detailed-price" >${item.price}</h2>
+                    {
+                        user.cart &&
+                        <ItemCart item={item} />
+                    }
 
                     <ItemWishlists item={item}/>
                 </div>

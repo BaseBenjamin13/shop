@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { UserContext } from '../../contexts/UserState';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../../assets/style/user/Cart.css';
 
-function CartItem({ itemUrl, setTotal, total }) {
+function CartItem({ itemUrl }) {
 
+    const { user, setUser } = useContext(UserContext);
     const [item, setItem] = useState()
 
     useEffect(() => {
         axios.get(itemUrl)
             .then((res) =>{
                 setItem(res.data);
-                setTotal(total += res.data.price)
             })
             .catch(err => console.log(err))
+        
         
     }, [])
 

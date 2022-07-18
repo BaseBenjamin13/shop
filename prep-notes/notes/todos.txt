@@ -169,8 +169,11 @@ July 17th:
     use url from cart to get items and display them. ✅
     On Item get current cart and make add to cart button. ✅
     make add too cart functionality. ✅
-    get cart on cart page load and set local storage,
-        note: currently need to relogin to see updated cart.
+    get cart on cart page load and set local storage, ✅
+        note: currently need to relogin to see updated cart. ✅
+    added functionality to update cart, when adding to cart, updates total and items. ✅
+    add remove item from cart functionality.
+    Style add to cart btn.
 
 
 

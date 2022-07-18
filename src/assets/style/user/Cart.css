@@ -29,6 +29,7 @@
 .cart {
     background-color: var(--myblue);
     width: 75vw;
+    margin-bottom: 6rem;
 }
 
 .cart-item-container {

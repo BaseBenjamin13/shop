@@ -28,7 +28,37 @@ function ItemCart({ item }) {
             }
         })
         .then(() => {
-            window.location.reload()
+
+
+            axios.get('http://127.0.0.1:8000/user/carts/' + user.cart.id,
+            {
+                headers: {
+                    'Authorization': `Token ${user.knoxToken}`
+                }
+            }).then((res) => {
+                console.log(res)
+                axios.put('http://127.0.0.1:8000/user/carts/' + user.cart.id,
+                {
+                    "total": res.data.total + item.price,
+                    "order_completed": res.data.order_completed,
+                    "items": res.data.items
+                },
+                {
+                    headers: {
+                        'Authorization': `Token ${user.knoxToken}`
+                    }
+                }).then((res) => {
+                    console.log({res})
+                    localStorage.setItem('cart', JSON.stringify(res.data))
+                })
+                .catch(err => console.log(err))
+            })
+            .catch(err => console.log(err))
+        })
+
+
+        .then(() => {
+            // window.location.reload()
         })
         .catch(err => console.log(err))
     }

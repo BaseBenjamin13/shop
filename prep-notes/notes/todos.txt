@@ -181,7 +181,7 @@ July 17th:
 July 19th:
     style checkout button. ✅
     add a my cart button on profile page. ✅
-    checkout button that changes order_complete to true and makes new cart.
+    checkout button that changes order_complete to true and makes new cart. ✅
     make order History page setup.
     display all order_complete true.
     deploy back-end. 

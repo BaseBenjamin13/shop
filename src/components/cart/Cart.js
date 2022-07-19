@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../../contexts/UserState';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import CartItem from './CartItem';
 
@@ -8,6 +9,41 @@ function Cart() {
 
     const { user, setUser } = useContext(UserContext);
     
+
+    const checkout = () => {
+        axios.put('http://127.0.0.1:8000/user/carts/' + user.cart.id,
+        {
+            "total": user.cart.total,
+            "order_completed": true,
+            "items": user.cart.items
+        },
+        {
+            headers: {
+                'Authorization': `Token ${user.knoxToken}`
+            }
+        }).then(() => {
+            axios.post('http://127.0.0.1:8000/user/carts', 
+                {
+                    "total": 0,
+                    "order_completed": false,
+                    "items": []
+                },
+                {
+                    headers: {
+                        'Authorization': `Token ${user.knoxToken}`
+                    }
+                })
+                .then((res) => {
+                    console.log(res)
+                    localStorage.setItem('cart', JSON.stringify(res.data))
+                })
+                .then(() => {
+                    window.location.reload()
+                })
+                .catch(err => console.log(err))
+        })
+        .catch(err => console.log(err))
+    }
 
     useEffect(() => {
         console.log(user.cart);
@@ -36,7 +72,9 @@ function Cart() {
         }
         <div className="total-container">
             <h1>Total: ${user.cart.total}</h1>
-            <button className="checkout-btn">Checkout</button>
+            {user.cart.items.length > 0 && 
+                <button onClick={checkout} className="checkout-btn">Checkout</button>
+            }
         </div>
     </div>
   )

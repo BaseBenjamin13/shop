@@ -174,7 +174,7 @@ July 17th:
     added functionality to update cart, when adding to cart, updates total and items. ✅
     add remove item from cart functionality. ✅
     fixed cart rendering new item, refresh needed. ✅
-    Style add to cart btn.
+    Style add to cart btn. ✅
     create a new cart on register.
 
 

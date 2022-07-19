@@ -65,8 +65,8 @@ function ItemCart({ item }) {
     }
 
   return (
-    <div>
-        <button onClick={addToCart}>Add to Cart</button>
+    <div className="cart-button-container">
+        <button className="add-cart-btn" onClick={addToCart}>Add to Cart</button>
     </div>
   )
 }

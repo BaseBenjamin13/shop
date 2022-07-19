@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-body h1, body h2 {
+body h1, body h2, body button {
     font-family: 'Share Tech Mono', monospace;
 }
 

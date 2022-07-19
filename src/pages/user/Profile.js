@@ -62,6 +62,9 @@ function Profile() {
             <h1>Welcome {user.username}</h1>
             <br></br>
             <h1>{user.email}</h1>
+            <Link className="link" to="/user/cart">
+                <button className="my-cart-btn">My Cart</button>
+            </Link>
             <button onClick={() => logout()} className="logout-btn">Logout</button>
         </div>
         <div className="help-container">

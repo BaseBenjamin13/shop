@@ -178,6 +178,13 @@ July 17th:
     fixed massive bug, site would shut down when newly logged in user tried to get cart. ✅
     create a new cart on register. ✅
 
+July 19th:
+    style checkout button. ✅
+    checkout button that changes order_complete to true and makes new cart.
+    make order History page setup.
+    display all order_complete true.
+    deploy back-end. 
+
 
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
@@ -187,7 +194,6 @@ July 17th:
 
 
 
-    deploy back-end. 
     make readme.
 
 

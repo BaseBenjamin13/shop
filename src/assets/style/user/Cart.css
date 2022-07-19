@@ -14,13 +14,8 @@
     height: 5rem;
     background-color: var(--myblue);
     color: var(--mydarkyellow);
-    /* text-shadow: 1px 1px 16px 16px var(--myblack); */
     font-size: 2rem;
     text-shadow: -3px 3px 15px var(--myblack), 3px -3px 15px var(--myblack);
-    /* text-shadow: -6px 6px 6px #000,
-                          6px 6px 6px #000,
-                         6px -6px 6px #000,
-                        -6px -6px 6px #000; */
     letter-spacing: 8px;
 }
 
@@ -79,6 +74,15 @@
     text-decoration: none;
     color: inherit;
 }
+
+.checkout-btn {
+    background-color: var(--myblack);
+    color: var(--mylightyellow);
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 .item-link:hover {
     text-decoration:underline;
     color: var(--mydarkyellow);
@@ -88,7 +92,7 @@
     text-decoration: line-through;
 }
 
-.remove-item-btn:hover {
-    box-shadow:  0px 0px 2px 2px;
+.remove-item-btn:hover, .checkout-btn:hover {
+    box-shadow:  0px 1px 3px 3px;
 }
 

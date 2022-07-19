@@ -36,7 +36,7 @@ function Cart() {
         }
         <div className="total-container">
             <h1>Total: ${user.cart.total}</h1>
-            <button>Checkout</button>
+            <button className="checkout-btn">Checkout</button>
         </div>
     </div>
   )

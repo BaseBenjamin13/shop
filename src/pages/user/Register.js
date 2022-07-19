@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { UserContext } from '../../contexts/UserState';
 
 function Register() {
+
+    const { user, setUser } = useContext(UserContext);
     const initForm = {username: '', email: '', password: ''}
     const [registerForm, setRegisterForm] = useState(initForm)
     const [registerUser, setRegisterUser] = useState()
@@ -14,7 +17,10 @@ function Register() {
     const submitRegisterForm = async (e) => {
         e.preventDefault()
         console.log(registerForm)
-        await setRegisterUser(registerForm)
+        setRegisterUser(registerForm)
+    }
+
+    if(registerUser) {
         axios.post('http://127.0.0.1:8000/api/auth/register', 
             {
                 "username": registerUser.username,
@@ -26,6 +32,32 @@ function Register() {
             })
             .then((res) => {
                 console.log(res)
+                setUser({
+                    username: res.data.user.username,
+                    email: res.data.user.email,
+                    knoxToken: res.data.token
+                })
+                localStorage.setItem('username', res.data.user.username)
+                localStorage.setItem('email', res.data.user.email)
+                localStorage.setItem('knox_token', res.data.token)
+            })
+            .then(() => {
+                axios.post('http://127.0.0.1:8000/user/carts', 
+                {
+                    "total": 0,
+                    "order_completed": false,
+                    "items": []
+                },
+                {
+                    headers: {
+                        'Authorization': `Token ${user.knoxToken}`
+                    }
+                })
+                .then((res) => {
+                    console.log(res)
+                    // window.location.reload()
+                })
+                .catch(err => console.log(err))
             })
             .catch(err => console.log(err))
     }

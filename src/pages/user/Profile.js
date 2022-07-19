@@ -19,7 +19,7 @@ function Profile() {
                 localStorage.removeItem('username')
                 localStorage.removeItem('email')
                 localStorage.removeItem('knox_token')
-                localStorage.removeItem('cart')
+                localStorage.setItem('cart', 'no cart')
             })
             .then(() => {
                 navigate('/login')

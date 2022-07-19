@@ -41,9 +41,17 @@ function Login() {
             localStorage.setItem('username', res.data.user.username)
             localStorage.setItem('email', res.data.user.email)
             localStorage.setItem('knox_token', res.data.token)
-        })
-        .then((data) => {
-            navigate('/profile')
+            axios.get('http://127.0.0.1:8000/user/carts/current',
+            {
+                headers: {
+                    'Authorization': `Token ${res.data.token}`
+                }
+            }).then((res) => {
+                console.log(res)
+                localStorage.setItem('cart', JSON.stringify(res.data[0]))
+            })
+            .then(() => navigate('/profile'))
+            .catch(err => console.log(err))
         })
         .catch(err => console.log(err))
     }

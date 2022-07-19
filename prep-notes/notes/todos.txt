@@ -173,7 +173,7 @@ July 17th:
         note: currently need to relogin to see updated cart. ✅
     added functionality to update cart, when adding to cart, updates total and items. ✅
     add remove item from cart functionality. ✅
-    fix cart rendering new item, refresh needed.
+    fixed cart rendering new item, refresh needed. ✅
     Style add to cart btn.
     create a new cart on register.
 

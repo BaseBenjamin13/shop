@@ -51,6 +51,7 @@ function ItemCart({ item }) {
                     console.log({res})
                     localStorage.setItem('cart', JSON.stringify(res.data))
                 })
+                .then(() => window.location.reload())
                 .catch(err => console.log(err))
             })
             .catch(err => console.log(err))

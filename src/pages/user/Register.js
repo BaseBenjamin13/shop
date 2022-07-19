@@ -40,8 +40,6 @@ function Register() {
                 localStorage.setItem('username', res.data.user.username)
                 localStorage.setItem('email', res.data.user.email)
                 localStorage.setItem('knox_token', res.data.token)
-            })
-            .then(() => {
                 axios.post('http://127.0.0.1:8000/user/carts', 
                 {
                     "total": 0,
@@ -50,11 +48,12 @@ function Register() {
                 },
                 {
                     headers: {
-                        'Authorization': `Token ${user.knoxToken}`
+                        'Authorization': `Token ${res.data.token}`
                     }
                 })
                 .then((res) => {
                     console.log(res)
+                    localStorage.setItem('cart', JSON.stringify(res.data))
                     // window.location.reload()
                 })
                 .catch(err => console.log(err))

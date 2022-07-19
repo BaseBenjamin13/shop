@@ -176,7 +176,7 @@ July 17th:
     fixed cart rendering new item, refresh needed. ✅
     Style add to cart btn. ✅
     fixed massive bug, site would shut down when newly logged in user tried to get cart. ✅
-    create a new cart on register.
+    create a new cart on register. ✅
 
 
 

@@ -22,8 +22,12 @@ function Login() {
         setLogin(loginForm)
     }
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     if(login){
-        axios.post('http://127.0.0.1:8000/api/auth/login', 
+        axios.post(baseUrl + '/api/auth/login', 
         {
             "username": login.username,
             "password": login.password
@@ -41,7 +45,7 @@ function Login() {
             localStorage.setItem('username', res.data.user.username)
             localStorage.setItem('email', res.data.user.email)
             localStorage.setItem('knox_token', res.data.token)
-            axios.get('http://127.0.0.1:8000/user/carts/current',
+            axios.get(baseUrl + '/user/carts/current',
             {
                 headers: {
                     'Authorization': `Token ${res.data.token}`

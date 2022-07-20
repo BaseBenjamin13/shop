@@ -15,20 +15,24 @@ function HomePage() {
     const [topMouse, setTopMouse] = useState()
     const [topHeadPhone, setTopHeadPhone] = useState()
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     const getMonitors = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/items/2?format=json')
+        const { data } = await axios.get(baseUrl + '/items/2?format=json')
         setFeaturedMonitor(data)
     }
     const getTopChoiceKeyBoard = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/items/3?format=json')
+        const { data } = await axios.get(baseUrl + '/items/3?format=json')
         setTopKeyBoard(data)
     }
     const getTopChoiceMouse = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/items/4?format=json')
+        const { data } = await axios.get(baseUrl + '/items/4?format=json')
         setTopMouse(data)
     }
     const getTopChoiceHeadPhone = async () => {
-        const { data } = await axios.get('http://127.0.0.1:8000/items/1?format=json')
+        const { data } = await axios.get(baseUrl + '/items/1?format=json')
         setTopHeadPhone(data)
     }
 

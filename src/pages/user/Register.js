@@ -20,8 +20,12 @@ function Register() {
         setRegisterUser(registerForm)
     }
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     if(registerUser) {
-        axios.post('http://127.0.0.1:8000/api/auth/register', 
+        axios.post(baseUrl + '/api/auth/register', 
             {
                 "username": registerUser.username,
                 "email": registerUser.email,
@@ -40,7 +44,8 @@ function Register() {
                 localStorage.setItem('username', res.data.user.username)
                 localStorage.setItem('email', res.data.user.email)
                 localStorage.setItem('knox_token', res.data.token)
-                axios.post('http://127.0.0.1:8000/user/carts', 
+                
+                axios.post(baseUrl + '/user/carts', 
                 {
                     "total": 0,
                     "order_completed": false,

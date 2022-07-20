@@ -9,10 +9,13 @@ function Monitors() {
 
     const [monitors, setMonitors] = useState([])
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
 
     useEffect(() => {
         const getMonitors = async () => {
-            const { data } = await axios.get('http://127.0.0.1:8000/monitors/?format=json')
+            const { data } = await axios.get(baseUrl + '/monitors/?format=json')
             await setMonitors(data)
             console.log(monitors)
             console.log(data)

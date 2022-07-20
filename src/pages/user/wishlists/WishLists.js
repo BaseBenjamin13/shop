@@ -26,8 +26,13 @@ function WishLists() {
         e.preventDefault()
         setNewWishlist(wishlistForm)
     }
+
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     if(newWishlist){
-        axios.post('http://127.0.0.1:8000/user/wishlists', 
+        axios.post(baseUrl + '/user/wishlists', 
         {
             "name": newWishlist,
             "items": []
@@ -46,7 +51,7 @@ function WishLists() {
 
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/user/wishlists',
+        axios.get(baseUrl + '/user/wishlists',
         {
             headers: {
                 'Authorization': `Token ${user.knoxToken}`

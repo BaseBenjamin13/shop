@@ -11,8 +11,12 @@ function CartPage() {
 
     const { user, setUser } = useContext(UserContext);
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     useEffect(() => {
-            axios.get('http://127.0.0.1:8000/user/carts/current',
+            axios.get(baseUrl + '/user/carts/current',
             {
                 headers: {
                     'Authorization': `Token ${user.knoxToken}`

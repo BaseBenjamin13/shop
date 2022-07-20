@@ -11,8 +11,12 @@ function MouseDetail() {
 
     const [mouse, setMouse] = useState()
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     const getMouse = async () => {
-        const { data } = await axios.get(`http://127.0.0.1:8000/items/${id}?format=json`)
+        const { data } = await axios.get(baseUrl + `/items/${id}?format=json`)
         await setMouse(data)
     }
 

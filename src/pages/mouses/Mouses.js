@@ -8,10 +8,13 @@ function Mouses() {
 
     const [mouses, setMouses] = useState([])
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
    
     useEffect(() => {
         const getMouses = async () => {
-            const { data } = await axios.get('http://127.0.0.1:8000/mouses/?format=json')
+            const { data } = await axios.get(baseUrl + '/mouses/?format=json')
             await setMouses(data)
         }
         getMouses()

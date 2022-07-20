@@ -8,8 +8,12 @@ function Profile() {
     const navigate = useNavigate()
     const { user, setUser } = useContext(UserContext)
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     const logout = () => {
-        axios.post('http://127.0.0.1:8000/api/auth/logout', {},{
+        axios.post(baseUrl + '/api/auth/logout', {},{
                 headers: {
                     'Authorization': `Token ${user.knoxToken}`
                 }
@@ -31,14 +35,14 @@ function Profile() {
 
     useEffect(() =>{
         const getUser = () => {
-            axios.get('http://127.0.0.1:8000/api/auth/user', {
+            axios.get(baseUrl + '/api/auth/user', {
                 headers: {
                     'Authorization': `Token ${user.knoxToken}`
                     }
             })
             .then((res) => {
                 console.log(res) 
-                axios.get('http://127.0.0.1:8000/user/carts/current',
+                axios.get(baseUrl + '/user/carts/current',
                 {
                     headers: {
                         'Authorization': `Token ${user.knoxToken}`

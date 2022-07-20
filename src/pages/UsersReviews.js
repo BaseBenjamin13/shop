@@ -11,19 +11,15 @@ function UsersReviews() {
     const user = useContext(UserContext)
     const [usersReviews, setUsersReviews] = useState()
 
-
-    // const returnErrors = (msg, status) => {
-    //     return {
-    //         type: GET_ERRORS,
-    //         payload: { msg, status }
-    //     }
-    // }
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
 
     useEffect(() =>{
         const getUsersReviews = () => {
-            axios.get('http://127.0.0.1:8000/user/reviews?format=json', {
+            axios.get(baseUrl + '/user/reviews?format=json', {
                 headers: {
-                    'Authorization': 'Token 9066ab0db7d6b6496c4a80c557baab2a3a4b06e904eb3f92d4ae835fffae4e86'
+                    'Authorization': `Token ${user.user.knoxToken}`
                     }
             })
             .then((res) => {
@@ -31,7 +27,6 @@ function UsersReviews() {
             })
             .catch((err) => {
                 console.log(err)
-                // dispatch(returnErrors(err.response.data, err.response.status))
             })
         }
         // getUsersReviews()

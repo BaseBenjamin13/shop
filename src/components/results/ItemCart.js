@@ -8,14 +8,19 @@ function ItemCart({ item }) {
     const {user, setUser} = useContext(UserContext)
 
     const [newCart, setNewCart] = useState()
-    const newCartUrl = 'http://127.0.0.1:8000/user/carts/' + user.cart.id
+
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
+    const newCartUrl = baseUrl + '/user/carts/' + user.cart.id
     const addToCart = () => {
         const copy = item.carts
         copy.push(newCartUrl)
         setNewCart(copy)
     }
     if(newCart) {
-        axios.put('http://127.0.0.1:8000/items/edit/' + item.id, {
+        axios.put(baseUrl + '/items/edit/' + item.id, {
             "category": item.category,
             "description": item.description,
             "price": item.price,
@@ -30,14 +35,14 @@ function ItemCart({ item }) {
         .then(() => {
 
 
-            axios.get('http://127.0.0.1:8000/user/carts/' + user.cart.id,
+            axios.get(baseUrl + '/user/carts/' + user.cart.id,
             {
                 headers: {
                     'Authorization': `Token ${user.knoxToken}`
                 }
             }).then((res) => {
                 console.log(res)
-                axios.put('http://127.0.0.1:8000/user/carts/' + user.cart.id,
+                axios.put(baseUrl + '/user/carts/' + user.cart.id,
                 {
                     "total": res.data.total + item.price,
                     "order_completed": res.data.order_completed,

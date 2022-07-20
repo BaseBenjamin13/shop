@@ -10,8 +10,11 @@ function Cart() {
     const { user, setUser } = useContext(UserContext);
     
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
     const checkout = () => {
-        axios.put('http://127.0.0.1:8000/user/carts/' + user.cart.id,
+        axios.put(baseUrl + '/user/carts/' + user.cart.id,
         {
             "total": user.cart.total,
             "order_completed": true,
@@ -22,7 +25,7 @@ function Cart() {
                 'Authorization': `Token ${user.knoxToken}`
             }
         }).then(() => {
-            axios.post('http://127.0.0.1:8000/user/carts', 
+            axios.post(baseUrl + '/user/carts', 
                 {
                     "total": 0,
                     "order_completed": false,

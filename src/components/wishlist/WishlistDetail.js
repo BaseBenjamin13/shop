@@ -10,8 +10,13 @@ function WishlistDetail({ wishlist, setrenderWishlistIndex }) {
     const goBack = () => {
         setrenderWishlistIndex()
     }
+
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     const deleteWishlist = () => {
-        axios.delete('http://127.0.0.1:8000/user/wishlists/' + wishlist.id,
+        axios.delete(baseUrl + '/user/wishlists/' + wishlist.id,
         {
             headers: {
                 'Authorization': `Token ${user.knoxToken}`

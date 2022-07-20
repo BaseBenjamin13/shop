@@ -10,8 +10,12 @@ function ItemWishlists({ item }) {
     const { user, setUser } = useContext(UserContext);
     const [wishlists, setWishlists] = useState();
 
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/user/wishlists',
+        axios.get(baseUrl + '/user/wishlists',
         {
             headers: {
                 'Authorization': `Token ${user.knoxToken}`

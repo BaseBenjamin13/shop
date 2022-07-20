@@ -26,12 +26,14 @@ function DetailedResult({ item, getItems }) {
         await setReviewState(reviewForm)
     }
 
-
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
     
     if(reviewState) {
-        axios.post('http://127.0.0.1:8000/reviews/create',
+        axios.post(baseUrl + '/reviews/create',
         {
-            "item": "http://127.0.0.1:8000/items/" + item.id,
+            "item": baseUrl + "/items/" + item.id,
             // "author": user.user.id,
             // thought i needed to send user but in create route i had to set author 
             // too the authenticated user, its wonderful.

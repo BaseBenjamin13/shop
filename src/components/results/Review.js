@@ -26,8 +26,13 @@ function Review({ reviewUrl, item, getItems }){
         })
         .catch(err => console.log(err))
     }
+
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+
     const deleteReview = () => {
-        axios.delete(`http://127.0.0.1:8000/reviews/${review.id}/change`,
+        axios.delete(baseUrl + `/reviews/${review.id}/change`,
         {
             headers: {
                 'Authorization': `Token ${user.user.knoxToken}`
@@ -54,9 +59,9 @@ function Review({ reviewUrl, item, getItems }){
     }
 
     if(editReviewState) {
-        axios.put(`http://127.0.0.1:8000/reviews/${review.id}/change`,
+        axios.put(baseUrl + `/reviews/${review.id}/change`,
         {
-            "item": "http://127.0.0.1:8000/items/" + item.id,
+            "item": baseUrl + "/items/" + item.id,
             "title": editReviewState.title,
             "body": editReviewState.body,
             "rating": editReviewState.rating

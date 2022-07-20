@@ -11,8 +11,12 @@ function WishlistItem({ itemUrl, wishlist }) {
 
     const [item, setItem] = useState()
     const [replaceWishlist, setReplaceWishlist] = useState()
+
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
     
-    const newWishlistUrl = 'http://127.0.0.1:8000/user/wishlists/' + wishlist.id;
+    const newWishlistUrl = baseUrl + '/user/wishlists/' + wishlist.id;
     const removeItem = () => {
         const index = item.wishlists.indexOf(newWishlistUrl);
         const copy = item.wishlists;
@@ -21,7 +25,7 @@ function WishlistItem({ itemUrl, wishlist }) {
     }
 
     if(replaceWishlist) {
-        axios.put('http://127.0.0.1:8000/items/edit/' + item.id, {
+        axios.put(baseUrl + '/items/edit/' + item.id, {
             "carts": item.carts,
             "category": item.category,
             "description": item.description,

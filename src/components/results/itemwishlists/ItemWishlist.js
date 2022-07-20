@@ -6,7 +6,10 @@ function ItemWishlist({ wishlist, item }) {
 
     const {user, setUser} = useContext(UserContext)
     const [newWishlists, setNewWishlists] = useState()
-    const newWishlistUrl = 'http://127.0.0.1:8000/user/wishlists/' + wishlist.id
+    const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
+    ? "https://tech-excess-server.herokuapp.com"
+    : "http://127.0.0.1:8000"
+    const newWishlistUrl = baseUrl + '/user/wishlists/' + wishlist.id
     const addToWishlist = () => {
         console.log(wishlist)
         console.log(item)
@@ -16,7 +19,7 @@ function ItemWishlist({ wishlist, item }) {
         setNewWishlists(copy)
     }
     if(newWishlists) {
-        axios.put('http://127.0.0.1:8000/items/edit/' + item.id, {
+        axios.put(baseUrl + '/items/edit/' + item.id, {
             "category": item.category,
             "description": item.description,
             "price": item.price,

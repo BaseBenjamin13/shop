@@ -184,9 +184,9 @@ July 19th:
     checkout button that changes order_complete to true and makes new cart. ✅
     deploy back-end. ✅
     make seed items on heroku. ✅
-    make front-end env for REACT_APP_IS_DEPLOYED and set in netlify.
-    put switch statements on each react route too use deployed backend.
-    redeploy front-end.
+    make front-end env for REACT_APP_IS_DEPLOYED and set in netlify. ✅
+    put switch statements on each react route too use deployed backend. ✅
+    redeploy front-end. ✅
 
 July 20th:
     make order History page setup. 

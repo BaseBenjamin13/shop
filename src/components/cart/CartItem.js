@@ -13,6 +13,7 @@ function CartItem({ itemUrl }) {
     const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
     ? "https://tech-excess-server.herokuapp.com"
     : "http://127.0.0.1:8000"
+
     const newCartUrl = baseUrl + '/user/carts/' + user.cart.id;
     const removeItem = () => {
         const index = item.carts.indexOf(newCartUrl);
@@ -35,7 +36,7 @@ function CartItem({ itemUrl }) {
             }
         })
         .then(() => {
-            axios.get(baseurl + '/user/carts/' + user.cart.id,
+            axios.get(baseUrl + '/user/carts/' + user.cart.id,
             {
                 headers: {
                     'Authorization': `Token ${user.knoxToken}`

@@ -21,6 +21,7 @@ import UsersReviews from './pages/UsersReviews';
 import Profile from './pages/user/Profile';
 import WishLists from './pages/user/wishlists/WishLists';
 import CartPage from './pages/user/cart/CartPage';
+import OrderHistory from './pages/user/OrderHistory';
 
 import { UserContext, UserProvider } from './contexts/UserState';
 
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/user/reviews" element={<UsersReviews />} />
                 <Route path="/user/wishlists" element={<WishLists />} />
                 <Route path="/user/cart" element={<CartPage />} />
+                <Route path="/user/orders" element={<OrderHistory />} />
 
                 <Route path="*" element={<PageNotFound />} />
                 

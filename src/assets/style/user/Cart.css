@@ -1,11 +1,11 @@
 
-.cart-page {
+.cart-page, .order-history {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
 }
 
-.cart-header {
+.cart-header, .orders-header {
     display: flex;
     justify-content: center;
     align-items: center;

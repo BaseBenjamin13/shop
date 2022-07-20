@@ -189,7 +189,8 @@ July 19th:
     redeploy front-end. ✅
 
 July 20th:
-    make order History page setup. 
+    make order History page setup with links to. ✅
+    make backend route and view for complete orders.
     display all order_complete true. 
 
 

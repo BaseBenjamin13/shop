@@ -2,7 +2,7 @@ import React from 'react'
 import OrderItems from './OrderItems';
 
 function Orders({ order, index }) {
-
+    console.log(order.items)
   return (
     <div className="order">
         <h1>Order: {index + 1}</h1>
@@ -10,7 +10,7 @@ function Orders({ order, index }) {
         {
             order.items.length > 0 ?
             order.items.map((item, i) => {
-                <OrderItems itemUrl={item} />
+                return <OrderItems itemUrl={item} />
             })
             : <h2>No items found</h2>
         }

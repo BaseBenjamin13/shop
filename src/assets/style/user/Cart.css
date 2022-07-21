@@ -27,7 +27,7 @@
     margin-bottom: 6rem;
 }
 
-.cart-item-container, .order {
+.cart-item-container, .order, .order-item-container {
     display: flex;
     justify-content: space-around;
     border: 2px solid var(--myblack);
@@ -35,6 +35,14 @@
     border-inline-end: 5px solid var(--myred);
     border-radius: 35px 10px 10px 10px;
     margin: 3rem;
+}
+.order {
+    flex-flow: wrap;
+}
+.order-item-container {
+    border: 3px solid var(--myblack);
+    background-color: var(--mydarkblue);
+    box-shadow: 0 5px 9px 9px rgb(42, 125, 134);
 }
 
 .cart-img-container {

@@ -197,7 +197,7 @@ July 20th:
 
 July 21st:
     make item detail page mobile responsive. ✅
-
+    make category page mobile responsive. ✅
     redeploy back-end.
     redeploy front-end.
 

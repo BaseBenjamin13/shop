@@ -190,8 +190,10 @@ July 19th:
 
 July 20th:
     make order History page setup with links to. ✅
-    make backend route and view for complete orders.
-    display all order_complete true. 
+    make backend route and view for complete orders. ✅
+    get and set state all order_complete true. ✅
+    map through all orders displaying component for each. ✅
+    get and display each item in order.
 
 
 

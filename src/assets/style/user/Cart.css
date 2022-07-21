@@ -21,13 +21,13 @@
 
 /* margin: auto auto; */
 
-.cart {
+.cart, .orders {
     background-color: var(--myblue);
     width: 75vw;
     margin-bottom: 6rem;
 }
 
-.cart-item-container {
+.cart-item-container, .order {
     display: flex;
     justify-content: space-around;
     border: 2px solid var(--myblack);

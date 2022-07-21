@@ -11,7 +11,7 @@ As a user i want to be able to login/logout to my account. ✅
 If logged in as a user I want to be able to add my own review. ✅
 If logged in as a user I want to add images to my review. 
 If logged in as a user I want to be able to edit and delete my own review. ✅
-If logged in as a user I want to see my orders, orderHistory. 
+If logged in as a user I want to see my orders, orderHistory. ✅
 
 ADDED SCRETCH:
     on profile page let user pick what color the mini rectangles in background will be.
@@ -194,6 +194,12 @@ July 20th:
     get and set state all order_complete true. ✅
     map through all orders displaying component for each. ✅
     get and display each item in order. ✅
+
+July 21st:
+    make item detail page mobile responsive. ✅
+
+    redeploy back-end.
+    redeploy front-end.
 
 
 

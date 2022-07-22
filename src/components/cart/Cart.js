@@ -85,7 +85,7 @@ function Cart() {
                 <button onClick={checkout} className="checkout-btn">Checkout</button>
             } */}
             {showCheckout ? (
-                <PayPal />
+                <PayPal total={user.cart.total} />
             ) : (
                 <button onClick={setShowCheckout(true)} className="checkout-btn">Checkout</button>
             )

@@ -204,8 +204,11 @@ July 21st:
     redeploy front-end. ✅
 
 July 22th:
+    look into paypal's react package. ✅
+    setting up paypal show button and component. ✅
+    user can checkout with paypal. ✅
+    after paypal checkout, reset cart and send to order history.
     make wishlists page mobile responsive.
-    look into paypal's react package.
 
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.

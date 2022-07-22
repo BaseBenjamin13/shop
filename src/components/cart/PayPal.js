@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 
-function PayPal({ total }) {
+function PayPal({ total, checkoutFunc }) {
 
     const paypal = useRef()
 
@@ -23,6 +23,7 @@ function PayPal({ total }) {
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture()
                 console.log(order)
+                checkoutFunc()
             },
             onError: (err) => {
                 console.log(err)

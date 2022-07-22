@@ -207,7 +207,8 @@ July 22th:
     look into paypal's react package. ✅
     setting up paypal show button and component. ✅
     user can checkout with paypal. ✅
-    after paypal checkout, reset cart and send to order history.
+    after paypal checkout, reset cart and send to order history. ✅
+    style paypal placement.
     make wishlists page mobile responsive.
 
 

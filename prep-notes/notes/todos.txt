@@ -209,7 +209,7 @@ July 22th:
     user can checkout with paypal. ✅
     after paypal checkout, reset cart and send to order history. ✅
     style paypal placement. ✅
-    redeploy front-end. 
+    redeploy front-end.  ✅
     make wishlists page mobile responsive. 
 
 

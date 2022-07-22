@@ -5,6 +5,11 @@
     flex-flow: wrap;
 }
 
+.paypal {
+    margin: 1rem;
+    margin-left: 3rem;
+}
+
 .cart-header, .orders-header {
     display: flex;
     justify-content: center;

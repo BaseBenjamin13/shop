@@ -208,8 +208,9 @@ July 22th:
     setting up paypal show button and component. ✅
     user can checkout with paypal. ✅
     after paypal checkout, reset cart and send to order history. ✅
-    style paypal placement.
-    make wishlists page mobile responsive.
+    style paypal placement. ✅
+    redeploy front-end. 
+    make wishlists page mobile responsive. 
 
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.

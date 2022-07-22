@@ -84,11 +84,14 @@ function Cart() {
             {/* {user.cart.items.length > 0 && 
                 <button onClick={checkout} className="checkout-btn">Checkout</button>
             } */}
-            {showCheckout ? (
-                <PayPal total={user.cart.total} checkoutFunc={checkout} />
-            ) : (
-                <button onClick={setShowCheckout(true)} className="checkout-btn">Checkout</button>
-            )
+            {   user.cart.items.length > 0 ? 
+                showCheckout ? 
+                <div className="paypal">
+                    <PayPal total={user.cart.total} checkoutFunc={checkout} />
+                </div>
+            : 
+                <button onClick={() => setShowCheckout(true)} className="checkout-btn">Checkout</button>
+            : null
             }
         </div>
     </div>

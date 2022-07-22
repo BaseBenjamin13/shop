@@ -3,7 +3,6 @@
 
 ## Visit Here [Tech Excess](https://tech-excess.netlify.app)
 ### The API made and used [Here](https://tech-excess-server.herokuapp.com/items/)
-### Client-side github [Repo](https://github.com/BaseBenjamin13/tech-excess-client)
 ### Server-side github [Repo](https://github.com/BaseBenjamin13/tech-excess-server)
 
 Tech excess, a tech score made and reviewed by Benjamin Morgiewicz

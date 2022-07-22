@@ -3,11 +3,14 @@ import { UserContext } from '../../contexts/UserState';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import PayPal from './PayPal';
 import CartItem from './CartItem';
 
 function Cart() {
 
     const { user, setUser } = useContext(UserContext);
+
+    const [showCheckout, setShowCheckout]= useState(false);
     
 
     const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
@@ -64,6 +67,9 @@ function Cart() {
   return (
     <div className="cart border-blue">
         <h2>Your Items</h2>
+
+
+
         {
             user.cart.items.length > 0 ?
             user.cart.items.map((itemUrl, i) => {
@@ -75,8 +81,14 @@ function Cart() {
         }
         <div className="total-container">
             <h1>Total: ${user.cart.total}</h1>
-            {user.cart.items.length > 0 && 
+            {/* {user.cart.items.length > 0 && 
                 <button onClick={checkout} className="checkout-btn">Checkout</button>
+            } */}
+            {showCheckout ? (
+                <PayPal />
+            ) : (
+                <button onClick={setShowCheckout(true)} className="checkout-btn">Checkout</button>
+            )
             }
         </div>
     </div>

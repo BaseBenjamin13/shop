@@ -201,7 +201,7 @@ July 21st:
     make cart page mobile responsive. ✅
     make order history page mobile responsive. ✅
     redeploy back-end. ✅
-    redeploy front-end.
+    redeploy front-end. ✅
 
 July 22th:
     make wishlists page mobile responsive.

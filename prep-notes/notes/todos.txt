@@ -200,10 +200,12 @@ July 21st:
     make category page mobile responsive. ✅
     make cart page mobile responsive. ✅
     make order history page mobile responsive. ✅
-    make wishlists page mobile responsive.
-    redeploy back-end.
+    redeploy back-end. ✅
     redeploy front-end.
 
+July 22th:
+    make wishlists page mobile responsive.
+    look into paypal's react package.
 
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.

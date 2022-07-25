@@ -68,8 +68,6 @@ function Cart() {
     <div className="cart border-blue">
         <h2>Your Items</h2>
 
-
-
         {
             user.cart.items.length > 0 ?
             user.cart.items.map((itemUrl, i) => {
@@ -81,9 +79,7 @@ function Cart() {
         }
         <div className="total-container">
             <h1>Total: ${user.cart.total}</h1>
-            {/* {user.cart.items.length > 0 && 
-                <button onClick={checkout} className="checkout-btn">Checkout</button>
-            } */}
+            
             {   user.cart.items.length > 0 ? 
                 showCheckout ? 
                 <div className="paypal">

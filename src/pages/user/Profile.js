@@ -20,10 +20,7 @@ function Profile() {
             })
             .then((res) => {
                 setUser({})
-                localStorage.removeItem('username')
-                localStorage.removeItem('email')
-                localStorage.removeItem('knox_token')
-                localStorage.setItem('cart', 'no cart')
+                localStorage.clear();
             })
             .then(() => {
                 navigate('/login')

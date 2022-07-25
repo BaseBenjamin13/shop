@@ -210,17 +210,16 @@ July 22th:
     after paypal checkout, reset cart and send to order history. ✅
     style paypal placement. ✅
     redeploy front-end.  ✅
+    make readme. ✅
+
+July 25th:
+    refactored logout functionality. ✅
+
+July 26th:
     make wishlists page mobile responsive. 
 
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
-
-    stop using getItems functions. use window.location.reload. MAYBE
-    fix delete route, delete route dosent work right after edit. 
-
-
-
-    make readme.
 
 
 Bugs:
@@ -237,7 +236,8 @@ Bugs:
     #2 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
 
-
+    #3 
+    after adding item to cart, add to cart btn disapears on all items, untill user visits there cart.
 
 IDEAS: 
     Color wheel to choose there own profile color.

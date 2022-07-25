@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Tech Excess
+## Made by Benjamin Morgiewicz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Visit Here [Tech Excess](https://tech-excess.netlify.app)
+### The API made and used [Here](https://tech-excess-server.herokuapp.com/items/)
+### Server-side github [Repo](https://github.com/BaseBenjamin13/tech-excess-server)
 
-## Available Scripts
+Tech excess, a tech score made and reviewed by Benjamin Morgiewicz
+This company will have a limited amount of items for sale, because this is Benjamin Morgiewicz’s store where everything is reviewed by me. Same features and quality as a big tech company but much more honestly reviewed, and personalized.
 
-In the project directory, you can run:
 
-### `npm start`
+### User stories
+As a user I want to start at a homepage where top rated, newly added, and on-sale items are on display.
+As a user I want the navigation to be easy with a nav bar.
+As a user I want to be able to like/add items to my wish list.
+As a user I want to be able to contact reviewers for help, customer support.
+As a user I want the site to be mobile responsive.
+As a user I want to be able to see Ben's review and other’s reviews under items for sale.
+As a user i want to be able to register for an account
+As a user i want to be able to login/logout to my account
+If logged in as a user I want to be able to add my own review.
+If logged in as a user I want to add images to my review.
+If logged in as a user I want to be able to edit and delete my own review.
+If logged in as a user I want to see my orders, orderHistory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Wireframes
+![homepage](https://media.git.generalassemb.ly/user/41045/files/7c854d90-7079-4f19-925b-cd9cdfaea216)
 
-### `npm test`
+![item-detail](https://media.git.generalassemb.ly/user/41045/files/50a517f3-4228-4425-b6fd-e5da4f210aa2)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![items-forsale](https://media.git.generalassemb.ly/user/41045/files/a860352d-23bf-4282-ae18-86c1933a6922)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![tech-profile](https://media.git.generalassemb.ly/user/41045/files/956c3ca1-516c-4f1e-9bf5-ce75235481da)

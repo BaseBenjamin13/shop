@@ -120,13 +120,13 @@
         margin: 2rem;
     }
     .logout-btn {
-        width: 28%;
+        width: 30%;
         height: 12%;
         font-size: 1.2rem;
         left: 65%;
     }
     .my-cart-btn {
-        width: 28%;
+        width: 30%;
         height: 13%;
         font-size: 1rem;
     }
@@ -142,4 +142,17 @@
         margin: 0.8rem;
         font-size: 1.7rem;
     }
+}
+
+@media screen and (max-width: 400px) {
+    .help-btn {
+        height: 3rem;
+        width: 90%;
+        margin: 0.8rem;
+        font-size: 1.2rem;
+    }
+    .my-cart-btn {
+        font-size: 0.8rem;
+    }
+
 }

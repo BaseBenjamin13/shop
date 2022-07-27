@@ -161,9 +161,11 @@
     .checkout-btn {
         background-color: var(--myblack);
         color: var(--mylightyellow);
-        margin: 1rem;
         font-weight: bold;
-        font-size: 2rem;
+    }
+    .total-container {
+        flex-flow: wrap;
+        justify-content: center;
     }
 }
 

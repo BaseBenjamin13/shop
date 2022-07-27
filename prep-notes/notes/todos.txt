@@ -219,8 +219,9 @@ July 26th:
     refactor some safety statements and cleaned up console logs. ✅
 
 July 27th:
+    fix mobile display for cart total/checkout and cart button. ✅
     make wishlists page mobile responsive. 
-
+    get a favicon.
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
 

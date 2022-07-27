@@ -216,6 +216,9 @@ July 25th:
     refactored logout functionality. ✅
 
 July 26th:
+    refactor some safety statements and cleaned up console logs. ✅
+
+July 27th:
     make wishlists page mobile responsive. 
 
 

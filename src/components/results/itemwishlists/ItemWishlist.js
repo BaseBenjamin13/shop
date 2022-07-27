@@ -11,11 +11,8 @@ function ItemWishlist({ wishlist, item }) {
     : "http://127.0.0.1:8000"
     const newWishlistUrl = baseUrl + '/user/wishlists/' + wishlist.id
     const addToWishlist = () => {
-        console.log(wishlist)
-        console.log(item)
         const copy = item.wishlists
         copy.push(newWishlistUrl)
-        console.log(copy)
         setNewWishlists(copy)
     }
     if(newWishlists) {

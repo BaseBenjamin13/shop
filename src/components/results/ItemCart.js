@@ -53,18 +53,11 @@ function ItemCart({ item }) {
                         'Authorization': `Token ${user.knoxToken}`
                     }
                 }).then((res) => {
-                    console.log({res})
                     localStorage.setItem('cart', JSON.stringify(res.data))
                 })
-                .then(() => window.location.reload())
                 .catch(err => console.log(err))
             })
             .catch(err => console.log(err))
-        })
-
-
-        .then(() => {
-            // window.location.reload()
         })
         .catch(err => console.log(err))
     }

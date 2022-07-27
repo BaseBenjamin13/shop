@@ -12,7 +12,7 @@ function Orders({ order, index }) {
             order.items.map((item, i) => {
                 return <OrderItems itemUrl={item} />
             })
-            : <h2>No items found</h2>
+            : <h2>No orders found</h2>
         }
     </div>
   )

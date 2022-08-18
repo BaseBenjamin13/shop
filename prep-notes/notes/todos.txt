@@ -220,8 +220,12 @@ July 26th:
 
 July 27th:
     fix mobile display for cart total/checkout and cart button. ✅
+
     make wishlists page mobile responsive. 
     get a favicon.
+    on signup send verication email.
+    add image file to reviews.
+    add favColor into user model.
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
 

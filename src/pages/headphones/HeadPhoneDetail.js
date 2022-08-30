@@ -28,7 +28,10 @@ function HeadPhoneDetail() {
     if(!headphone) {
         return (
             <div className="loading-data-container">
-                <h1 className="loading-data">Loading ...</h1>
+                Loading
+                <div className="spinner-sector spinner-red"></div>
+                <div className="spinner-sector spinner-blue"></div>
+                <div className="spinner-sector spinner-yellow"></div>
             </div>
         )
     }

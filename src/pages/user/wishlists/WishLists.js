@@ -59,6 +59,10 @@ function WishLists() {
         }).then((res) => {
             console.log(res)
             setWishlists(res.data)
+        }).catch((err) => {
+            if(err.response.status === 401){
+                navigate('/login');
+            }
         })
     }, [])
 

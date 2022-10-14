@@ -221,6 +221,8 @@ July 26th:
 July 27th:
     fix mobile display for cart total/checkout and cart button. ✅
 
+Oct 13th:
+    require login to view wishlist page. ✅
 
     add loading animation circle.
     make wishlists page mobile responsive. 

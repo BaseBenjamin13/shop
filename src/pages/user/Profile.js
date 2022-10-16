@@ -1,12 +1,16 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../../contexts/UserState';
 import '../../assets/style/user/ProfilePage.css';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
+import { SketchPicker } from 'react-color';
+
 function Profile() {
     const navigate = useNavigate()
     const { user, setUser } = useContext(UserContext)
+
+    const [ favColor, setFavColor ] = useState('rgba(242, 212, 61, 1)')
 
     const baseUrl = process.env.REACT_APP_IS_DEPLOYED === 'true'
     ? "https://tech-excess-server.herokuapp.com"
@@ -30,8 +34,9 @@ function Profile() {
             })
     }
 
-    const changeColor = () => {
-        document.documentElement.style.setProperty('--mylightyellow', 'rgba(217, 30, 80, 1)');
+    const changeFavColor = (color) => {
+        setFavColor(color.hex);
+        document.documentElement.style.setProperty('--mylightyellow', color.hex);
     }
 
     useEffect(() =>{
@@ -61,6 +66,7 @@ function Profile() {
         getUser()
     }, [])
 
+
   return (
     <div className="profile">
         <div className="user-info-container">
@@ -71,8 +77,11 @@ function Profile() {
                 <button className="my-cart-btn">My Cart</button>
             </Link>
 
-            <button onClick={() => changeColor()}className="">Change Color</button>
-            
+            <SketchPicker
+                color={ favColor }
+                onChangeComplete={ (color) => changeFavColor(color) }
+            />
+
             <button onClick={() => logout()} className="logout-btn">Logout</button>
         </div>
         <div className="help-container">

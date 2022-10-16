@@ -5,14 +5,16 @@ body h1, body h2, body button {
     font-family: 'Share Tech Mono', monospace;
 }
 
+:root {
+    --mylightyellow: rgba(242, 212, 61, 1);
+    --mydarkyellow: rgba(242, 199, 68, 1);
+}
 
 body {
     --myred: rgba(217, 30, 80, 1);
     --myblue: rgba(94, 181, 191, 1);
     --mydarkblue: rgb(32, 158, 172);
     --myblack: rgba(13, 12, 0, 1);
-    --mylightyellow: rgba(242, 212, 61, 1);
-    --mydarkyellow: rgba(242, 199, 68, 1);
 }
 
 .link {

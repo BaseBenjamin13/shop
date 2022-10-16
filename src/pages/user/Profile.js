@@ -30,6 +30,10 @@ function Profile() {
             })
     }
 
+    const changeColor = () => {
+        document.documentElement.style.setProperty('--mylightyellow', 'rgba(217, 30, 80, 1)');
+    }
+
     useEffect(() =>{
         const getUser = () => {
             axios.get(baseUrl + '/api/auth/user', {
@@ -66,6 +70,9 @@ function Profile() {
             <Link className="link" to="/user/cart">
                 <button className="my-cart-btn">My Cart</button>
             </Link>
+
+            <button onClick={() => changeColor()}className="">Change Color</button>
+            
             <button onClick={() => logout()} className="logout-btn">Logout</button>
         </div>
         <div className="help-container">

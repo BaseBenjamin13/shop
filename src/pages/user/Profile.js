@@ -69,6 +69,14 @@ function Profile() {
 
   return (
     <div className="profile">
+        <div className="color-picker">
+            <h3>Pick your favorite Color</h3>
+            <SketchPicker
+                color={ favColor }
+                onChangeComplete={ (color) => changeFavColor(color) }
+            />
+        </div>
+
         <div className="user-info-container">
             <h1>Welcome {user.username}</h1>
             <br></br>
@@ -76,11 +84,7 @@ function Profile() {
             <Link className="link" to="/user/cart">
                 <button className="my-cart-btn">My Cart</button>
             </Link>
-
-            <SketchPicker
-                color={ favColor }
-                onChangeComplete={ (color) => changeFavColor(color) }
-            />
+            
 
             <button onClick={() => logout()} className="logout-btn">Logout</button>
         </div>

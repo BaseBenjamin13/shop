@@ -223,13 +223,15 @@ July 27th:
 
 Oct 13th:
     require login to view wishlist page. ✅
+    add favColor into user to change background color. ✅
+    style color picker. ✅
+    make color picker mobile responsive.
 
     add loading animation circle.
     make wishlists page mobile responsive. 
     get a favicon.
     on signup send verication email.
     add image file to reviews.
-    add favColor into user model.
 
     when adding a dulplicate to cart it adds too total but dosent put another item in the cart.
 

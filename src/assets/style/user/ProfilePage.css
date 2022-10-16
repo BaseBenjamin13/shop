@@ -34,7 +34,7 @@
     width: 20%;
     height: 13%;
     font-size: 1.5rem;
-    background-color: var(--mylightyellow);
+    background-color: var(--mydarkyellow);
     color: var(--myblack);
     font-weight: bold;
     letter-spacing: 2px;
@@ -46,6 +46,15 @@
     box-shadow:  0px 0px 2px 2px;
 }
 
+.color-picker {
+    margin: 2rem;
+    padding: 2rem;
+    padding-top: 0;
+    position: absolute;
+    right: 3%;
+    background-color: var(--myblack);
+    color: var(--mylightyellow)
+}
 
 .help-container {
     display: flex;
@@ -55,7 +64,7 @@
 }
 .help-btn {
     background-color: var(--myblack);
-    color: var(--mylightyellow);
+    color: var(--mydarkyellow);
     height: 5rem;
     width: 100%;
     margin: 2rem;

@@ -2,8 +2,11 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../contexts/UserState';
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+
+    const navigate = useNavigate();
 
     const { user, setUser } = useContext(UserContext);
     const initForm = {username: '', email: '', password: ''}
@@ -57,9 +60,8 @@ function Register() {
                     }
                 })
                 .then((res) => {
-                    console.log(res)
                     localStorage.setItem('cart', JSON.stringify(res.data))
-                    // window.location.reload()
+                    navigate('/login');
                 })
                 .catch(err => console.log(err))
             })

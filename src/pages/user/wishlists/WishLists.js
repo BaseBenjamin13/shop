@@ -20,7 +20,6 @@ function WishLists() {
 
     const handleFormChange = (e) => {
         setWishlistForm(e.target.value)
-        console.log(wishlistForm)
     }
     const handleFormSubmit = (e) => {
         e.preventDefault()
@@ -43,7 +42,6 @@ function WishLists() {
             }
         })
         .then((res) => {
-            console.log(res)
             window.location.reload()
         })
         .catch(err => console.log(err))
@@ -57,7 +55,6 @@ function WishLists() {
                 'Authorization': `Token ${user.knoxToken}`
             }
         }).then((res) => {
-            console.log(res)
             setWishlists(res.data)
         }).catch((err) => {
             if(err.response.status === 401){

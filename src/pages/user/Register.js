@@ -12,14 +12,13 @@ function Register() {
     const initForm = {username: '', email: '', password: ''}
     const [registerForm, setRegisterForm] = useState(initForm)
     const [registerUser, setRegisterUser] = useState()
+    const [invalidInput, setInvalidInput] = useState(false);
 
     const handleFormChange = (e) => {
         setRegisterForm({ ...registerForm, [e.target.id]: e.target.value})
-        console.log(registerForm)
     }
     const submitRegisterForm = async (e) => {
         e.preventDefault()
-        console.log(registerForm)
         setRegisterUser(registerForm)
     }
 
@@ -65,7 +64,10 @@ function Register() {
                 })
                 .catch(err => console.log(err))
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+                setInvalidInput(true);
+            })
     }
 
   return (
@@ -80,11 +82,17 @@ function Register() {
                     <input type="text" id="username" value={registerForm.username} onChange={handleFormChange}></input>
                     <br></br>
                     <label>Email:</label>
-                    <input type="email" id="email" value={registerForm.email} onChange={handleFormChange}></input>
+                    <input type="email" id="email" placeholder='jacksmit@gmail.com' value={registerForm.email} onChange={handleFormChange}></input>
                     <br></br>
                     <label>Password:</label>
                     <input type="password" id="password" value={registerForm.password} onChange={handleFormChange}></input>
-                    <br></br>
+                    {
+                        invalidInput &&
+                        <div>
+                            <p className="invalid-input">Invalid Input</p>
+                            <p>Please try again</p>
+                        </div>
+                    }
                     <button className="register-btn" type="submit">Register</button>
                     </div>
                 </form>

@@ -6,6 +6,9 @@
 .login-form, .register-form {
     margin: 3rem;
 }
+.invalid-input {
+    color: var(--myred);
+}
 .register, .login {
     margin: 5vw;
     margin-left: 10vw;
